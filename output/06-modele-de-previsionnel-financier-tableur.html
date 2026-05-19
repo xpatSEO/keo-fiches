@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modèle de prévisionnel financier sur tableur Excel : guide pas à pas 2026</title>
+<meta name="description" content="Guide pratique pour créer et utiliser un modèle de prévisionnel financier sur tableur Excel: structure, formules clés et scénarios prêts.">
+<style>
+:root{
+  --indigo:#4848E8; --indigo-600:#3840C8; --indigo-700:#3040A0; --indigo-50:#ECF2FA;
+  --green:#08A06F; --green-600:#089068;
+  --mint-bg:#D6F0E5; --mint-text:#08805A;
+  --peach:#FCEEDC;
+  --navy:#1B2D5E; --ink:#1F2A44; --muted:#5B6B82;
+  --line:#E5EAF0; --soft:#F6F8FB; --white:#FFFFFF;
+  --radius:24px; --radius-sm:14px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#fff;color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--indigo);text-decoration:underline;text-underline-offset:2px}
+a:hover{text-decoration-thickness:2px}
+img{max-width:100%}
+.nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.nav-inner{max-width:1320px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:36px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:38px;height:38px;background:var(--green);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;font-family:Georgia,serif;font-style:italic}
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-text b{color:var(--navy);font-weight:800;font-size:22px;letter-spacing:-0.3px}
+.logo-text small{color:#9AA8BB;font-size:9.5px;letter-spacing:0.18em;margin-top:3px}
+.nav-menu{display:flex;gap:30px;font-size:14.5px;color:var(--navy);font-weight:600}
+.nav-menu a{color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:6px}
+.nav-menu a::after{content:"⌄";font-size:12px;color:#9AA8BB;margin-top:-4px}
+.nav-menu a.no-arrow::after{content:""}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:14px}
+.nav-phone{font-size:14.5px;color:var(--navy);font-weight:600;text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:13px 22px;font-weight:600;font-size:14.5px;cursor:pointer;border:0;transition:.2s;text-decoration:none}
+.btn-indigo{background:var(--indigo);color:#fff}
+.btn-green{background:var(--green);color:#fff}
+.btn-white{background:#fff;color:var(--navy)}
+.crumb{max-width:1320px;margin:0 auto;padding:22px 32px 4px;font-size:13.5px;color:var(--muted)}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb .sep{margin:0 10px;color:#B5C0D0}
+.wrap{max-width:1320px;margin:0 auto;padding:20px 32px 60px;display:grid;grid-template-columns:280px 1fr;gap:48px}
+.toc{position:sticky;top:100px;align-self:start}
+.toc h4{margin:0 0 16px;font-size:18px;color:var(--navy);font-weight:800}
+.toc ul{list-style:none;padding:0;margin:0}
+.toc li a{display:block;padding:12px 14px;border-radius:10px;color:var(--ink);text-decoration:none;line-height:1.4;font-size:14px}
+.toc li a:hover{background:var(--soft);color:var(--indigo)}
+.toc li.active a{background:var(--soft);color:var(--navy);font-weight:600}
+.hero{background:var(--indigo-50);border-radius:var(--radius);padding:46px 60px 50px;margin-bottom:36px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;border-radius:50%;border:1px solid #D7DFEC;opacity:.6}
+.hero .meta-row{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.hero .pill{background:var(--mint-bg);color:var(--mint-text);padding:6px 14px;border-radius:8px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.hero .time{color:var(--muted);font-size:13px}
+.hero h1{margin:0 0 28px;font-size:42px;line-height:1.15;font-weight:800;color:var(--navy);letter-spacing:-0.8px;max-width:780px}
+.hero h1 .accent{color:var(--indigo)}
+.hero .cta-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.hero-arrow{position:absolute;right:60px;top:36px;color:var(--green);font-size:30px;line-height:1;transform:rotate(35deg)}
+.intro p{font-size:16.5px;color:var(--ink);margin:0 0 14px}
+.retain{background:linear-gradient(135deg,#4A48E8 0%,#3850D0 60%,#3858C8 100%);color:#fff;border-radius:var(--radius);padding:42px 50px 44px;margin:36px 0;position:relative}
+.retain-icon{position:absolute;left:36px;top:-26px;width:54px;height:54px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(72,72,232,.25)}
+.retain h3{margin:14px 0 22px;font-size:18px;color:#A7D8E8;font-weight:700}
+.retain ul{list-style:none;padding:0;margin:0}
+.retain li{padding:14px 0 14px 36px;position:relative;border-top:1px solid rgba(255,255,255,.18)}
+.retain li:first-child{border-top:0}
+.retain li::before{content:"";position:absolute;left:0;top:18px;width:20px;height:20px;border-radius:50%;border:2px solid rgba(255,255,255,.5);background:transparent}
+.retain li::after{content:"";position:absolute;left:7px;top:25px;width:6px;height:6px;border-radius:50%;background:#fff}
+.retain li strong{display:block;color:#fff;font-weight:700;margin-bottom:4px;font-size:15.5px}
+.retain li span{display:block;color:rgba(255,255,255,.78);font-size:14px;line-height:1.55}
+.content h2{font-size:28px;margin:48px 0 14px;color:var(--navy);font-weight:800;letter-spacing:-0.4px;scroll-margin-top:100px}
+.content h3{font-size:18.5px;margin:28px 0 10px;color:var(--navy);font-weight:700}
+.content p{margin:0 0 14px;color:var(--ink);font-size:15.5px}
+.content ul,.content ol{padding-left:0;margin:14px 0 18px;list-style:none}
+.content > ul > li, .content section > ul > li{position:relative;padding:6px 0 6px 22px;margin-bottom:4px;font-size:15.5px}
+.content > ul > li::before, .content section > ul > li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:8px;border-radius:50%;background:var(--green)}
+.content > ol{counter-reset:olist}
+.content > ol > li{counter-increment:olist;position:relative;padding:6px 0 6px 36px;margin-bottom:8px;font-size:15.5px}
+.content > ol > li::before{content:counter(olist,decimal-leading-zero);position:absolute;left:0;top:8px;color:var(--indigo);font-weight:800;font-size:13px}
+.content li strong{color:var(--navy)}
+.content ul ul li{position:relative;padding:3px 0 3px 18px;font-size:14.5px;color:var(--muted);list-style:none}
+.content ul ul li::before{content:"";position:absolute;left:0;top:13px;width:6px;height:1.5px;background:var(--muted)}
+.attention,.advice{border-radius:14px;padding:20px 24px;margin:24px 0}
+.attention{background:#FFF6E5;border:1px solid #F5D89B}
+.attention h4{margin:0 0 6px;color:#7A4E00;font-size:15.5px}
+.attention p{margin:0;font-size:14.5px;color:#5C3A00}
+.advice{background:var(--indigo-50);border:1px solid #C7D6F0}
+.advice h4{margin:0 0 6px;color:var(--navy);font-size:15.5px}
+.advice p{margin:0;font-size:14.5px;color:var(--ink)}
+.band{background:linear-gradient(95deg,#4A48E8 0%,#08A06F 130%);color:#fff;border-radius:18px;padding:24px 30px;display:flex;align-items:center;justify-content:space-between;gap:24px;margin:30px 0}
+.band h4{margin:0;font-size:17px;font-weight:700;max-width:520px;line-height:1.35}
+.band .btn-white{padding:14px 24px}
+.peach-block{background:var(--peach);border-radius:var(--radius);padding:34px 38px;margin:30px 0;display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:center}
+.peach-block h3{margin:0 0 12px;color:var(--navy);font-size:22px;font-weight:800;line-height:1.25}
+.peach-block p{margin:0 0 22px;color:var(--muted);font-size:14.5px}
+.peach-illu{display:flex;justify-content:center;align-items:center}
+.author{background:var(--indigo-50);border-radius:var(--radius);padding:26px 30px;margin:40px 0 30px;display:grid;grid-template-columns:80px 1fr;gap:22px;align-items:center}
+.author-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--indigo),var(--indigo-600));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:26px;font-family:Georgia,serif}
+.author h5{margin:0 0 6px;font-size:16px;color:var(--navy);font-weight:700}
+.author p{margin:0;font-size:14px;color:var(--muted);line-height:1.6}
+.step-nav{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:24px 0;margin:30px 0}
+.step-nav .step{font-size:13.5px;color:var(--indigo);font-weight:600}
+.step-nav .step small{display:block;color:var(--muted);font-weight:400;font-size:13px;margin-top:4px}
+.step-nav .step.next{text-align:right}
+.bottom-cta{background:var(--indigo-700);color:#fff;border-radius:18px;padding:26px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;margin:30px 0 0}
+.bottom-cta h3{margin:0;font-size:18px;font-weight:700;max-width:430px;line-height:1.35}
+.bottom-cta .btn-white{padding:14px 26px}
+.site-footer{background:linear-gradient(180deg,var(--indigo-700) 0%,#283890 100%);color:rgba(255,255,255,.78);padding:60px 32px 30px;margin-top:60px;border-radius:32px 32px 0 0}
+.foot-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.foot-brand .logo-mark{background:#fff;color:var(--green)}
+.foot-brand .logo-text b{color:#fff}
+.foot-brand .logo-text small{color:rgba(255,255,255,.6)}
+.foot-social{display:flex;gap:10px;margin-top:18px}
+.foot-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:13px}
+.foot-cert{margin-top:22px;display:inline-flex;align-items:center;gap:8px;background:#F23358;color:#fff;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.foot-col h6{color:#fff;margin:0 0 14px;font-size:14.5px;font-weight:700}
+.foot-col a{display:block;color:rgba(255,255,255,.78);font-size:14px;padding:5px 0;text-decoration:none}
+.foot-legal{max-width:1320px;margin:34px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);display:flex;justify-content:space-between;font-size:12.5px;color:rgba(255,255,255,.55);gap:20px;flex-wrap:wrap}
+.foot-legal a{color:rgba(255,255,255,.7);text-decoration:none}
+</style></head><body>
+<nav class="nav"><div class="nav-inner">
+  <a class="logo" href="#"><div class="logo-mark">k</div><div class="logo-text"><b>keobiz</b><small>BY KEROGO FINANCE</small></div></a>
+  <div class="nav-menu"><a href="#">Expert comptable</a><a href="#">Création d'entreprise</a><a href="#" class="no-arrow">Tarifs</a><a href="#">Ressources</a></div>
+  <div class="nav-right"><a class="nav-phone" href="tel:0176410560">📞 01 76 41 05 60</a><a class="btn btn-indigo" href="#">Obtenir un devis</a><a class="btn btn-green" href="#">Se connecter</a></div>
+</div></nav>
+<div class="crumb"><a href="#">Accueil</a><span class="sep">/</span><a href="#">Fiches pratiques</a><span class="sep">/</span><span style="color:var(--navy);font-weight:500">Modèle de prévisionnel financier sur tableur Excel</span></div>
+<div class="wrap">
+  <aside class="toc"><h4>Sommaire</h4><ul><li class="active"><a href="#s1">Qu’est-ce qu’un modèle de prévisionnel financier sur tableur ?</a></li>
+<li><a href="#s2">À quoi sert un prévisionnel financier pour un projet ou une création d</a></li>
+<li><a href="#s3">Les tableaux indispensables d’un prévisionnel financier</a></li>
+<li><a href="#s4">Comment faire un prévisionnel financier sur Excel étape par étape ?</a></li>
+<li><a href="#s5">Comment choisir un modèle Excel gratuit à remplir ?</a></li>
+<li><a href="#s6">Erreurs fréquentes et points de vigilance avant d’utiliser un modèle g</a></li>
+<li><a href="#s7">Comment lire les résultats de son prévisionnel financier ?</a></li></ul></aside>
+  <main>
+    <section class="hero">
+      <span class="hero-arrow">↘</span>
+      <div class="meta-row"><span class="pill">Guide complet</span><span class="time">12 min</span></div>
+      <h1>Modèle de prévisionnel financier sur tableur Excel <span class="accent">guide pas à pas 2026</span></h1>
+      <div class="cta-row"><a class="btn btn-indigo" href="#">Être accompagné par un expert →</a></div>
+    </section>
+    <section class="intro"><p>Vous vous lancez dans un projet de création d'entreprise ou vous pilotez un nouveau développement ? Vous avez probablement entendu parler du prévisionnel financier, cet outil souvent présenté comme une étape incontournable, mais aussi un peu intimidante. La bonne nouvelle, c’est qu’avec une bonne méthode et un simple tableur, vous pouvez construire une vision chiffrée claire de votre projet.</p>
+<p>Ce guide pratique vous explique, sans jargon, comment utiliser ou créer un <strong>modèle de prévisionnel financier sur tableur</strong>. On verra ensemble quels tableaux sont indispensables, comment les construire pas à pas sur Excel, et comment éviter les pièges des modèles gratuits.</p></section>
+    <section class="retain">
+      <div class="retain-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke="#08A06F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>Ce que vous devez retenir :</h3>
+      <ul><li><strong>Qu’est-ce qu’un modèle de prévisionnel financier sur tableur</strong><span>Un modèle de prévisionnel financier est un document, généralement sous forme de fichier Excel , qui permet de projeter l’activité financière future de votre entreprise.</span></li>
+<li><strong>À quoi sert un prévisionnel financier pour un projet ou u...</strong><span>On pense souvent au prévisionnel comme à un document obligatoire pour la banque.</span></li>
+<li><strong>Les tableaux indispensables d’un prévisionnel financier</strong><span>Un modèle financier complet et fiable, même s’il est gratuit , doit contenir au minimum quatre tableaux interconnectés.</span></li>
+<li><strong>Comment faire un prévisionnel financier sur Excel étape p...</strong><span>Créer son propre prévisionnel sur un fichier Excel peut sembler complexe, mais en suivant une méthode structurée, l’exercice devient beaucoup plus accessible.</span></li></ul>
+    </section>
+    <div class="content">
+      
+
+<h2 id="s1">Qu’est-ce qu’un modèle de prévisionnel financier sur tableur ?</h2>
+<p>Un modèle de prévisionnel financier est un document, généralement sous forme de <strong>fichier Excel</strong>, qui permet de projeter l’activité financière future de votre entreprise. C’est une simulation chiffrée de votre projet sur une période donnée, le plus souvent <strong>sur 3 ans</strong>.</p>
+<p>Imaginez-le comme la traduction de votre stratégie en chiffres. Cet <strong>outil prévisionnel</strong> rassemble un ensemble de tableaux financiers qui s’articulent entre eux pour répondre à des questions fondamentales :</p>
+<ul>
+<li>Votre projet est-il rentable ?</li>
+<li>Aurez-vous assez de liquidités pour payer vos factures ?</li>
+<li>De quel <strong>financement</strong> avez-vous besoin pour démarrer ?</li>
+</ul>
+<p>Un <strong>modèle financier</strong> sur tableur (comme Excel ou Google Sheets) est particulièrement pratique, car il contient déjà la structure des tableaux et les formules de calcul. Votre rôle est de le remplir avec les chiffres propres à votre activité : vos prévisions de ventes, vos coûts, vos investissements.</p>
+<h2 id="s2">À quoi sert un prévisionnel financier pour un projet ou une création d’activité ?</h2>
+<p>On pense souvent au prévisionnel comme à un document obligatoire pour la banque. C’est vrai, mais son utilité va bien au-delà. C’est avant tout un outil de pilotage pour vous, l’entrepreneur.</p>
+<ol>
+<li><strong>Valider la viabilité de votre projet</strong> : Avant de vous lancer, le prévisionnel financier vous aide à vérifier si votre idée peut générer un <strong>résultat</strong> positif. Il permet de tester différentes hypothèses (prix de vente, volume de clients, coûts) pour sécuriser votre modèle économique.</li>
+<li><strong>Convaincre des partenaires financiers</strong> : C’est la pièce maîtresse de votre <a href="https://keobiz.fr/le-mag/comment-realiser-un-business-plan">business plan</a>. Banquiers, investisseurs et organismes d’aide s’appuient sur ces <strong>prévisions</strong> pour évaluer le sérieux de votre démarche et la solidité de votre <strong>projet</strong>. Un prévisionnel clair et cohérent démontre que vous maîtrisez vos chiffres.</li>
+<li><strong>Anticiper les besoins en trésorerie</strong> : Une entreprise rentable peut échouer à cause d’un manque de <strong>trésorerie</strong>. Le prévisionnel met en lumière les décalages entre les encaissements et les décaissements. Il vous alerte sur les périodes creuses et vous permet d’anticiper le besoin d’un découvert autorisé ou d’un financement à court terme.</li>
+<li><strong>Piloter votre activité au quotidien</strong> : Une fois l’entreprise lancée, votre prévisionnel devient une feuille de route. En comparant vos résultats réels avec vos prévisions, vous pouvez analyser les écarts, comprendre ce qui fonctionne (ou pas) et ajuster votre stratégie rapidement.</li>
+</ol>
+<div class="band"><h4>Sécurisez votre projet avec un expert-comptable Keobiz</h4><a class="btn btn-white" href="#">Besoin d'aide pour vous lancer ?</a></div><h2 id="s3">Les tableaux indispensables d’un prévisionnel financier</h2>
+<p>Un <strong>modèle financier</strong> complet et fiable, même s’il est <strong>gratuit</strong>, doit contenir au minimum quatre tableaux interconnectés. Chaque tableau offre une perspective différente sur la santé financière de votre projet.</p>
+<h3>Le compte de résultat prévisionnel</h3>
+<p>Le compte de résultat prévisionnel se concentre sur la rentabilité. Il compare les produits (ce que l’entreprise gagne, principalement le chiffre d’affaires) et les charges (ce que l’entreprise dépense pour fonctionner) sur une période donnée (un an, par exemple).</p>
+<p>Son objectif est de calculer le <strong>résultat</strong> net :</p>
+<ul>
+<li><strong>Bénéfice</strong> : si les produits sont supérieurs aux charges.</li>
+<li><strong>Perte</strong> : si les charges sont supérieures aux produits.</li>
+</ul>
+<p>Il permet de répondre à la question : « Mon activité va-t-elle gagner de l’argent ? ». Il inclut des éléments comme le chiffre d’affaires, les achats de marchandises, les frais généraux (loyer, assurances, salaires), les dotations aux amortissements et les impôts.</p>
+<h3>Le plan de trésorerie</h3>
+<p>C’est le tableau qui suit les entrées et sorties d’argent réelles sur votre <strong>compte</strong> bancaire, mois par mois. Le <a href="https://keobiz.fr/le-mag/plan-de-tresorerie-vous-permet-de-suivre-votre-comptabilite-dans-le-temps/">plan de trésorerie prévisionnel</a> est le gardien de votre liquidité.</p>
+<p>Il liste tous les encaissements (paiements des clients, apports en capital, subventions) et tous les décaissements (paiements des fournisseurs, salaires, loyer, TVA, remboursement d’emprunts). La différence donne le solde de trésorerie à la fin de chaque mois.</p>
+<p>Sa mission est de répondre à la question : « Aurai-je assez d’argent sur mon compte pour payer mes factures à la fin du mois ? ». Un résultat positif ne garantit pas une trésorerie positive, à cause des délais de paiement clients et fournisseurs.</p>
+<h3>Le bilan prévisionnel</h3>
+<p>Le <a href="https://keobiz.fr/le-mag/bilan-previsionnel">bilan prévisionnel</a> est une photographie du patrimoine de votre entreprise à un instant T (généralement à la fin de chaque année). Il se divise en deux parties qui doivent toujours être égales :</p>
+<ul>
+<li><strong>L’actif</strong> : ce que l’entreprise possède (bâtiments, machines, stocks, créances clients, argent en banque).</li>
+<li><strong>Le passif</strong> : ce que l’entreprise doit (capital social, dettes fournisseurs, emprunts bancaires, résultat de l’année).</li>
+</ul>
+<p>Il répond à la question : « Quelle est la structure financière de mon entreprise et comment ses actifs sont-ils financés ? ». Il montre l’équilibre (ou le déséquilibre) entre les ressources stables et les emplois durables.</p>
+<h3>Le plan de financement</h3>
+<p>Le plan de financement initial (puis annuel) met en balance les besoins durables de l’entreprise et les ressources financières mobilisées pour les couvrir.</p>
+<ul>
+<li><strong>Besoins</strong> : investissements de départ (matériel, fonds de commerce), besoin en fonds de roulement (le stock et le crédit client à financer).</li>
+<li><strong>Ressources</strong> : apports personnels, comptes courants d’associés, emprunts bancaires, <a href="https://keobiz.fr/le-mag/les-aides-a-la-creation-entreprise">aides et subventions</a>.</li>
+</ul>
+<p>L’objectif est simple : s’assurer que les ressources sont suffisantes pour couvrir tous les besoins. Ce tableau est crucial pour déterminer le montant exact du prêt à demander à la banque.</p>
+<p>[image alt="Capture d'écran d'un modèle de prévisionnel financier sur Excel montrant les différents onglets : hypothèses, compte de résultat, plan de trésorerie, bilan."]</p>
+<div class="peach-block"><div><h3>Marre de l'administratif avant même d'avoir commencé ?</h3><p>Laissez nos experts Keobiz structurer votre projet pendant que vous peaufinez votre activité. Nous gérons la complexité pour vous.</p><a class="btn btn-green" href="#">Créer mon entreprise gratuitement →</a></div><div class="peach-illu"><svg fill="none" viewbox="0 0 200 220">
+<rect fill="#fff" height="170" rx="14" stroke="#1B2D5E" stroke-width="2" width="90" x="40" y="20"></rect>
+<rect fill="#4848E8" height="8" rx="3" width="70" x="50" y="40"></rect>
+<rect fill="#E5EAF0" height="6" rx="3" width="50" x="50" y="56"></rect>
+<rect fill="#ECF2FA" height="40" rx="6" width="70" x="50" y="70"></rect>
+<rect fill="#08A06F" height="22" rx="6" width="70" x="50" y="150"></rect>
+<rect fill="#fff" height="140" rx="12" stroke="#1B2D5E" stroke-width="2" width="80" x="100" y="60"></rect>
+<rect fill="#4848E8" height="6" rx="3" width="60" x="110" y="78"></rect>
+<rect fill="#ECF2FA" height="30" rx="5" width="60" x="110" y="106"></rect>
+<rect fill="#4848E8" height="18" rx="5" width="60" x="110" y="144"></rect>
+</svg></div></div><h2 id="s4">Comment faire un prévisionnel financier sur Excel étape par étape ?</h2>
+<p>Créer son propre prévisionnel sur un <strong>fichier Excel</strong> peut sembler complexe, mais en suivant une méthode structurée, l’exercice devient beaucoup plus accessible. Voici les quatre étapes clés.</p>
+<h3>1. Lister les hypothèses de départ</h3>
+<p>Tout votre prévisionnel repose sur des hypothèses. C’est la partie la plus importante, car la qualité de vos prévisions en dépend directement. Prenez le temps de les sourcer et de les justifier. Créez un onglet dédié dans votre tableur pour tout centraliser.</p>
+<p>Listez par exemple :</p>
+<ul>
+<li><strong>Hypothèses de ventes</strong> : prix de vente unitaire, nombre de clients par mois, saisonnalité, panier moyen. Appuyez-vous sur votre <a href="https://keobiz.fr/le-mag/etude-de-marche">étude de marché</a>.</li>
+<li><strong>Hypothèses de charges</strong> : coût d’achat des marchandises, salaires et charges sociales, loyer, abonnements (téléphone, logiciel), honoraires (comptable, avocat), budget marketing.</li>
+<li><strong>Hypothèses fiscales et sociales</strong> : taux d’imposition sur les sociétés, taux de TVA applicable, taux de charges sociales.</li>
+<li><strong>Hypothèses de financement</strong> : montant des apports, conditions de l’emprunt (taux, durée).</li>
+<li><strong>Hypothèses de délais de paiement</strong> : combien de jours en moyenne pour être payé par vos clients et pour payer vos fournisseurs.</li>
+</ul>
+<div class="advice">
+<h4>Le secret : des hypothèses prudentes et justifiées</h4>
+<p>On a tous tendance à être optimiste en lançant un projet. Pour votre prévisionnel, adoptez une approche réaliste, voire pessimiste. Mieux vaut une bonne surprise qu’une mauvaise. Chaque chiffre avancé doit pouvoir être expliqué : un devis pour un investissement, une étude de marché pour le chiffre d’affaires, etc.</p>
+</div>
+<h3>2. Prévoir le chiffre d’affaires</h3>
+<p>Dans un nouvel onglet, détaillez vos prévisions de ventes, mois par mois pour la première année, puis par an pour les deux suivantes.</p>
+<ul>
+<li><strong>Par produit/service</strong> : Chiffre d’Affaires = Quantité vendue x Prix de vente unitaire</li>
+<li><strong>Par type de client</strong> : Chiffre d’Affaires = Nombre de clients x Panier moyen</li>
+</ul>
+<p>Structurez votre tableau pour bien distinguer le chiffre d’affaires Hors Taxes (HT), la TVA collectée, et le montant Toutes Taxes Comprises (TTC). C’est le montant HT qui ira dans votre compte de résultat, et le montant TTC qui sera utilisé pour les encaissements dans votre plan de trésorerie.</p>
+<h3>3. Renseigner les charges et investissements</h3>
+<p>Listez l’ensemble de vos dépenses prévues. On les classe généralement en trois catégories :</p>
+<ul>
+<li><strong>Les investissements</strong> : achats de biens durables (ordinateur, machine, véhicule, mobilier). Ils apparaissent dans le plan de financement et au bilan. Leur usure est constatée via les amortissements dans le compte de résultat.</li>
+<li><strong>Les charges variables</strong> : elles dépendent directement de votre volume d’activité (achats de matières premières, frais de livraison, commissions sur ventes).</li>
+<li><strong>Les charges fixes</strong> : elles sont récurrentes, quel que soit votre niveau de ventes (loyer, salaires, assurances, abonnements).</li>
+</ul>
+<p>Comme pour le chiffre d’affaires, séparez bien le HT, la TVA (déductible cette fois) et le TTC pour alimenter correctement les différents tableaux.</p>
+<h3>4. Construire les formules et vérifier les calculs</h3>
+<p>C'est ici que la magie du tableur opère. L’idée est de lier les cellules entre elles pour que tout se mette à jour automatiquement si vous modifiez une hypothèse.</p>
+<ul>
+<li><strong>Liez vos tableaux à l’onglet d’hypothèses</strong> : Ne saisissez jamais un chiffre en dur dans plusieurs tableaux. Faites toujours référence à la cellule de votre onglet "Hypothèses". Par exemple, la cellule "Loyer" dans votre plan de trésorerie doit être égale à la cellule "Loyer mensuel HT" de vos hypothèses.</li>
+<li><strong>Automatisez les totaux et les soldes</strong> : Utilisez des formules simples comme <code>SOMME</code> pour les totaux annuels et <code>Solde fin de mois = Solde début de mois + Encaissements - Décaissements</code> pour la trésorerie.</li>
+<li><strong>Vérifiez la cohérence</strong> : La clé d’un bon prévisionnel est sa cohérence. Assurez-vous que :
+    <ul>
+<li>Le résultat net du compte de résultat est bien reporté au passif du bilan.</li>
+<li>Le solde de trésorerie final du plan de trésorerie correspond bien au montant sur la ligne "Banque" à l’actif du bilan.</li>
+<li>Le total de l’actif est toujours parfaitement égal au total du passif dans votre bilan.</li>
+</ul>
+</li>
+</ul>
+<h2 id="s5">Comment choisir un modèle Excel gratuit à remplir ?</h2>
+<p>De nombreux sites proposent un <strong>modèle de prévisionnel financier gratuit</strong> au <strong>format Excel</strong>. C’est une excellente base de départ, mais tous ne se valent pas.</p>
+<p>Voici quelques critères pour faire le bon choix :</p>
+<ol>
+<li><strong>La complétude</strong> : Vérifiez que le fichier contient bien les quatre tableaux indispensables mentionnés plus haut (compte de résultat, plan de trésorerie, bilan, plan de financement). Un simple tableau de budget n’est pas un prévisionnel financier.</li>
+<li><strong>La clarté de la structure</strong> : Un bon modèle doit avoir un onglet dédié aux hypothèses à remplir. Les cellules à modifier doivent être clairement identifiées (par exemple, avec un fond de couleur), tandis que les cellules contenant des formules doivent être protégées pour éviter les erreurs de manipulation.</li>
+<li><strong>L’adaptabilité</strong> : Votre activité a ses spécificités. Le modèle doit être suffisamment souple pour vous permettre d’ajouter ou de supprimer des lignes de charges ou de revenus sans "casser" toutes les formules.</li>
+<li><strong>L’absence de publicité intrusive</strong> : Méfiez-vous des fichiers verrouillés qui vous obligent à vous inscrire ou à payer pour accéder à des fonctions de base.</li>
+<li><strong>Les instructions intégrées</strong> : Les meilleurs modèles incluent des commentaires ou un onglet "Guide" pour expliquer comment remplir chaque partie et à quoi correspondent les principaux indicateurs.</li>
+</ol>
+<h2 id="s6">Erreurs fréquentes et points de vigilance avant d’utiliser un modèle gratuit</h2>
+<p>Un modèle, c'est un gain de temps, mais pas une solution miracle. On voit souvent les mêmes erreurs qui peuvent décrédibiliser tout un <strong>projet</strong>.</p>
+<div class="attention">
+<h4>L'erreur classique : oublier la TVA</h4>
+<p>La gestion de la TVA est une source d'erreurs majeure. Le compte de résultat se raisonne en Hors Taxes (HT), tandis que la trésorerie suit les flux Toutes Taxes Comprises (TTC). Un modèle qui ne distingue pas clairement ces deux notions vous mènera à des prévisions de trésorerie complètement fausses.</p>
+</div>
+<p><strong>Checklist de vigilance avant de vous lancer :</strong></p>
+<ul>
+<li>[ ] <strong>Hypothèses irréalistes</strong> : Évitez le fameux "chiffre d’affaires de 100 000 € la première année" sans aucune justification. Chaque chiffre doit être le fruit d’une réflexion.</li>
+<li>[ ] <strong>Oubli de certaines charges</strong> : Pensez à tout : impôts et taxes, cotisations sociales du dirigeant, frais bancaires, petites fournitures... La somme de ces "petites" dépenses peut peser lourd.</li>
+<li>[ ] <strong>Confusion entre rentabilité et trésorerie</strong> : Ne concluez pas que tout va bien parce que votre compte de résultat affiche un bénéfice. Vérifiez que votre plan de trésorerie ne plonge jamais dans le rouge.</li>
+<li>[ ] <strong>Mauvais calcul du BFR</strong> (Besoin en Fonds de Roulement) : Le décalage créé par les stocks et les délais de paiement est souvent sous-estimé. Il représente un besoin de financement crucial au démarrage.</li>
+<li>[ ] <strong>Modèle non adapté</strong> : N'essayez pas de faire rentrer de force votre activité de service dans un modèle conçu pour du négoce de marchandises. Les postes de dépenses et les logiques de flux sont très différents.</li>
+</ul>
+<p>Comment lire les résultats de son prévisionnel financier ?</p>
+<h2 id="s7">Comment lire les résultats de son prévisionnel financier ?</h2>
+<p>Une fois votre <strong>fichier Excel</strong> rempli, le travail d'analyse commence. L'objectif est de faire parler les chiffres pour prendre les bonnes décisions.</p>
+<ol>
+<li><strong>Analysez la rentabilité</strong> : Regardez l’évolution du résultat net sur 3 ans. Est-il positif dès la première année ? Si non, quand atteignez-vous le point mort (le niveau de chiffre d’affaires où vous ne faites ni perte ni bénéfice) ?</li>
+<li><strong>Surveillez la trésorerie</strong> : Le solde de trésorerie est-il positif chaque mois ? Si des creux apparaissent, identifiez-en les causes (saisonnalité, gros investissement) et cherchez des solutions (négocier des délais de paiement, prévoir un financement court terme).</li>
+<li><strong>Évaluez la structure financière</strong> : Dans le bilan, comparez le poids des dettes à celui des capitaux propres. Une entreprise trop endettée est plus fragile. L’équilibre est-il sain ?</li>
+<li><strong>Validez le plan de financement</strong> : Le montant du financement demandé est-il cohérent avec les besoins identifiés ? Vos apports personnels sont-ils suffisants pour rassurer un banquier (généralement, on attend entre 20% et 30% d’apport par rapport au besoin total) ?</li>
+</ol>
+<p>Testez la robustesse de votre modèle en changeant quelques hypothèses clés (baisse du prix de vente, augmentation d’un coût). Votre projet résiste-t-il à ces scénarios ?</p>
+<p>***</p>
+<p><strong>Disclaimer informatif :</strong> <em>Cet article a une visée purement pédagogique. La construction d’un prévisionnel financier est une étape engageante pour votre projet. Les modèles et conseils fournis ne se substituent pas à l’avis d’un professionnel. Pour sécuriser vos prévisions et optimiser votre montage financier, il est recommandé de vous faire accompagner par un <a href="https://keobiz.fr/le-mag/le-cout-et-les-honoraires-des-services-dun-expert-comptable">expert-comptable</a>.</em></p>
+<p>***</p>
+
+
+
+
+
+
+
+
+
+
+      <div class="author">
+        <div class="author-avatar">MD</div>
+        <div><h5>Marcel Delaregardière</h5><p>Expert-comptable chez Keobiz, Marcel accompagne chaque année plus de 200 dirigeants dans la structuration juridique et fiscale de leur projet.</p></div>
+      </div>
+      <div class="step-nav"><div class="step prev">← Étape précédente<small>Modèle de CGV 2026 - prêt, clair et conforme</small></div><div class="step next">Étape suivante →<small>Checklist création d&#x27;entreprise étape par étape — du concept</small></div></div>
+      <div class="bottom-cta"><h3>La création d'une entreprise ça ne s'improvise pas, on s'en parle ?</h3><a class="btn btn-white" href="#">Besoin d'aide pour vous lancer ?</a></div>
+    </div>
+  </main>
+</div>
+<footer class="site-footer"><div class="foot-inner">
+  <div class="foot-brand">
+    <a class="logo" href="#"><div class="logo-mark">k</div><div class="logo-text"><b>keobiz</b><small>BY KEROGO FINANCE</small></div></a>
+    <div class="foot-social"><a href="#">f</a><a href="#">▶</a><a href="#">◉</a><a href="#">in</a></div>
+    <div class="foot-cert">ENTREPRISE LABEL · QUALIANOR</div>
+  </div>
+  <div class="foot-col"><h6>Nos services</h6><a href="#">Expert comptable en ligne</a><a href="#">Création d'entreprise</a><a href="#">Bilan & liasse fiscale</a><a href="#">Conseil juridique</a></div>
+  <div class="foot-col"><h6>Nos ressources</h6><a href="#">Le mag</a><a href="#">Nos outils</a><a href="#">Guides</a><a href="#">Modèles</a></div>
+  <div class="foot-col"><h6>À propos de Keobiz</h6><a href="#">Notre cabinet à Paris</a><a href="#">Notre cabinet à Rouen</a><a href="#">Témoignages</a><a href="#">Qui sommes-nous</a><a href="#">Nous contacter</a></div>
+</div><div class="foot-legal"><span>© 2026 Keobiz, tous droits réservés.</span><span><a href="#">CGU</a> · <a href="#">Mentions légales</a> · <a href="#">Cookies</a></span></div></footer>
+</body></html>

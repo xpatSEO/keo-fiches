@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modèle de statuts simplifié - SASU SAS SARL 2026</title>
+<meta name="description" content="Comprendre les différences entre SASU, SAS et SARL et obtenir un modèle de statuts prêt à l&#x27;emploi. Guide pratique et conseils pour 2026.">
+<style>
+:root{
+  --indigo:#4848E8; --indigo-600:#3840C8; --indigo-700:#3040A0; --indigo-50:#ECF2FA;
+  --green:#08A06F; --green-600:#089068;
+  --mint-bg:#D6F0E5; --mint-text:#08805A;
+  --peach:#FCEEDC;
+  --navy:#1B2D5E; --ink:#1F2A44; --muted:#5B6B82;
+  --line:#E5EAF0; --soft:#F6F8FB; --white:#FFFFFF;
+  --radius:24px; --radius-sm:14px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#fff;color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--indigo);text-decoration:underline;text-underline-offset:2px}
+a:hover{text-decoration-thickness:2px}
+img{max-width:100%}
+.nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.nav-inner{max-width:1320px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:36px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:38px;height:38px;background:var(--green);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;font-family:Georgia,serif;font-style:italic}
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-text b{color:var(--navy);font-weight:800;font-size:22px;letter-spacing:-0.3px}
+.logo-text small{color:#9AA8BB;font-size:9.5px;letter-spacing:0.18em;margin-top:3px}
+.nav-menu{display:flex;gap:30px;font-size:14.5px;color:var(--navy);font-weight:600}
+.nav-menu a{color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:6px}
+.nav-menu a::after{content:"⌄";font-size:12px;color:#9AA8BB;margin-top:-4px}
+.nav-menu a.no-arrow::after{content:""}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:14px}
+.nav-phone{font-size:14.5px;color:var(--navy);font-weight:600;text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:13px 22px;font-weight:600;font-size:14.5px;cursor:pointer;border:0;transition:.2s;text-decoration:none}
+.btn-indigo{background:var(--indigo);color:#fff}
+.btn-green{background:var(--green);color:#fff}
+.btn-white{background:#fff;color:var(--navy)}
+.crumb{max-width:1320px;margin:0 auto;padding:22px 32px 4px;font-size:13.5px;color:var(--muted)}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb .sep{margin:0 10px;color:#B5C0D0}
+.wrap{max-width:1320px;margin:0 auto;padding:20px 32px 60px;display:grid;grid-template-columns:280px 1fr;gap:48px}
+.toc{position:sticky;top:100px;align-self:start}
+.toc h4{margin:0 0 16px;font-size:18px;color:var(--navy);font-weight:800}
+.toc ul{list-style:none;padding:0;margin:0}
+.toc li a{display:block;padding:12px 14px;border-radius:10px;color:var(--ink);text-decoration:none;line-height:1.4;font-size:14px}
+.toc li a:hover{background:var(--soft);color:var(--indigo)}
+.toc li.active a{background:var(--soft);color:var(--navy);font-weight:600}
+.hero{background:var(--indigo-50);border-radius:var(--radius);padding:46px 60px 50px;margin-bottom:36px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;border-radius:50%;border:1px solid #D7DFEC;opacity:.6}
+.hero .meta-row{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.hero .pill{background:var(--mint-bg);color:var(--mint-text);padding:6px 14px;border-radius:8px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.hero .time{color:var(--muted);font-size:13px}
+.hero h1{margin:0 0 28px;font-size:42px;line-height:1.15;font-weight:800;color:var(--navy);letter-spacing:-0.8px;max-width:780px}
+.hero h1 .accent{color:var(--indigo)}
+.hero .cta-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.hero-arrow{position:absolute;right:60px;top:36px;color:var(--green);font-size:30px;line-height:1;transform:rotate(35deg)}
+.intro p{font-size:16.5px;color:var(--ink);margin:0 0 14px}
+.retain{background:linear-gradient(135deg,#4A48E8 0%,#3850D0 60%,#3858C8 100%);color:#fff;border-radius:var(--radius);padding:42px 50px 44px;margin:36px 0;position:relative}
+.retain-icon{position:absolute;left:36px;top:-26px;width:54px;height:54px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(72,72,232,.25)}
+.retain h3{margin:14px 0 22px;font-size:18px;color:#A7D8E8;font-weight:700}
+.retain ul{list-style:none;padding:0;margin:0}
+.retain li{padding:14px 0 14px 36px;position:relative;border-top:1px solid rgba(255,255,255,.18)}
+.retain li:first-child{border-top:0}
+.retain li::before{content:"";position:absolute;left:0;top:18px;width:20px;height:20px;border-radius:50%;border:2px solid rgba(255,255,255,.5);background:transparent}
+.retain li::after{content:"";position:absolute;left:7px;top:25px;width:6px;height:6px;border-radius:50%;background:#fff}
+.retain li strong{display:block;color:#fff;font-weight:700;margin-bottom:4px;font-size:15.5px}
+.retain li span{display:block;color:rgba(255,255,255,.78);font-size:14px;line-height:1.55}
+.content h2{font-size:28px;margin:48px 0 14px;color:var(--navy);font-weight:800;letter-spacing:-0.4px;scroll-margin-top:100px}
+.content h3{font-size:18.5px;margin:28px 0 10px;color:var(--navy);font-weight:700}
+.content p{margin:0 0 14px;color:var(--ink);font-size:15.5px}
+.content ul,.content ol{padding-left:0;margin:14px 0 18px;list-style:none}
+.content > ul > li, .content section > ul > li{position:relative;padding:6px 0 6px 22px;margin-bottom:4px;font-size:15.5px}
+.content > ul > li::before, .content section > ul > li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:8px;border-radius:50%;background:var(--green)}
+.content > ol{counter-reset:olist}
+.content > ol > li{counter-increment:olist;position:relative;padding:6px 0 6px 36px;margin-bottom:8px;font-size:15.5px}
+.content > ol > li::before{content:counter(olist,decimal-leading-zero);position:absolute;left:0;top:8px;color:var(--indigo);font-weight:800;font-size:13px}
+.content li strong{color:var(--navy)}
+.content ul ul li{position:relative;padding:3px 0 3px 18px;font-size:14.5px;color:var(--muted);list-style:none}
+.content ul ul li::before{content:"";position:absolute;left:0;top:13px;width:6px;height:1.5px;background:var(--muted)}
+.attention,.advice{border-radius:14px;padding:20px 24px;margin:24px 0}
+.attention{background:#FFF6E5;border:1px solid #F5D89B}
+.attention h4{margin:0 0 6px;color:#7A4E00;font-size:15.5px}
+.attention p{margin:0;font-size:14.5px;color:#5C3A00}
+.advice{background:var(--indigo-50);border:1px solid #C7D6F0}
+.advice h4{margin:0 0 6px;color:var(--navy);font-size:15.5px}
+.advice p{margin:0;font-size:14.5px;color:var(--ink)}
+.band{background:linear-gradient(95deg,#4A48E8 0%,#08A06F 130%);color:#fff;border-radius:18px;padding:24px 30px;display:flex;align-items:center;justify-content:space-between;gap:24px;margin:30px 0}
+.band h4{margin:0;font-size:17px;font-weight:700;max-width:520px;line-height:1.35}
+.band .btn-white{padding:14px 24px}
+.peach-block{background:var(--peach);border-radius:var(--radius);padding:34px 38px;margin:30px 0;display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:center}
+.peach-block h3{margin:0 0 12px;color:var(--navy);font-size:22px;font-weight:800;line-height:1.25}
+.peach-block p{margin:0 0 22px;color:var(--muted);font-size:14.5px}
+.peach-illu{display:flex;justify-content:center;align-items:center}
+.author{background:var(--indigo-50);border-radius:var(--radius);padding:26px 30px;margin:40px 0 30px;display:grid;grid-template-columns:80px 1fr;gap:22px;align-items:center}
+.author-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--indigo),var(--indigo-600));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:26px;font-family:Georgia,serif}
+.author h5{margin:0 0 6px;font-size:16px;color:var(--navy);font-weight:700}
+.author p{margin:0;font-size:14px;color:var(--muted);line-height:1.6}
+.step-nav{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:24px 0;margin:30px 0}
+.step-nav .step{font-size:13.5px;color:var(--indigo);font-weight:600}
+.step-nav .step small{display:block;color:var(--muted);font-weight:400;font-size:13px;margin-top:4px}
+.step-nav .step.next{text-align:right}
+.bottom-cta{background:var(--indigo-700);color:#fff;border-radius:18px;padding:26px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;margin:30px 0 0}
+.bottom-cta h3{margin:0;font-size:18px;font-weight:700;max-width:430px;line-height:1.35}
+.bottom-cta .btn-white{padding:14px 26px}
+.site-footer{background:linear-gradient(180deg,var(--indigo-700) 0%,#283890 100%);color:rgba(255,255,255,.78);padding:60px 32px 30px;margin-top:60px;border-radius:32px 32px 0 0}
+.foot-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.foot-brand .logo-mark{background:#fff;color:var(--green)}
+.foot-brand .logo-text b{color:#fff}
+.foot-brand .logo-text small{color:rgba(255,255,255,.6)}
+.foot-social{display:flex;gap:10px;margin-top:18px}
+.foot-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:13px}
+.foot-cert{margin-top:22px;display:inline-flex;align-items:center;gap:8px;background:#F23358;color:#fff;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.foot-col h6{color:#fff;margin:0 0 14px;font-size:14.5px;font-weight:700}
+.foot-col a{display:block;color:rgba(255,255,255,.78);font-size:14px;padding:5px 0;text-decoration:none}
+.foot-legal{max-width:1320px;margin:34px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);display:flex;justify-content:space-between;font-size:12.5px;color:rgba(255,255,255,.55);gap:20px;flex-wrap:wrap}
+.foot-legal a{color:rgba(255,255,255,.7);text-decoration:none}
+</style></head><body>
+<nav class="nav"><div class="nav-inner">
+  <a class="logo" href="#"><div class="logo-mark">k</div><div class="logo-text"><b>keobiz</b><small>BY KEROGO FINANCE</small></div></a>
+  <div class="nav-menu"><a href="#">Expert comptable</a><a href="#">Création d'entreprise</a><a href="#" class="no-arrow">Tarifs</a><a href="#">Ressources</a></div>
+  <div class="nav-right"><a class="nav-phone" href="tel:0176410560">📞 01 76 41 05 60</a><a class="btn btn-indigo" href="#">Obtenir un devis</a><a class="btn btn-green" href="#">Se connecter</a></div>
+</div></nav>
+<div class="crumb"><a href="#">Accueil</a><span class="sep">/</span><a href="#">Fiches pratiques</a><span class="sep">/</span><span style="color:var(--navy);font-weight:500">Modèle de statuts simplifié</span></div>
+<div class="wrap">
+  <aside class="toc"><h4>Sommaire</h4><ul><li class="active"><a href="#s1">SASU, SAS, SARL : quel statut choisir pour votre projet ?</a></li>
+<li><a href="#s2">Les clauses obligatoires : le squelette de vos statuts</a></li>
+<li><a href="#s3">Modèle de statuts commenté pour une SASU</a></li>
+<li><a href="#s4">Adapter le modèle pour une SAS ou une SARL : les points de vigilance</a></li>
+<li><a href="#s5">Les étapes clés après la rédaction des statuts</a></li></ul></aside>
+  <main>
+    <section class="hero">
+      <span class="hero-arrow">↘</span>
+      <div class="meta-row"><span class="pill">Guide complet</span><span class="time">10 min</span></div>
+      <h1>Modèle de statuts simplifié <span class="accent">SASU SAS SARL 2026</span></h1>
+      <div class="cta-row"><a class="btn btn-indigo" href="#">Être accompagné par un expert →</a></div>
+    </section>
+    <section class="intro"><p>Rédiger les statuts de sa future société, c’est un peu comme dessiner les plans de sa maison. C'est l'étape qui transforme une idée en un projet concret, un moment où l'excitation se mêle souvent à une certaine anxiété face à la page blanche. Ce document n'est pas une simple formalité administrative ; il est l'ADN de votre entreprise, le pacte qui définit ses règles, son fonctionnement et son ambition.</p>
+<p>Que vous vous lanciez seul ou à plusieurs, le choix de la forme juridique et la rédaction des statuts sont des décisions fondatrices. SASU, SAS, SARL... ces acronymes peuvent sembler complexes, mais chacun correspond à une vision et à des besoins spécifiques. L'objectif est simple : vous donner les clés pour comprendre, choisir et rédiger des statuts solides, sans jargon inutile, pour lancer votre activité sur des bases saines et sécurisées.</p></section>
+    <section class="retain">
+      <div class="retain-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke="#08A06F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>Ce que vous devez retenir :</h3>
+      <ul><li><strong>SASU, SAS, SARL</strong><span>Avant même de penser à un modèle, il faut cadrer votre projet.</span></li>
+<li><strong>Les clauses obligatoires</strong><span>Quel que soit le statut choisi, la loi impose un socle commun d&#x27;informations qui doivent impérativement figurer dans vos statuts.</span></li>
+<li><strong>Modèle de statuts commenté pour une SASU</strong><span>Pour vous aider à visualiser concrètement à quoi ressemblent des statuts, voici un modèle simplifié pour une SASU, commenté pour chaque section clé.</span></li>
+<li><strong>Adapter le modèle pour une SAS ou une SARL</strong><span>Un modèle pour SASU est un excellent point de départ, mais il ne peut être transposé tel quel pour une SAS ou une SARL.</span></li></ul>
+    </section>
+    <div class="content">
+      
+
+<h2 id="s1">SASU, SAS, SARL : quel statut choisir pour votre projet ?</h2>
+<p>Avant même de penser à un modèle, il faut cadrer votre projet. Le choix de la structure juridique impacte directement votre responsabilité, votre régime social, la fiscalité de l'entreprise et sa flexibilité future. On sait que cette décision peut paralyser. Voici une comparaison directe pour y voir plus clair.</p>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th>SAS (Société par Actions Simplifiée) / SASU (Unipersonnelle)</th>
+<th>SARL (Société à Responsabilité Limitée) / EURL (Unipersonnelle)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nombre d'associés</strong></td>
+<td>1 (SASU) ou 2 minimum (SAS), sans maximum.</td>
+<td>1 (EURL) ou 2 minimum (SARL), jusqu'à 100.</td>
+</tr>
+<tr>
+<td><strong>Capital social</strong></td>
+<td>Minimum 1 €. Le <a href="https://keobiz.fr/le-mag/capital-social" title="Conseils pour fixer le montant du capital social">montant du capital social</a> est librement fixé par les statuts.</td>
+<td>Minimum 1 €. Librement fixé par les statuts.</td>
+</tr>
+<tr>
+<td><strong>Responsabilité</strong></td>
+<td>Limitée aux apports. Votre patrimoine personnel est protégé.</td>
+<td>Limitée aux apports. Le patrimoine personnel des associés est protégé.</td>
+</tr>
+<tr>
+<td><strong>Régime social du dirigeant</strong></td>
+<td><strong>Président</strong> : Assimilé-salarié. Affilié au régime général de la Sécurité Sociale. Pas d'assurance chômage.</td>
+<td><strong>Gérant majoritaire</strong> : Travailleur non-salarié (TNS). Affilié à la Sécurité Sociale des Indépendants.</td>
+</tr>
+<tr>
+<td><strong>Fiscalité de l'entreprise</strong></td>
+<td>Impôt sur les sociétés (IS) par défaut. Option pour l'impôt sur le revenu (IR) possible sous conditions pour 5 ans.</td>
+<td>IS par défaut. Option pour l'IR possible sous conditions. Pour l'EURL, IR par défaut (avec option pour l'IS).</td>
+</tr>
+<tr>
+<td><strong>Cession des titres</strong></td>
+<td>Actions : grande liberté, les modalités sont fixées dans les statuts (clause d'agrément, etc.).</td>
+<td>Parts sociales : procédure plus encadrée par la loi, agrément obligatoire des autres associés.</td>
+</tr>
+<tr>
+<td><strong>Flexibilité</strong></td>
+<td><strong>Très élevée</strong>. Grande liberté statutaire pour organiser la direction et le fonctionnement.</td>
+<td><strong>Encadrée</strong>. Le fonctionnement est largement défini par le Code de commerce, ce qui peut être rassurant.</td>
+</tr>
+</tbody>
+</table>
+<p>En résumé :</p>
+<ul>
+<li>La <strong>SASU</strong> est idéale pour le créateur seul qui anticipe une croissance rapide et souhaite une grande flexibilité. Elle facilite l'entrée de futurs investisseurs.</li>
+<li>La <strong>SAS</strong> est la forme privilégiée des start-ups et des projets à plusieurs associés qui nécessitent des règles de gouvernance sur mesure. Pour en savoir plus, vous pouvez <a href="https://keobiz.fr/le-mag/sas-et-sasu" title="Comprendre les différences entre SAS et SASU">consulter les détails sur la SAS et la SASU</a>.</li>
+<li>La <strong>SARL</strong> convient parfaitement aux projets familiaux ou aux TPE/PME recherchant un cadre juridique stable et sécurisant. Le statut de gérant majoritaire TNS offre des cotisations sociales plus faibles, mais une protection sociale moindre.</li>
+</ul>
+<h2 id="s2">Les clauses obligatoires : le squelette de vos statuts</h2>
+<p>Quel que soit le statut choisi, la loi impose un socle commun d'informations qui doivent impérativement figurer dans vos statuts. Oublier l'une de ces mentions entraîne un rejet quasi certain de votre dossier par le greffe. Pensez à ce socle comme aux murs porteurs de votre société.</p>
+<p>Voici la checklist des clauses incontournables :</p>
+<ul>
+<li><strong>La forme juridique</strong> : Préciser s'il s'agit d'une "Société par actions simplifiée" (SAS), "Société par actions simplifiée unipersonnelle" (SASU) ou "Société à responsabilité limitée" (SARL).</li>
+<li><strong>La dénomination sociale</strong> : Le nom officiel de votre entreprise. Il doit être unique et suivi de la forme juridique.</li>
+<li><strong>L'objet social</strong> : C'est la description de l'ensemble des activités que la société exercera. Cette clause est stratégique.</li>
+<li><strong>Le siège social</strong> : L'adresse administrative et juridique de la société.</li>
+<li><strong>La durée</strong> : La durée de vie de la société, qui ne peut excéder 99 ans.</li>
+<li><strong>Le capital social</strong> : Le montant total des apports (en numéraire ou en nature) réalisés par les associés.</li>
+<li><strong>Les apports de chaque associé</strong> : La nature et le montant de l'apport de chaque fondateur, qui déterminent la répartition des <a href="https://keobiz.fr/le-mag/parts-de-societe" title="Gestion des parts sociales et actions">actions ou parts sociales</a>.</li>
+<li><strong>Les modalités de fonctionnement</strong> : Les règles concernant les décisions collectives, la direction, etc.</li>
+</ul>
+<div class="advice">
+<h4>Soignez la rédaction de l'objet social</h4>
+<p>L'objet social doit être suffisamment large pour permettre à votre activité d'évoluer sans nécessiter une modification statutaire coûteuse, mais assez précis pour être accepté par le greffe et pour définir le champ d'action de votre assurance professionnelle. Pensez à inclure une clause générale comme : "et plus généralement, toutes opérations industrielles, commerciales, financières, mobilières ou immobilières, se rapportant directement ou indirectement à l'objet social". Pour plus d'informations, consultez notre guide sur la <a href="https://keobiz.fr/le-mag/modification-objet-social" title="Guide sur la modification de l'objet social">modification de l'objet social</a>.</p>
+</div>
+<p>[image alt="Checklist des clauses obligatoires pour les statuts d'une société sur un document officiel."]</p>
+<div class="band"><h4>Sécurisez votre projet avec un expert-comptable Keobiz</h4><a class="btn btn-white" href="#">Besoin d'aide pour vous lancer ?</a></div><h2 id="s3">Modèle de statuts commenté pour une SASU</h2>
+<p>Pour vous aider à visualiser concrètement à quoi ressemblent des statuts, voici un modèle simplifié pour une SASU, commenté pour chaque section clé. Ce modèle est une base de travail et doit être adapté à votre situation spécifique.</p>
+<hr/>
+<p><strong>LE (ou LA) SOUSSIGNÉ(E) :</strong></p>
+<p>[Prénom et Nom de l’associé unique], demeurant [adresse complète], né(e) le [Date] à [Lieu], de nationalité [Nationalité], [Situation matrimoniale].</p>
+<p><em>A arrêté ainsi qu’il suit les statuts d’une Société par actions simplifiée unipersonnelle qu’il (ou elle) a décidé de constituer.</em></p>
+<h3>Titre 1 – forme juridique – objet – dénomination – siège – durée</h3>
+<h4>Article 1 – Forme juridique</h4>
+<p>Il est formé par l’associé unique une société par actions simplifiée unipersonnelle (SASU), régie par les dispositions légales en vigueur et par les présents statuts.</p>
+<h4>Article 2 – Objet social</h4>
+<p>La Société a pour objet, en France et à l’étranger :</p>
+<ul>
+<li>[Activité principale détaillée]</li>
+<li>[Activité(s) secondaire(s) si nécessaire]</li>
+<li>La participation de la société, par tous moyens, à toutes entreprises ou sociétés créées ou à créer...</li>
+</ul>
+<blockquote>
+<p><strong>Commentaire :</strong> C'est ici que vous décrivez précisément votre activité. Soyez exhaustif pour couvrir vos projets actuels et futurs.</p>
+</blockquote>
+<h4>Article 3 – Dénomination sociale</h4>
+<p>La dénomination de la Société est : [Dénomination sociale de la société].</p>
+<p>Tous les documents émanant de la société devront indiquer la dénomination sociale, suivie de la mention "SASU" et du montant du capital social.</p>
+<h4>Article 4 – Siège social</h4>
+<p>Le siège social est fixé : [Adresse complète du siège].</p>
+<h4>Article 5 – Durée</h4>
+<p>La durée de la Société est fixée à 99 ans à compter de son immatriculation au Registre du commerce et des sociétés, sauf cas de dissolution anticipée.</p>
+<h3>Titre 2 – apports et capital social</h3>
+<h4>Article 6 – Capital social</h4>
+<p>Le capital social est fixé à la somme de [Montant en euros] €. Il est divisé en [Nombre] actions de [Valeur nominale] € chacune, de même catégorie, entièrement souscrites et libérées par l'associé unique.</p>
+<blockquote>
+<p><strong>Commentaire :</strong> Même si le capital minimum est de 1 €, un montant trop faible peut nuire à votre crédibilité. Un capital entre 1 000 € et 5 000 € est souvent un bon compromis pour les activités de service.</p>
+</blockquote>
+<h3>Titre 3 – direction de la société</h3>
+<h4>Article 14 – Présidence</h4>
+<p>La Société est dirigée et représentée à l'égard des tiers par un Président, personne physique, associé unique ou non.</p>
+<p>Le premier Président de la société est : [Prénom et Nom du Président], demeurant [Adresse du Président].</p>
+<blockquote>
+<p><strong>Commentaire :</strong> Dans une SASU, l'associé unique est souvent le Président. Cette clause permet de nommer un tiers si nécessaire. Elle précise aussi la durée du mandat et les modalités de rémunération.</p>
+</blockquote>
+<hr/>
+<p>On le sait, se plonger dans ces articles peut sembler fastidieux. C'est précisément pour vous éviter cette charge mentale que nous avons décidé d'offrir la <strong>création d'entreprise à nos clients</strong>. Nous nous occupons de la rédaction de statuts adaptés à votre projet et de toutes les formalités, sans frais. Vous pouvez ainsi vous concentrer sur ce qui compte vraiment : le lancement de votre activité.</p>
+<div class="peach-block"><div><h3>Marre de l'administratif avant même d'avoir commencé ?</h3><p>Laissez nos experts Keobiz structurer votre projet pendant que vous peaufinez votre activité. Nous gérons la complexité pour vous.</p><a class="btn btn-green" href="#">Créer mon entreprise gratuitement →</a></div><div class="peach-illu"><svg fill="none" viewbox="0 0 200 220">
+<rect fill="#fff" height="170" rx="14" stroke="#1B2D5E" stroke-width="2" width="90" x="40" y="20"></rect>
+<rect fill="#4848E8" height="8" rx="3" width="70" x="50" y="40"></rect>
+<rect fill="#E5EAF0" height="6" rx="3" width="50" x="50" y="56"></rect>
+<rect fill="#ECF2FA" height="40" rx="6" width="70" x="50" y="70"></rect>
+<rect fill="#08A06F" height="22" rx="6" width="70" x="50" y="150"></rect>
+<rect fill="#fff" height="140" rx="12" stroke="#1B2D5E" stroke-width="2" width="80" x="100" y="60"></rect>
+<rect fill="#4848E8" height="6" rx="3" width="60" x="110" y="78"></rect>
+<rect fill="#ECF2FA" height="30" rx="5" width="60" x="110" y="106"></rect>
+<rect fill="#4848E8" height="18" rx="5" width="60" x="110" y="144"></rect>
+</svg></div></div><h2 id="s4">Adapter le modèle pour une SAS ou une SARL : les points de vigilance</h2>
+<p>Un modèle pour SASU est un excellent point de départ, mais il ne peut être transposé tel quel pour une SAS ou une SARL. Plusieurs associés impliquent de nouvelles règles du jeu à définir.</p>
+<h3>Pour une sas (multi-associés)</h3>
+<p>La SAS est le royaume de la liberté contractuelle. Les statuts doivent donc être particulièrement soignés pour organiser les relations entre associés. Voici les clauses à ajouter ou à renforcer :</p>
+<ul>
+<li><strong>La direction</strong> : Qui dirige ? Un Président ? Un Directeur Général ? Un conseil d'administration ? Les statuts doivent le prévoir.</li>
+<li><strong>Les décisions collectives</strong> : Comment les décisions sont-elles prises (majorité simple, qualifiée, unanimité) ? Quelles décisions nécessitent une assemblée générale ?</li>
+<li><strong>La clause d’agrément</strong> : Elle soumet toute nouvelle entrée d'associé (suite à une cession d'actions) à l'approbation des autres. C'est un moyen de contrôler qui entre au capital.</li>
+<li><strong>La clause de préemption</strong> : Elle oblige un associé souhaitant vendre ses actions à les proposer en priorité aux autres associés.</li>
+</ul>
+<h3>Pour une sarl</h3>
+<p>La <a href="https://keobiz.fr/le-mag/constitution-sarl" title="Guide pour la constitution d'une SARL">constitution d'une SARL</a> est plus encadrée par la loi. Les statuts sont moins souples mais plus simples à rédiger. Les points d'attention sont :</p>
+<ul>
+<li><strong>La gérance</strong> : On ne parle pas de Président mais de <strong>gérant</strong>. Les statuts doivent préciser sa nomination, ses pouvoirs et sa rémunération. Les règles diffèrent si le gérant est majoritaire, minoritaire ou égalitaire. Découvrez comment procéder à la <a href="https://keobiz.fr/le-mag/nomination-et-remuneration-gerant-sarl" title="Processus de nomination et rémunération du gérant">nomination et rémunération du gérant de SARL</a>.</li>
+<li><strong>L'agrément pour la cession de parts</strong> : La loi impose un agrément strict. La cession de parts à un tiers requiert l'accord des associés représentant au moins la moitié des parts sociales.</li>
+</ul>
+<div class="note">
+<h4>Faites valider vos statuts par un professionnel</h4>
+<p>Même en partant d'un modèle, une erreur est vite arrivée. Une clause mal rédigée peut avoir des conséquences lourdes sur le fonctionnement de votre société ou en cas de litige. Faire relire vos statuts par un expert-comptable ou un avocat est une sécurité indispensable pour démarrer sereinement.</p>
+</div>
+<h2 id="s5">Les étapes clés après la rédaction des statuts</h2>
+<p>Une fois vos statuts rédigés et finalisés, le marathon administratif n'est pas terminé. Mais rassurez-vous, les dernières étapes sont bien balisées.</p>
+<ol>
+<li><strong>Dépôt du capital social</strong> : Vous devez déposer les fonds correspondants aux apports en numéraire sur un compte bloqué au nom de la société "en formation". La banque vous remettra une attestation de dépôt de fonds.</li>
+<li><strong>Signature des statuts</strong> : Tous les associés (ou l'associé unique) doivent signer les exemplaires finaux des statuts. C'est l'acte de naissance officiel de votre société.</li>
+<li><strong>Publication d'une annonce légale</strong> : Un avis de constitution doit être publié dans un journal d'annonces légales (JAL) du département du siège social.</li>
+<li><strong>Dépôt du dossier d'immatriculation</strong> : Le dossier complet doit être déposé au greffe du tribunal de commerce via le guichet unique des formalités d'entreprises. Il contient les statuts, l'attestation de dépôt de fonds, l'attestation de parution de l'annonce légale, et d'autres justificatifs.</li>
+</ol>
+<p>Ces démarches peuvent paraître complexes. Chez Keobiz, nous prenons en charge l'intégralité de ce processus pour nos clients, de la publication de l'annonce au dépôt final du dossier, avec une assurance anti-rejet. L'objectif est de vous garantir une <a href="https://keobiz.fr/le-mag/immatriculation-sasu" title="Procédure d'immatriculation d'une SASU">immatriculation de votre SASU</a> ou autre société, rapide et sans accroc.</p>
+<p>Rédiger ses statuts est une étape fondatrice qui mérite du temps et de la rigueur. Un bon modèle est un guide précieux, mais la personnalisation est la clé pour que ce document reflète véritablement votre projet et sécurise son avenir. L'important est de lancer votre projet sur des bases solides pour pouvoir vous concentrer sur votre cœur de métier. C'est notre mission chez Keobiz : transformer la complexité administrative en une simple formalité, pour que vous puissiez vous consacrer pleinement à votre croissance.</p>
+
+
+
+
+
+
+
+
+
+      <div class="author">
+        <div class="author-avatar">MD</div>
+        <div><h5>Marcel Delaregardière</h5><p>Expert-comptable chez Keobiz, Marcel accompagne chaque année plus de 200 dirigeants dans la structuration juridique et fiscale de leur projet.</p></div>
+      </div>
+      <div class="step-nav"><div class="step prev">← Étape précédente<small>Checklist création d&#x27;entreprise étape par étape — du concept</small></div><div class="step next">Étape suivante →<small>Simulateur statut juridique 2026 — Guide rapide et gratuit</small></div></div>
+      <div class="bottom-cta"><h3>La création d'une entreprise ça ne s'improvise pas, on s'en parle ?</h3><a class="btn btn-white" href="#">Besoin d'aide pour vous lancer ?</a></div>
+    </div>
+  </main>
+</div>
+<footer class="site-footer"><div class="foot-inner">
+  <div class="foot-brand">
+    <a class="logo" href="#"><div class="logo-mark">k</div><div class="logo-text"><b>keobiz</b><small>BY KEROGO FINANCE</small></div></a>
+    <div class="foot-social"><a href="#">f</a><a href="#">▶</a><a href="#">◉</a><a href="#">in</a></div>
+    <div class="foot-cert">ENTREPRISE LABEL · QUALIANOR</div>
+  </div>
+  <div class="foot-col"><h6>Nos services</h6><a href="#">Expert comptable en ligne</a><a href="#">Création d'entreprise</a><a href="#">Bilan & liasse fiscale</a><a href="#">Conseil juridique</a></div>
+  <div class="foot-col"><h6>Nos ressources</h6><a href="#">Le mag</a><a href="#">Nos outils</a><a href="#">Guides</a><a href="#">Modèles</a></div>
+  <div class="foot-col"><h6>À propos de Keobiz</h6><a href="#">Notre cabinet à Paris</a><a href="#">Notre cabinet à Rouen</a><a href="#">Témoignages</a><a href="#">Qui sommes-nous</a><a href="#">Nous contacter</a></div>
+</div><div class="foot-legal"><span>© 2026 Keobiz, tous droits réservés.</span><span><a href="#">CGU</a> · <a href="#">Mentions légales</a> · <a href="#">Cookies</a></span></div></footer>
+</body></html>

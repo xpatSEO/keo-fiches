@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calendrier pratique 2026 obligations fiscales et sociales</title>
+<meta name="description" content="Récapitulatif 2026 des échéances fiscales et sociales pour particuliers, micro-entrepreneurs et TPE. Dates clés et conseils pratiques.">
+<style>
+:root{
+  --indigo:#4848E8; --indigo-600:#3840C8; --indigo-700:#3040A0; --indigo-50:#ECF2FA;
+  --green:#08A06F; --green-600:#089068;
+  --mint-bg:#D6F0E5; --mint-text:#08805A;
+  --peach:#FCEEDC;
+  --navy:#1B2D5E; --ink:#1F2A44; --muted:#5B6B82;
+  --line:#E5EAF0; --soft:#F6F8FB; --white:#FFFFFF;
+  --radius:24px; --radius-sm:14px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#fff;color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--indigo);text-decoration:underline;text-underline-offset:2px}
+a:hover{text-decoration-thickness:2px}
+img{max-width:100%}
+.nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.nav-inner{max-width:1320px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:36px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:38px;height:38px;background:var(--green);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;font-family:Georgia,serif;font-style:italic}
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-text b{color:var(--navy);font-weight:800;font-size:22px;letter-spacing:-0.3px}
+.logo-text small{color:#9AA8BB;font-size:9.5px;letter-spacing:0.18em;margin-top:3px}
+.nav-menu{display:flex;gap:30px;font-size:14.5px;color:var(--navy);font-weight:600}
+.nav-menu a{color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:6px}
+.nav-menu a::after{content:"⌄";font-size:12px;color:#9AA8BB;margin-top:-4px}
+.nav-menu a.no-arrow::after{content:""}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:14px}
+.nav-phone{font-size:14.5px;color:var(--navy);font-weight:600;text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:13px 22px;font-weight:600;font-size:14.5px;cursor:pointer;border:0;transition:.2s;text-decoration:none}
+.btn-indigo{background:var(--indigo);color:#fff}
+.btn-green{background:var(--green);color:#fff}
+.btn-white{background:#fff;color:var(--navy)}
+.crumb{max-width:1320px;margin:0 auto;padding:22px 32px 4px;font-size:13.5px;color:var(--muted)}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb .sep{margin:0 10px;color:#B5C0D0}
+.wrap{max-width:1320px;margin:0 auto;padding:20px 32px 60px;display:grid;grid-template-columns:280px 1fr;gap:48px}
+.toc{position:sticky;top:100px;align-self:start}
+.toc h4{margin:0 0 16px;font-size:18px;color:var(--navy);font-weight:800}
+.toc ul{list-style:none;padding:0;margin:0}
+.toc li a{display:block;padding:12px 14px;border-radius:10px;color:var(--ink);text-decoration:none;line-height:1.4;font-size:14px}
+.toc li a:hover{background:var(--soft);color:var(--indigo)}
+.toc li.active a{background:var(--soft);color:var(--navy);font-weight:600}
+.hero{background:var(--indigo-50);border-radius:var(--radius);padding:46px 60px 50px;margin-bottom:36px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;border-radius:50%;border:1px solid #D7DFEC;opacity:.6}
+.hero .meta-row{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.hero .pill{background:var(--mint-bg);color:var(--mint-text);padding:6px 14px;border-radius:8px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.hero .time{color:var(--muted);font-size:13px}
+.hero h1{margin:0 0 28px;font-size:42px;line-height:1.15;font-weight:800;color:var(--navy);letter-spacing:-0.8px;max-width:780px}
+.hero h1 .accent{color:var(--indigo)}
+.hero .cta-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.hero-arrow{position:absolute;right:60px;top:36px;color:var(--green);font-size:30px;line-height:1;transform:rotate(35deg)}
+.intro p{font-size:16.5px;color:var(--ink);margin:0 0 14px}
+.retain{background:linear-gradient(135deg,#4A48E8 0%,#3850D0 60%,#3858C8 100%);color:#fff;border-radius:var(--radius);padding:42px 50px 44px;margin:36px 0;position:relative}
+.retain-icon{position:absolute;left:36px;top:-26px;width:54px;height:54px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(72,72,232,.25)}
+.retain h3{margin:14px 0 22px;font-size:18px;color:#A7D8E8;font-weight:700}
+.retain ul{list-style:none;padding:0;margin:0}
+.retain li{padding:14px 0 14px 36px;position:relative;border-top:1px solid rgba(255,255,255,.18)}
+.retain li:first-child{border-top:0}
+.retain li::before{content:"";position:absolute;left:0;top:18px;width:20px;height:20px;border-radius:50%;border:2px solid rgba(255,255,255,.5);background:transparent}
+.retain li::after{content:"";position:absolute;left:7px;top:25px;width:6px;height:6px;border-radius:50%;background:#fff}
+.retain li strong{display:block;color:#fff;font-weight:700;margin-bottom:4px;font-size:15.5px}
+.retain li span{display:block;color:rgba(255,255,255,.78);font-size:14px;line-height:1.55}
+.content h2{font-size:28px;margin:48px 0 14px;color:var(--navy);font-weight:800;letter-spacing:-0.4px;scroll-margin-top:100px}
+.content h3{font-size:18.5px;margin:28px 0 10px;color:var(--navy);font-weight:700}
+.content p{margin:0 0 14px;color:var(--ink);font-size:15.5px}
+.content ul,.content ol{padding-left:0;margin:14px 0 18px;list-style:none}
+.content > ul > li, .content section > ul > li{position:relative;padding:6px 0 6px 22px;margin-bottom:4px;font-size:15.5px}
+.content > ul > li::before, .content section > ul > li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:8px;border-radius:50%;background:var(--green)}
+.content > ol{counter-reset:olist}
+.content > ol > li{counter-increment:olist;position:relative;padding:6px 0 6px 36px;margin-bottom:8px;font-size:15.5px}
+.content > ol > li::before{content:counter(olist,decimal-leading-zero);position:absolute;left:0;top:8px;color:var(--indigo);font-weight:800;font-size:13px}
+.content li strong{color:var(--navy)}
+.content ul ul li{position:relative;padding:3px 0 3px 18px;font-size:14.5px;color:var(--muted);list-style:none}
+.content ul ul li::before{content:"";position:absolute;left:0;top:13px;width:6px;height:1.5px;background:var(--muted)}
+.attention,.advice{border-radius:14px;padding:20px 24px;margin:24px 0}
+.attention{background:#FFF6E5;border:1px solid #F5D89B}
+.attention h4{margin:0 0 6px;color:#7A4E00;font-size:15.5px}
+.attention p{margin:0;font-size:14.5px;color:#5C3A00}
+.advice{background:var(--indigo-50);border:1px solid #C7D6F0}
+.advice h4{margin:0 0 6px;color:var(--navy);font-size:15.5px}
+.advice p{margin:0;font-size:14.5px;color:var(--ink)}
+.band{background:linear-gradient(95deg,#4A48E8 0%,#08A06F 130%);color:#fff;border-radius:18px;padding:24px 30px;display:flex;align-items:center;justify-content:space-between;gap:24px;margin:30px 0}
+.band h4{margin:0;font-size:17px;font-weight:700;max-width:520px;line-height:1.35}
+.band .btn-white{padding:14px 24px}
+.peach-block{background:var(--peach);border-radius:var(--radius);padding:34px 38px;margin:30px 0;display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:center}
+.peach-block h3{margin:0 0 12px;color:var(--navy);font-size:22px;font-weight:800;line-height:1.25}
+.peach-block p{margin:0 0 22px;color:var(--muted);font-size:14.5px}
+.peach-illu{display:flex;justify-content:center;align-items:center}
+.author{background:var(--indigo-50);border-radius:var(--radius);padding:26px 30px;margin:40px 0 30px;display:grid;grid-template-columns:80px 1fr;gap:22px;align-items:center}
+.author-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--indigo),var(--indigo-600));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:26px;font-family:Georgia,serif}
+.author h5{margin:0 0 6px;font-size:16px;color:var(--navy);font-weight:700}
+.author p{margin:0;font-size:14px;color:var(--muted);line-height:1.6}
+.step-nav{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:24px 0;margin:30px 0}
+.step-nav .step{font-size:13.5px;color:var(--indigo);font-weight:600}
+.step-nav .step small{display:block;color:var(--muted);font-weight:400;font-size:13px;margin-top:4px}
+.step-nav .step.next{text-align:right}
+.bottom-cta{background:var(--indigo-700);color:#fff;border-radius:18px;padding:26px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;margin:30px 0 0}
+.bottom-cta h3{margin:0;font-size:18px;font-weight:700;max-width:430px;line-height:1.35}
+.bottom-cta .btn-white{padding:14px 26px}
+.site-footer{background:linear-gradient(180deg,var(--indigo-700) 0%,#283890 100%);color:rgba(255,255,255,.78);padding:60px 32px 30px;margin-top:60px;border-radius:32px 32px 0 0}
+.foot-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.foot-brand .logo-mark{background:#fff;color:var(--green)}
+.foot-brand .logo-text b{color:#fff}
+.foot-brand .logo-text small{color:rgba(255,255,255,.6)}
+.foot-social{display:flex;gap:10px;margin-top:18px}
+.foot-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:13px}
+.foot-cert{margin-top:22px;display:inline-flex;align-items:center;gap:8px;background:#F23358;color:#fff;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.foot-col h6{color:#fff;margin:0 0 14px;font-size:14.5px;font-weight:700}
+.foot-col a{display:block;color:rgba(255,255,255,.78);font-size:14px;padding:5px 0;text-decoration:none}
+.foot-legal{max-width:1320px;margin:34px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);display:flex;justify-content:space-between;font-size:12.5px;color:rgba(255,255,255,.55);gap:20px;flex-wrap:wrap}
+.foot-legal a{color:rgba(255,255,255,.7);text-decoration:none}
+</style></head><body>
+<nav class="nav"><div class="nav-inner">
+  <a class="logo" href="#"><div class="logo-mark">k</div><div class="logo-text"><b>keobiz</b><small>BY KEROGO FINANCE</small></div></a>
+  <div class="nav-menu"><a href="#">Expert comptable</a><a href="#">Création d'entreprise</a><a href="#" class="no-arrow">Tarifs</a><a href="#">Ressources</a></div>
+  <div class="nav-right"><a class="nav-phone" href="tel:0176410560">📞 01 76 41 05 60</a><a class="btn btn-indigo" href="#">Obtenir un devis</a><a class="btn btn-green" href="#">Se connecter</a></div>
+</div></nav>
+<div class="crumb"><a href="#">Accueil</a><span class="sep">/</span><a href="#">Fiches pratiques</a><span class="sep">/</span><span style="color:var(--navy);font-weight:500">Calendrier pratique 2026 obligations fiscales</span></div>
+<div class="wrap">
+  <aside class="toc"><h4>Sommaire</h4><ul><li class="active"><a href="#s1">Le calendrier fiscal et social 2026, mois par mois</a></li>
+<li><a href="#s2">Comprendre les principales obligations fiscales</a></li>
+<li><a href="#s3">Les échéances sociales à ne pas oublier</a></li>
+<li><a href="#s4">Que se passe-t-il en cas de retard ? Sanctions et majorations</a></li>
+<li><a href="#s5">Comment piloter ses échéances sans stress ?</a></li></ul></aside>
+  <main>
+    <section class="hero">
+      <span class="hero-arrow">↘</span>
+      <div class="meta-row"><span class="pill">Guide complet</span><span class="time">10 min</span></div>
+      <h1>Calendrier pratique 2026 obligations fiscales <span class="accent">et sociales</span></h1>
+      <div class="cta-row"><a class="btn btn-indigo" href="#">Être accompagné par un expert →</a></div>
+    </section>
+    <section class="intro"><p>Gérer une entreprise, c'est un marathon. Et chaque année, la course aux échéances fiscales et sociales revient. La simple évocation de ces dates vous donne des sueurs froides ? Entre la TVA, l'impôt sur les sociétés, les cotisations URSSAF et la DSN, il est facile de se sentir submergé. On connaît ce sentiment : la peur d'oublier une déclaration, de se tromper dans un paiement et de subir des pénalités. Pourtant, avec une bonne organisation, il est tout à fait possible de traverser l'année administrative sereinement. Alors, comment anticiper et structurer votre agenda pour 2026 sans y laisser toute votre énergie ?</p>
+<p>Ce calendrier unique regroupe vos principales obligations fiscales et sociales. Il est conçu pour les entreprises soumises à l'IS qui clôturent leur exercice comptable le 31 décembre.</p></section>
+    <section class="retain">
+      <div class="retain-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke="#08A06F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>Ce que vous devez retenir :</h3>
+      <ul><li><strong>Le calendrier fiscal et social 2026, mois par mois</strong><span>Pour rester lisible, ce planning se concentre sur les impôts et cotisations les plus courants : TVA, Impôt sur les Sociétés (IS), Cotisation Foncière des Entreprises (CFE) et le...</span></li>
+<li><strong>Comprendre les principales obligations fiscales</strong><span>Derrière ces acronymes se cachent des mécanismes précis.</span></li>
+<li><strong>Les échéances sociales à ne pas oublier</strong><span>Le volet social est tout aussi important et récurrent que le volet fiscal.</span></li>
+<li><strong>Que se passe-t-il en cas de retard</strong><span>On le sait, un oubli peut arriver.</span></li></ul>
+    </section>
+    <div class="content">
+      
+
+<h2 id="s1">Le calendrier fiscal et social 2026, mois par mois</h2>
+<p>Pour rester lisible, ce planning se concentre sur les impôts et cotisations les plus courants : TVA, Impôt sur les Sociétés (IS), Cotisation Foncière des Entreprises (CFE) et les obligations sociales comme la DSN.</p>
+<h3>Janvier 2026</h3>
+<p>Le début d'année démarre en douceur, mais il faut déjà penser à la TVA du mois précédent.</p>
+<ul>
+<li><strong>Entre le 15 et le 24 janvier</strong> : Déclaration et paiement de la TVA (formulaire CA3) de décembre 2025 pour les entreprises au régime réel normal.</li>
+<li><strong>15 janvier</strong> : Date limite de paiement de la Taxe annuelle sur les véhicules lourds de transport de marchandises pour les entreprises clôturant au 31 décembre.</li>
+</ul>
+<h3>Février 2026</h3>
+<p>Un mois classique pour les déclarations mensuelles.</p>
+<ul>
+<li><strong>Entre le 15 et le 24 février</strong> : Déclaration et paiement de la TVA de janvier 2026.</li>
+</ul>
+<h3>Mars 2026</h3>
+<p>Le premier grand rendez-vous de l'année pour l'impôt sur les sociétés.</p>
+<ul>
+<li><strong>15 mars</strong> (ou jour ouvré suivant) : Paiement du premier acompte de l'<a href="https://keobiz.fr/le-mag/impot-sur-les-societes" title="Comprendre le mécanisme de l'impôt sur les sociétés">impôt sur les sociétés (IS)</a> pour l'exercice 2026.</li>
+<li><strong>Entre le 15 et le 24 mars</strong> : Déclaration et paiement de la TVA de février 2026.</li>
+</ul>
+<h3>Avril 2026</h3>
+<p>Le rythme des déclarations mensuelles se poursuit.</p>
+<ul>
+<li><strong>Entre le 15 et le 24 avril</strong> : Déclaration et paiement de la TVA de mars 2026.</li>
+</ul>
+<h3>Mai 2026</h3>
+<p>Le mois de mai est souvent le plus chargé de l'année pour les déclarations annuelles. Une bonne anticipation est indispensable.</p>
+<ul>
+<li><strong>5 mai</strong> (2ème jour ouvré suivant le 1er mai) : Date limite pour le dépôt de la déclaration annuelle de résultats (liasse fiscale) pour les entreprises à l'IS ou à l'IR.</li>
+<li><strong>5 mai</strong> : Date limite pour la déclaration annuelle de TVA (formulaire CA12) pour les entreprises au régime réel simplifié.</li>
+<li><strong>5 mai</strong> : Dépôt de la déclaration de CFE en cas de modification de la situation de votre entreprise.</li>
+<li><strong>15 mai</strong> : Paiement du solde de l'IS de l'exercice 2025.</li>
+<li><strong>Entre le 15 et le 24 mai</strong> : Déclaration et paiement de la TVA d'avril 2026.</li>
+<li><strong>20 mai</strong> (délai supplémentaire de 15 jours) : Date limite pour le dépôt de la déclaration de résultats pour les entreprises qui utilisent la téléprocédure.</li>
+</ul>
+<p></p>
+<h3>Juin 2026</h3>
+<p>L'été approche, mais deux échéances majeures sont à prévoir.</p>
+<ul>
+<li><strong>15 juin</strong> : Paiement du deuxième acompte de l'IS pour 2026.</li>
+<li><strong>15 juin</strong> : Paiement de l'acompte de la CFE (si le montant de l'année précédente était supérieur à 3 000 €).</li>
+<li><strong>Entre le 15 et le 24 juin</strong> : Déclaration et paiement de la TVA de mai 2026.</li>
+</ul>
+<h3>Juillet 2026</h3>
+<p>Le premier acompte de TVA pour les entreprises au régime simplifié.</p>
+<ul>
+<li><strong>Courant juillet</strong> : Paiement du premier acompte semestriel de TVA pour les entreprises au régime réel simplifié (55 % de la taxe due l'année précédente).</li>
+<li><strong>Entre le 15 et le 24 juillet</strong> : Déclaration et paiement de la TVA de juin 2026.</li>
+</ul>
+<h3>Août 2026</h3>
+<p>Un mois plus calme, idéal pour préparer la rentrée.</p>
+<ul>
+<li><strong>Entre le 15 et le 24 août</strong> : Déclaration et paiement de la TVA de juillet 2026.</li>
+</ul>
+<h3>Septembre 2026</h3>
+<p>La rentrée est marquée par le troisième acompte d'IS.</p>
+<ul>
+<li><strong>15 septembre</strong> : Paiement du troisième acompte de l'IS pour 2026.</li>
+<li><strong>Entre le 15 et le 24 septembre</strong> : Déclaration et paiement de la TVA d'août 2026.</li>
+</ul>
+<h3>Octobre 2026</h3>
+<p>Pas de répit sur les déclarations mensuelles.</p>
+<ul>
+<li><strong>Entre le 15 et le 24 octobre</strong> : Déclaration et paiement de la TVA de septembre 2026.</li>
+</ul>
+<h3>Novembre 2026</h3>
+<p>L'avant-dernier mois de l'année civile.</p>
+<ul>
+<li><strong>Entre le 15 et le 24 novembre</strong> : Déclaration et paiement de la TVA d'octobre 2026.</li>
+</ul>
+<h3>Décembre 2026</h3>
+<p>Le sprint final avant la fin de l'exercice.</p>
+<ul>
+<li><strong>Courant décembre</strong> : Paiement du second acompte semestriel de TVA pour les entreprises au régime réel simplifié (40 % de la taxe due).</li>
+<li><strong>15 décembre</strong> : Paiement du dernier acompte de l'IS pour 2026.</li>
+<li><strong>15 décembre</strong> : Paiement du solde de la CFE.</li>
+<li><strong>Entre le 15 et le 24 décembre</strong> : Déclaration et paiement de la TVA de novembre 2026.</li>
+<li><strong>31 décembre</strong> : Date limite de dépôt de la déclaration de CFE pour les entreprises créées en cours d'année.</li>
+</ul>
+<h2 id="s2">Comprendre les principales obligations fiscales</h2>
+<p>Derrière ces acronymes se cachent des mécanismes précis. Les comprendre est la première étape pour bien les anticiper.</p>
+<h3>L'impôt sur les sociétés (IS)</h3>
+<p>L'<a href="https://keobiz.fr/le-mag/impot-sur-les-societes" title="Découvrir le fonctionnement de l'IS">Impôt sur les Sociétés (IS)</a> concerne principalement les sociétés de capitaux comme les SARL, les SAS ou les SA. Il est calculé sur les bénéfices réalisés au cours d'un exercice comptable. Son paiement est structuré en quatre acomptes prévisionnels tout au long de l'année, basés sur les résultats de l'année précédente. Le solde final est ensuite versé après la clôture des comptes et le dépôt de la liasse fiscale.</p>
+<p>Pour une entreprise clôturant ses comptes le 31 décembre, les dates des acomptes sont fixes : 15 mars, 15 juin, 15 septembre et 15 décembre. Le paiement du solde, lui, intervient au plus tard le 15 mai de l'année suivante. Cette mécanique demande une bonne gestion de trésorerie pour ne pas être pris au dépourvu.</p>
+<h3>La taxe sur la valeur ajoutée (tva)</h3>
+<p>La TVA est un impôt sur la consommation que l'entreprise collecte pour le compte de l'État. La fréquence des déclarations dépend de votre régime d'imposition :</p>
+<ul>
+<li><strong>Le régime réel normal</strong> : Si votre chiffre d'affaires est élevé, vous devez déclarer et payer la TVA chaque mois via le formulaire CA3. C'est le régime le plus courant pour les PME.</li>
+<li><strong>Le régime réel simplifié</strong> : Pour les entreprises avec un chiffre d'affaires moins important, la déclaration est annuelle (formulaire CA12), déposée début mai. Cependant, deux acomptes semestriels doivent être versés en juillet et décembre pour lisser la charge fiscale.</li>
+</ul>
+<div class="note">
+<h4>Bon à savoir : option pour le régime supérieur</h4>
+<p>Une entreprise relevant du régime simplifié peut toujours opter pour le régime réel normal si cela facilite sa gestion de trésorerie, notamment si elle bénéficie régulièrement de crédits de TVA.</p>
+</div>
+<h3>La cotisation foncière des entreprises (cfe)</h3>
+<p>La CFE est un impôt local dû par presque toutes les entreprises. Elle est calculée sur la valeur locative des biens immobiliers utilisés pour l'activité professionnelle. Le paiement principal a lieu le 15 décembre. Si le montant de votre CFE de l'année précédente dépassait 3 000 €, un acompte de 50 % vous sera demandé le 15 juin. Les nouvelles entreprises doivent effectuer une déclaration initiale avant le 31 décembre de leur première année d'activité.</p>
+<div class="band"><h4>Sécurisez votre projet avec un expert-comptable Keobiz</h4><a class="btn btn-white" href="#">Besoin d'aide pour vous lancer ?</a></div><h2 id="s3">Les échéances sociales à ne pas oublier</h2>
+<p>Le volet social est tout aussi important et récurrent que le volet fiscal. L'oublier peut avoir des conséquences rapides et sérieuses.</p>
+<h3>La déclaration sociale nominative (dsn)</h3>
+<p>La DSN est devenue le pilier des déclarations sociales. Elle remplace la plupart des anciennes déclarations et transmet mensuellement les informations relatives aux salariés aux organismes de protection sociale (URSSAF, assurance chômage, retraite complémentaire, etc.). Elle est indispensable pour le calcul et le paiement des <a href="https://keobiz.fr/le-mag/csg" title="Tout savoir sur la CSG et les cotisations">cotisations sociales</a>.</p>
+<p>La date limite de dépôt de la DSN est :</p>
+<ul>
+<li>Le <strong>5 du mois suivant</strong> pour les entreprises de 50 salariés et plus.</li>
+<li>Le <strong>15 du mois suivant</strong> pour les entreprises de moins de 50 salariés.</li>
+</ul>
+<p>Cette déclaration sert également de base au prélèvement à la source de l'impôt sur le revenu de vos salariés. La rigueur est donc de mise.</p>
+<h3>Le paiement des cotisations sociales (URSSAF)</h3>
+<p>Le paiement des cotisations sociales découle directement de la DSN. Pour les salariés, le paiement suit les mêmes échéances que la déclaration (le 5 ou le 15 du mois).</p>
+<p>Pour les Travailleurs Non Salariés (TNS), comme les gérants majoritaires de SARL, le système est différent. Les cotisations sont provisionnelles, calculées sur la base des revenus de l'année N-2, puis régularisées. Le paiement est généralement mensualisé ou trimestriel.</p>
+<p>Les micro-entrepreneurs, quant à eux, déclarent leur chiffre d'affaires et paient leurs cotisations mensuellement ou trimestriellement, selon l'option choisie.</p>
+<div class="peach-block"><div><h3>Marre de l'administratif avant même d'avoir commencé ?</h3><p>Laissez nos experts Keobiz structurer votre projet pendant que vous peaufinez votre activité. Nous gérons la complexité pour vous.</p><a class="btn btn-green" href="#">Créer mon entreprise gratuitement →</a></div><div class="peach-illu"><svg fill="none" viewbox="0 0 200 220">
+<rect fill="#fff" height="170" rx="14" stroke="#1B2D5E" stroke-width="2" width="90" x="40" y="20"></rect>
+<rect fill="#4848E8" height="8" rx="3" width="70" x="50" y="40"></rect>
+<rect fill="#E5EAF0" height="6" rx="3" width="50" x="50" y="56"></rect>
+<rect fill="#ECF2FA" height="40" rx="6" width="70" x="50" y="70"></rect>
+<rect fill="#08A06F" height="22" rx="6" width="70" x="50" y="150"></rect>
+<rect fill="#fff" height="140" rx="12" stroke="#1B2D5E" stroke-width="2" width="80" x="100" y="60"></rect>
+<rect fill="#4848E8" height="6" rx="3" width="60" x="110" y="78"></rect>
+<rect fill="#ECF2FA" height="30" rx="5" width="60" x="110" y="106"></rect>
+<rect fill="#4848E8" height="18" rx="5" width="60" x="110" y="144"></rect>
+</svg></div></div><h2 id="s4">Que se passe-t-il en cas de retard ? Sanctions et majorations</h2>
+<p>On le sait, un oubli peut arriver. Mais l'administration fiscale et les organismes sociaux ne font que rarement preuve de clémence. Mieux vaut connaître les risques pour les éviter.</p>
+<p>Un retard de déclaration ou de paiement entraîne quasi-automatiquement des pénalités. On distingue principalement :</p>
+<ul>
+<li><strong>Les intérêts de retard</strong> : Calculés sur le montant de l'impôt dû, ils s'élèvent à 0,20 % par mois de retard.</li>
+<li><strong>Les majorations</strong> : Une pénalité fixe s'ajoute aux intérêts. Elle est de 10 % en cas de retard de paiement ou de déclaration spontanée. Elle peut grimper à 40 % en cas de mise en demeure, voire 80 % en cas de manœuvres frauduleuses. En cas de <a href="https://keobiz.fr/guides-modeles/controle-fiscal" title="Se préparer à un contrôle fiscal">contrôle fiscal</a> révélant des manquements, les conséquences peuvent être bien plus lourdes.</li>
+</ul>
+<p>Ces sanctions peuvent rapidement peser sur la trésorerie d'une TPE ou d'une PME. La prévention est donc la meilleure stratégie.</p>
+<div class="attention">
+<h4>Ne jamais faire l'autruche</h4>
+<p>Si vous anticipez des difficultés de paiement, la pire des réactions est de ne rien faire. Contactez l'administration fiscale ou l'URSSAF en amont de l'échéance. Il est souvent possible de négocier un plan de paiement ou un délai, ce qui vous évitera au moins les majorations les plus sévères.</p>
+</div>
+<h2 id="s5">Comment piloter ses échéances sans stress ?</h2>
+<p>Jongler entre la DSN, la TVA mensuelle, les acomptes d'IS et le solde de CFE peut vite devenir un casse-tête. On connaît cette charge mentale qui pèse sur les épaules des dirigeants. C'est précisément pour vous en libérer que nous avons conçu nos services.</p>
+<p>La clé est d'allier la technologie à l'humain. Un portail en temps réel qui centralise vos documents et vous envoie des notifications avant chaque date butoir est un premier pas essentiel. Mais rien ne remplace le conseil d'un expert. Un chargé de mission dédié, qui connaît votre activité et ses spécificités, peut anticiper les échéances, optimiser vos déclarations et répondre à vos questions. C'est cette combinaison qui vous permet de vous concentrer sur votre cœur de métier et de dormir sur vos deux oreilles.</p>
+<div class="advice">
+<h4>Automatisez ce qui peut l'être</h4>
+<p>Pour les impôts et cotisations récurrents, mettez en place des prélèvements automatiques. Cela vous évitera les oublis liés à un paiement manuel. Un expert-comptable peut également gérer l'ensemble de vos télédéclarations et télépaiements, sécurisant ainsi l'intégralité du processus.</p>
+</div>
+<p>L'anticipation est le maître mot pour une gestion administrative sereine. En structurant votre année avec un calendrier clair et en vous appuyant sur les bons outils et partenaires, vous transformez une source de stress en une simple formalité. Un pilotage efficace de vos obligations vous permet non seulement de rester en règle, mais aussi de mieux maîtriser votre trésorerie et de prendre des décisions éclairées pour la croissance de votre entreprise.</p>
+
+
+
+
+
+
+
+
+
+      <div class="author">
+        <div class="author-avatar">MD</div>
+        <div><h5>Marcel Delaregardière</h5><p>Expert-comptable chez Keobiz, Marcel accompagne chaque année plus de 200 dirigeants dans la structuration juridique et fiscale de leur projet.</p></div>
+      </div>
+      <div class="step-nav"><div class="step prev">← Étape précédente<small>Tableau comparatif statuts juridiques 2026 simplifié</small></div><div class="step next">Étape suivante →<small>Modèle de CGV 2026 - prêt, clair et conforme</small></div></div>
+      <div class="bottom-cta"><h3>La création d'une entreprise ça ne s'improvise pas, on s'en parle ?</h3><a class="btn btn-white" href="#">Besoin d'aide pour vous lancer ?</a></div>
+    </div>
+  </main>
+</div>
+<footer class="site-footer"><div class="foot-inner">
+  <div class="foot-brand">
+    <a class="logo" href="#"><div class="logo-mark">k</div><div class="logo-text"><b>keobiz</b><small>BY KEROGO FINANCE</small></div></a>
+    <div class="foot-social"><a href="#">f</a><a href="#">▶</a><a href="#">◉</a><a href="#">in</a></div>
+    <div class="foot-cert">ENTREPRISE LABEL · QUALIANOR</div>
+  </div>
+  <div class="foot-col"><h6>Nos services</h6><a href="#">Expert comptable en ligne</a><a href="#">Création d'entreprise</a><a href="#">Bilan & liasse fiscale</a><a href="#">Conseil juridique</a></div>
+  <div class="foot-col"><h6>Nos ressources</h6><a href="#">Le mag</a><a href="#">Nos outils</a><a href="#">Guides</a><a href="#">Modèles</a></div>
+  <div class="foot-col"><h6>À propos de Keobiz</h6><a href="#">Notre cabinet à Paris</a><a href="#">Notre cabinet à Rouen</a><a href="#">Témoignages</a><a href="#">Qui sommes-nous</a><a href="#">Nous contacter</a></div>
+</div><div class="foot-legal"><span>© 2026 Keobiz, tous droits réservés.</span><span><a href="#">CGU</a> · <a href="#">Mentions légales</a> · <a href="#">Cookies</a></span></div></footer>
+</body></html>
