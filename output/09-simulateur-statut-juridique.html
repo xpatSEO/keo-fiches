@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulateur statut juridique 2026 — Guide rapide et gratuit</title>
+<meta name="description" content="Découvrez comment un simulateur de statut juridique 2026 aide à comparer microentreprise, EURL, SASU et choisir le meilleur régime en quelques minutes.">
+<style>
+:root{
+  --indigo:#4848E8; --indigo-600:#3840C8; --indigo-700:#3040A0; --indigo-50:#ECF2FA;
+  --green:#08A06F; --green-600:#089068;
+  --mint-bg:#D6F0E5; --mint-text:#08805A;
+  --peach:#FCEEDC;
+  --navy:#1B2D5E; --ink:#1F2A44; --muted:#5B6B82;
+  --line:#E5EAF0; --soft:#F6F8FB; --white:#FFFFFF;
+  --radius:24px; --radius-sm:14px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#fff;color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--indigo);text-decoration:underline;text-underline-offset:2px}
+a:hover{text-decoration-thickness:2px}
+img{max-width:100%}
+.nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.nav-inner{max-width:1320px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:36px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:38px;height:38px;background:var(--green);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;font-family:Georgia,serif;font-style:italic}
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-text b{color:var(--navy);font-weight:800;font-size:22px;letter-spacing:-0.3px}
+.logo-text small{color:#9AA8BB;font-size:9.5px;letter-spacing:0.18em;margin-top:3px}
+.nav-menu{display:flex;gap:30px;font-size:14.5px;color:var(--navy);font-weight:600}
+.nav-menu a{color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:6px}
+.nav-menu a::after{content:"⌄";font-size:12px;color:#9AA8BB;margin-top:-4px}
+.nav-menu a.no-arrow::after{content:""}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:14px}
+.nav-phone{font-size:14.5px;color:var(--navy);font-weight:600;text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:13px 22px;font-weight:600;font-size:14.5px;cursor:pointer;border:0;transition:.2s;text-decoration:none}
+.btn-indigo{background:var(--indigo);color:#fff}
+.btn-green{background:var(--green);color:#fff}
+.btn-white{background:#fff;color:var(--navy)}
+.crumb{max-width:1320px;margin:0 auto;padding:22px 32px 4px;font-size:13.5px;color:var(--muted)}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb .sep{margin:0 10px;color:#B5C0D0}
+.wrap{max-width:1320px;margin:0 auto;padding:20px 32px 60px;display:grid;grid-template-columns:280px 1fr;gap:48px}
+.toc{position:sticky;top:100px;align-self:start}
+.toc h4{margin:0 0 16px;font-size:18px;color:var(--navy);font-weight:800}
+.toc ul{list-style:none;padding:0;margin:0}
+.toc li a{display:block;padding:12px 14px;border-radius:10px;color:var(--ink);text-decoration:none;line-height:1.4;font-size:14px}
+.toc li a:hover{background:var(--soft);color:var(--indigo)}
+.toc li.active a{background:var(--soft);color:var(--navy);font-weight:600}
+.hero{background:var(--indigo-50);border-radius:var(--radius);padding:46px 60px 50px;margin-bottom:36px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;border-radius:50%;border:1px solid #D7DFEC;opacity:.6}
+.hero .meta-row{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.hero .pill{background:var(--mint-bg);color:var(--mint-text);padding:6px 14px;border-radius:8px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.hero .time{color:var(--muted);font-size:13px}
+.hero h1{margin:0 0 28px;font-size:42px;line-height:1.15;font-weight:800;color:var(--navy);letter-spacing:-0.8px;max-width:780px}
+.hero h1 .accent{color:var(--indigo)}
+.hero .cta-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.hero-arrow{position:absolute;right:60px;top:36px;color:var(--green);font-size:30px;line-height:1;transform:rotate(35deg)}
+.intro p{font-size:16.5px;color:var(--ink);margin:0 0 14px}
+.retain{background:linear-gradient(135deg,#4A48E8 0%,#3850D0 60%,#3858C8 100%);color:#fff;border-radius:var(--radius);padding:42px 50px 44px;margin:36px 0;position:relative}
+.retain-icon{position:absolute;left:36px;top:-26px;width:54px;height:54px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(72,72,232,.25)}
+.retain h3{margin:14px 0 22px;font-size:18px;color:#A7D8E8;font-weight:700}
+.retain ul{list-style:none;padding:0;margin:0}
+.retain li{padding:14px 0 14px 36px;position:relative;border-top:1px solid rgba(255,255,255,.18)}
+.retain li:first-child{border-top:0}
+.retain li::before{content:"";position:absolute;left:0;top:18px;width:20px;height:20px;border-radius:50%;border:2px solid rgba(255,255,255,.5);background:transparent}
+.retain li::after{content:"";position:absolute;left:7px;top:25px;width:6px;height:6px;border-radius:50%;background:#fff}
+.retain li strong{display:block;color:#fff;font-weight:700;margin-bottom:4px;font-size:15.5px}
+.retain li span{display:block;color:rgba(255,255,255,.78);font-size:14px;line-height:1.55}
+.content h2{font-size:28px;margin:48px 0 14px;color:var(--navy);font-weight:800;letter-spacing:-0.4px;scroll-margin-top:100px}
+.content h3{font-size:18.5px;margin:28px 0 10px;color:var(--navy);font-weight:700}
+.content p{margin:0 0 14px;color:var(--ink);font-size:15.5px}
+.content ul,.content ol{padding-left:0;margin:14px 0 18px;list-style:none}
+.content > ul > li, .content section > ul > li{position:relative;padding:6px 0 6px 22px;margin-bottom:4px;font-size:15.5px}
+.content > ul > li::before, .content section > ul > li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:8px;border-radius:50%;background:var(--green)}
+.content > ol{counter-reset:olist}
+.content > ol > li{counter-increment:olist;position:relative;padding:6px 0 6px 36px;margin-bottom:8px;font-size:15.5px}
+.content > ol > li::before{content:counter(olist,decimal-leading-zero);position:absolute;left:0;top:8px;color:var(--indigo);font-weight:800;font-size:13px}
+.content li strong{color:var(--navy)}
+.content ul ul li{position:relative;padding:3px 0 3px 18px;font-size:14.5px;color:var(--muted);list-style:none}
+.content ul ul li::before{content:"";position:absolute;left:0;top:13px;width:6px;height:1.5px;background:var(--muted)}
+.attention,.advice{border-radius:14px;padding:20px 24px;margin:24px 0}
+.attention{background:#FFF6E5;border:1px solid #F5D89B}
+.attention h4{margin:0 0 6px;color:#7A4E00;font-size:15.5px}
+.attention p{margin:0;font-size:14.5px;color:#5C3A00}
+.advice{background:var(--indigo-50);border:1px solid #C7D6F0}
+.advice h4{margin:0 0 6px;color:var(--navy);font-size:15.5px}
+.advice p{margin:0;font-size:14.5px;color:var(--ink)}
+.band{background:linear-gradient(95deg,#4A48E8 0%,#08A06F 130%);color:#fff;border-radius:18px;padding:24px 30px;display:flex;align-items:center;justify-content:space-between;gap:24px;margin:30px 0}
+.band h4{margin:0;font-size:17px;font-weight:700;max-width:520px;line-height:1.35}
+.band .btn-white{padding:14px 24px}
+.peach-block{background:var(--peach);border-radius:var(--radius);padding:34px 38px;margin:30px 0;display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:center}
+.peach-block h3{margin:0 0 12px;color:var(--navy);font-size:22px;font-weight:800;line-height:1.25}
+.peach-block p{margin:0 0 22px;color:var(--muted);font-size:14.5px}
+.peach-illu{display:flex;justify-content:center;align-items:center}
+.author{background:var(--indigo-50);border-radius:var(--radius);padding:26px 30px;margin:40px 0 30px;display:grid;grid-template-columns:80px 1fr;gap:22px;align-items:center}
+.author-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--indigo),var(--indigo-600));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:26px;font-family:Georgia,serif}
+.author h5{margin:0 0 6px;font-size:16px;color:var(--navy);font-weight:700}
+.author p{margin:0;font-size:14px;color:var(--muted);line-height:1.6}
+.step-nav{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:24px 0;margin:30px 0}
+.step-nav .step{font-size:13.5px;color:var(--indigo);font-weight:600}
+.step-nav .step small{display:block;color:var(--muted);font-weight:400;font-size:13px;margin-top:4px}
+.step-nav .step.next{text-align:right}
+.bottom-cta{background:var(--indigo-700);color:#fff;border-radius:18px;padding:26px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;margin:30px 0 0}
+.bottom-cta h3{margin:0;font-size:18px;font-weight:700;max-width:430px;line-height:1.35}
+.bottom-cta .btn-white{padding:14px 26px}
+.site-footer{background:linear-gradient(180deg,var(--indigo-700) 0%,#283890 100%);color:rgba(255,255,255,.78);padding:60px 32px 30px;margin-top:60px;border-radius:32px 32px 0 0}
+.foot-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.foot-brand .logo-mark{background:#fff;color:var(--green)}
+.foot-brand .logo-text b{color:#fff}
+.foot-brand .logo-text small{color:rgba(255,255,255,.6)}
+.foot-social{display:flex;gap:10px;margin-top:18px}
+.foot-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:13px}
+.foot-cert{margin-top:22px;display:inline-flex;align-items:center;gap:8px;background:#F23358;color:#fff;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.foot-col h6{color:#fff;margin:0 0 14px;font-size:14.5px;font-weight:700}
+.foot-col a{display:block;color:rgba(255,255,255,.78);font-size:14px;padding:5px 0;text-decoration:none}
+.foot-legal{max-width:1320px;margin:34px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);display:flex;justify-content:space-between;font-size:12.5px;color:rgba(255,255,255,.55);gap:20px;flex-wrap:wrap}
+.foot-legal a{color:rgba(255,255,255,.7);text-decoration:none}
+</style></head><body>
+<nav class="nav"><div class="nav-inner">
+  <a class="logo" href="#"><div class="logo-mark">k</div><div class="logo-text"><b>keobiz</b><small>BY KEROGO FINANCE</small></div></a>
+  <div class="nav-menu"><a href="#">Expert comptable</a><a href="#">Création d'entreprise</a><a href="#" class="no-arrow">Tarifs</a><a href="#">Ressources</a></div>
+  <div class="nav-right"><a class="nav-phone" href="tel:0176410560">📞 01 76 41 05 60</a><a class="btn btn-indigo" href="#">Obtenir un devis</a><a class="btn btn-green" href="#">Se connecter</a></div>
+</div></nav>
+<div class="crumb"><a href="#">Accueil</a><span class="sep">/</span><a href="#">Fiches pratiques</a><span class="sep">/</span><span style="color:var(--navy);font-weight:500">Simulateur statut juridique 2026</span></div>
+<div class="wrap">
+  <aside class="toc"><h4>Sommaire</h4><ul><li class="active"><a href="#s1">Qu&#x27;est-ce qu&#x27;un simulateur de statut juridique et à quoi sert-il ?</a></li>
+<li><a href="#s2">Les statuts juridiques passés au crible</a></li>
+<li><a href="#s3">Les critères clés à comparer pour bien choisir</a></li>
+<li><a href="#s4">Guide pratique : utiliser un comparateur étape par étape</a></li>
+<li><a href="#s5">Les limites des simulateurs : quand passer le relais à un expert ?</a></li></ul></aside>
+  <main>
+    <section class="hero">
+      <span class="hero-arrow">↘</span>
+      <div class="meta-row"><span class="pill">Guide complet</span><span class="time">10 min</span></div>
+      <h1>Simulateur statut juridique 2026 <span class="accent">Guide rapide et gratuit</span></h1>
+      <div class="cta-row"><a class="btn btn-indigo" href="#">Être accompagné par un expert →</a></div>
+    </section>
+    <section class="intro"><p>Auto-entrepreneur, EI, SASU... Le choix du statut juridique ressemble souvent à un casse-tête. On se sent seul face à des sigles complexes, avec la peur de faire une erreur qui coûtera cher plus tard. Comment savoir quelle structure protégera le mieux votre projet, optimisera votre revenu et vous offrira une protection sociale solide ? La première étape pour y voir clair n'est pas de lire des dizaines de guides, mais de lancer une simulation.</p>
+<p>Un comparateur en ligne est un outil puissant pour traduire ces options abstraites en chiffres concrets. Il vous permet de projeter l'impact de chaque statut sur votre futur quotidien d'entrepreneur : votre revenu net, vos cotisations, votre retraite et même vos indemnités en cas de coup dur. C'est le moyen le plus rapide de défricher le terrain et de prendre une décision éclairée, basée sur votre propre situation.</p></section>
+    <section class="retain">
+      <div class="retain-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke="#08A06F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>Ce que vous devez retenir :</h3>
+      <ul><li><strong>Qu&#x27;est-ce qu&#x27;un simulateur de statut juridique et à quoi ...</strong><span>Un simulateur de statut juridique est un outil en ligne qui calcule et compare les conséquences financières, fiscales et sociales des différentes formes d&#x27;entreprise.</span></li>
+<li><strong>Les statuts juridiques passés au crible</strong><span>Les simulateurs se concentrent généralement sur les formes d&#x27;entreprise les plus courantes pour les créateurs qui se lancent seuls.</span></li>
+<li><strong>Les critères clés à comparer pour bien choisir</strong><span>Lancer une simulation, c&#x27;est bien.</span></li>
+<li><strong>Guide pratique</strong><span>On passe à l&#x27;action.</span></li></ul>
+    </section>
+    <div class="content">
+      
+
+<h2 id="s1">Qu'est-ce qu'un simulateur de statut juridique et à quoi sert-il ?</h2>
+<p>Un simulateur de statut juridique est un outil en ligne qui calcule et compare les conséquences financières, fiscales et sociales des différentes formes d'entreprise. Son objectif est simple : vous aider à visualiser concrètement ce que chaque option implique pour votre portefeuille et votre protection. Fini les hypothèses, place aux chiffres.</p>
+<p>En entrant des informations de base sur votre projet, comme votre chiffre d'affaires prévisionnel et vos dépenses professionnelles, l'outil se charge de calculer pour chaque statut :</p>
+<ul>
+<li><strong>Le montant de vos cotisations sociales :</strong> la part de votre revenu qui financera votre protection (santé, retraite, etc.).</li>
+<li><strong>Votre revenu net après impôt :</strong> ce qu'il vous restera réellement en poche à la fin du mois.</li>
+<li><strong>Vos droits à la retraite :</strong> le nombre de trimestres que vous validez et les points que vous accumulez.</li>
+<li><strong>Votre couverture sociale :</strong> les indemnités journalières en cas d'arrêt maladie, de congé maternité ou d'accident du travail.</li>
+</ul>
+<p>Cet outil agit comme un premier filtre. Il ne remplace pas le conseil personnalisé d'un expert-comptable, mais il vous donne une base factuelle pour orienter votre réflexion. Il vous permet de répondre à des questions essentielles : vaut-il mieux un revenu net légèrement plus faible en SASU pour une meilleure protection sociale, ou privilégier la simplicité de l'auto-entreprise ? Le comparateur vous donne les éléments pour commencer à arbitrer.</p>
+<h2 id="s2">Les statuts juridiques passés au crible</h2>
+<p>Les simulateurs se concentrent généralement sur les formes d'entreprise les plus courantes pour les créateurs qui se lancent seuls. Chaque structure répond à des besoins différents en termes de simplicité, de protection et d'ambition de croissance.</p>
+<h3>L'auto-entreprise (AE) ou micro-entreprise</h3>
+<p>C'est le régime de la simplicité par excellence. Idéal pour tester une activité ou pour les freelances, il se caractérise par des obligations comptables et administratives allégées. Le calcul des cotisations sociales se fait sur la base d'un pourcentage fixe du chiffre d'affaires encaissé. La fiscalité par défaut est l'impôt sur le revenu (IR) avec le versement libératoire en option. Sa principale limite réside dans les plafonds de chiffre d'affaires à ne pas dépasser.</p>
+<h3>L'entreprise individuelle (EI)</h3>
+<p>Depuis 2022, l'EI est un statut unifié qui protège automatiquement le patrimoine personnel de l'entrepreneur. Plus souple que l'auto-entreprise car sans plafond de chiffre d'affaires, elle reste simple à créer. Le dirigeant est un travailleur non-salarié (TNS) affilié à la Sécurité sociale des indépendants. Par défaut, les bénéfices sont soumis à l'impôt sur le revenu, mais une option pour l'impôt sur les sociétés (IS) est possible pour mieux piloter sa rémunération.</p>
+<h3>L'eurl (entreprise unipersonnelle à responsabilité limitée)</h3>
+<p>L'EURL est la version à associé unique de la SARL. C'est une véritable société, ce qui implique des formalités de création plus lourdes (rédaction de statuts, dépôt de capital). La responsabilité de l'associé est limitée au montant de ses apports, protégeant ainsi son patrimoine personnel. Si l'<a href="https://keobiz.fr/le-mag/gerant-associe-unique-eurl" title="Détails sur le gérant associé unique d'EURL">associé unique est également le gérant</a>, il est considéré comme TNS. Le choix entre IR et IS est possible, offrant une flexibilité fiscale appréciable.</p>
+<h3>La sasu (société par actions simplifiée unipersonnelle)</h3>
+<p>La SASU est la forme juridique la plus souple, plébiscitée pour sa grande liberté dans la rédaction des statuts. Le dirigeant, appelé "Président", est affilié au régime général de la Sécurité sociale en tant qu'assimilé-salarié. Ce <a href="https://keobiz.fr/le-mag/le-statut-social-du-chef-d-entreprise-tns-ou-dirigeant-assimile-salarie" title="Comparaison des statuts sociaux de dirigeant">statut social offre une protection</a> plus complète (notamment pour la retraite) mais entraîne des cotisations sociales plus élevées. La SASU est par défaut soumise à l'IS, ce qui permet de distinguer clairement la rémunération du dirigeant des bénéfices de l'entreprise et d'opter pour une rémunération sous forme de <a href="https://keobiz.fr/le-mag/sasu-salaire-dividendes" title="Stratégies de rémunération en SASU">salaires ou de dividendes</a>.</p>
+<p>[image alt="Tableau comparatif des principaux statuts juridiques : AE, EI, EURL, SASU"]</p>
+<div class="band"><h4>Sécurisez votre projet avec un expert-comptable Keobiz</h4><a class="btn btn-white" href="#">Besoin d'aide pour vous lancer ?</a></div><h2 id="s3">Les critères clés à comparer pour bien choisir</h2>
+<p>Lancer une simulation, c'est bien. Savoir quels chiffres regarder et comment les interpréter, c'est mieux. Un bon comparateur met en lumière plusieurs indicateurs essentiels qui vont au-delà du simple revenu net.</p>
+<h3>Le revenu net mensuel après impôts</h3>
+<p>C'est le chiffre qui attire le plus l'attention. Il représente ce que vous touchez réellement après déduction des cotisations sociales et de l'impôt sur le revenu. C'est un excellent point de départ, mais il ne faut pas s'arrêter là. Un statut peut offrir un revenu net plus élevé au détriment d'une protection sociale plus faible. C'est un arbitrage constant entre le présent (le revenu disponible) et le futur (la retraite, la prévoyance).</p>
+<h3>La protection sociale : le coût de la sécurité</h3>
+<p>Ici, deux grands régimes s'affrontent :</p>
+<ul>
+<li><strong>Le régime des indépendants (TNS)</strong> : Concerne les dirigeants d'EI et les gérants majoritaires d'EURL. Les cotisations sont plus faibles, ce qui augmente le revenu net à court terme. En contrepartie, la protection est moins étendue, notamment en ce qui concerne la retraite complémentaire et les indemnités journalières.</li>
+<li><strong>Le régime général (assimilé-salarié)</strong> : Concerne le président de SASU. Les cotisations sont plus élevées, proches de celles d'un salarié cadre. La protection est donc plus robuste : meilleure retraite, indemnités maladie calculées sur le salaire, mais pas d'assurance chômage.</li>
+</ul>
+<div class="note">
+<h4>Retraite, maladie, maternité : que comparent les simulateurs ?</h4>
+<p>Les outils les plus complets détaillent vos droits pour chaque régime. Ils estiment le nombre de trimestres de retraite de base validés, les points de retraite complémentaire acquis, ainsi que le montant des indemnités journalières en cas d'arrêt maladie, d'accident du travail ou de congé maternité/paternité. C'est un point crucial pour sécuriser votre avenir.</p>
+</div>
+<h3>La fiscalité de l'entreprise et du dirigeant</h3>
+<p>Le choix se porte principalement entre deux régimes :</p>
+<ul>
+<li><strong>L'Impôt sur le Revenu (IR)</strong> : Les bénéfices de l'entreprise sont directement imposés entre vos mains, dans votre tranche marginale d'imposition. C'est le régime par défaut de l'AE et de l'EI.</li>
+<li><strong>L'Impôt sur les Sociétés (IS)</strong> : L'entreprise paie son propre impôt sur ses bénéfices. Le dirigeant, lui, n'est imposé que sur la rémunération ou les dividendes qu'il se verse. Ce système permet de piloter plus finement sa fiscalité personnelle et de réinvestir les bénéfices dans l'entreprise. C'est le régime par défaut de la <a href="https://keobiz.fr/le-mag/creation-sas/" title="Guide pour la création d'une SAS">SASU</a> et une option possible pour l'EI et l'EURL.</li>
+</ul>
+<h3>Les autres facteurs à ne pas négliger</h3>
+<ul>
+<li><strong>Coût de création</strong> : La création d'une micro-entreprise ou d'une EI est quasi gratuite. En revanche, la <a href="https://keobiz.fr/le-mag/constitution-sarl" title="Processus de constitution d'une SARL">constitution d'une société (EURL, SASU)</a> engendre des frais (annonces légales, rédaction des statuts, immatriculation au greffe).</li>
+<li><strong>Statut du conjoint</strong> : Selon la forme juridique, votre conjoint peut avoir différents statuts (collaborateur, associé, salarié), avec des implications sociales et patrimoniales distinctes.</li>
+<li><strong>Responsabilité</strong> : Les sociétés (SASU, EURL) et la nouvelle EI limitent votre responsabilité à vos apports professionnels, protégeant ainsi votre patrimoine personnel en cas de dettes.</li>
+</ul>
+<div class="peach-block"><div><h3>Marre de l'administratif avant même d'avoir commencé ?</h3><p>Laissez nos experts Keobiz structurer votre projet pendant que vous peaufinez votre activité. Nous gérons la complexité pour vous.</p><a class="btn btn-green" href="#">Créer mon entreprise gratuitement →</a></div><div class="peach-illu"><svg fill="none" viewbox="0 0 200 220">
+<rect fill="#fff" height="170" rx="14" stroke="#1B2D5E" stroke-width="2" width="90" x="40" y="20"></rect>
+<rect fill="#4848E8" height="8" rx="3" width="70" x="50" y="40"></rect>
+<rect fill="#E5EAF0" height="6" rx="3" width="50" x="50" y="56"></rect>
+<rect fill="#ECF2FA" height="40" rx="6" width="70" x="50" y="70"></rect>
+<rect fill="#08A06F" height="22" rx="6" width="70" x="50" y="150"></rect>
+<rect fill="#fff" height="140" rx="12" stroke="#1B2D5E" stroke-width="2" width="80" x="100" y="60"></rect>
+<rect fill="#4848E8" height="6" rx="3" width="60" x="110" y="78"></rect>
+<rect fill="#ECF2FA" height="30" rx="5" width="60" x="110" y="106"></rect>
+<rect fill="#4848E8" height="18" rx="5" width="60" x="110" y="144"></rect>
+</svg></div></div><h2 id="s4">Guide pratique : utiliser un comparateur étape par étape</h2>
+<p>On passe à l'action. Pour que la simulation soit la plus juste possible, il faut la nourrir avec des données fiables. Voici comment procéder pour structurer votre démarche.</p>
+<h3>Étape 1 : Préparer les bonnes informations</h3>
+<p>Avant de vous lancer, rassemblez quelques chiffres clés. Une estimation, même approximative, est meilleure qu'une absence de données.</p>
+<ul>
+<li><strong>Votre chiffre d'affaires (CA) annuel brut hors taxes</strong> : Combien pensez-vous facturer sur une année complète ?</li>
+<li><strong>Le total de vos dépenses professionnelles</strong> : Estimez tous les frais nécessaires au fonctionnement de votre activité (loyer, matières premières, logiciels, assurances...). Attention, n'incluez pas les cotisations sociales ni votre rémunération, car c'est justement ce que le simulateur va calculer.</li>
+<li><strong>Option ACRE</strong> : Prévoyez-vous de demander l'ACRE (Aide à la Création ou à la Reprise d'une Entreprise) ? La plupart des outils permettent d'activer ou non cette option qui réduit les cotisations la première année.</li>
+</ul>
+<h3>Étape 2 : Lancer la simulation</h3>
+<p>Les interfaces des comparateurs sont conçues pour être intuitives. Vous trouverez des champs pour saisir le CA et les dépenses que vous venez de préparer. Au fur et à mesure que vous modifiez un chiffre, les résultats pour chaque statut juridique se mettent à jour automatiquement. Cela vous permet de tester différents scénarios en quelques clics : "Et si je fais 10 000 € de CA en plus ?", "Et si mes charges augmentent ?".</p>
+<div class="advice">
+<h4>Testez plusieurs hypothèses</h4>
+<p>Ne vous contentez pas d'une seule simulation. Faites varier votre chiffre d'affaires prévisionnel (une hypothèse basse, une moyenne et une optimiste) pour voir comment chaque statut réagit. Vous découvrirez peut-être qu'un statut est idéal à 40 000 € de CA, mais qu'un autre devient plus intéressant à 80 000 €.</p>
+</div>
+<h3>Étape 3 : Analyser les résultats en détail</h3>
+<p>Ne vous focalisez pas uniquement sur la ligne "revenu net". Prenez le temps d'explorer les panneaux de résultats détaillés. Comparez :</p>
+<ul>
+<li>Le <strong>coût total des cotisations sociales</strong> : quel est le "prix" de votre protection ?</li>
+<li>Le <strong>montant de l'impôt</strong> (sociétés et revenu).</li>
+<li>Les <strong>droits sociaux acquis</strong> : combien de trimestres de retraite sont validés ? À quelles indemnités journalières avez-vous droit ?</li>
+</ul>
+<p>C'est cette vision à 360 degrés qui vous permettra de faire un choix réellement éclairé, en alignant votre statut avec vos priorités personnelles (revenu immédiat, sécurité, préparation de l'avenir).</p>
+<h2 id="s5">Les limites des simulateurs : quand passer le relais à un expert ?</h2>
+<p>Un simulateur est un formidable outil de dégrossissage, mais il a ses limites. Il se base sur des cas standards et ne peut pas intégrer toutes les subtilités de votre situation personnelle ou de votre projet.</p>
+<p>Par exemple, un outil en ligne ne pourra pas :</p>
+<ul>
+<li><strong>Optimiser votre stratégie de rémunération</strong> : arbitrage entre salaire et dividendes, impact des frais professionnels, etc.</li>
+<li><strong>Prendre en compte votre situation familiale</strong> : quotient familial, revenus du conjoint...</li>
+<li><strong>Intégrer les spécificités de votre activité</strong> : régimes de TVA particuliers, crédits d'impôt sectoriels...</li>
+<li><strong>Anticiper l'évolution de votre entreprise</strong> : un statut adapté pour démarrer ne le sera peut-être plus dans 3 ans si vous prévoyez d'embaucher ou de faire entrer des associés.</li>
+</ul>
+<p>C'est là qu'un expert-comptable prend le relais. Après avoir utilisé un simulateur pour débroussailler le sujet, l'échange avec un professionnel permet de valider vos hypothèses et d'affiner la stratégie. Chez Keobiz, nous accompagnons gratuitement les créateurs dans le choix de leur statut et la réalisation de toutes les formalités. Cet accompagnement humain sécurise votre lancement en s'assurant que la structure choisie est non seulement viable aujourd'hui, mais aussi pérenne pour demain.</p>
+<div class="attention">
+<h4>Un simulateur n'est pas un conseil juridique</h4>
+<p>Les résultats fournis par un comparateur sont des estimations à titre informatif. Ils ne constituent pas un conseil juridique, fiscal ou social et n'engagent pas la responsabilité de leurs éditeurs. La validation par un professionnel est une étape de sécurité indispensable avant de procéder à l'immatriculation de votre entreprise.</p>
+</div>
+<p>Le choix du statut juridique est la première pierre de votre édifice entrepreneurial. Utiliser un simulateur vous permet de poser des fondations solides, basées sur des données objectives. C'est une démarche rassurante qui transforme une décision angoissante en un choix stratégique et maîtrisé.</p>
+<p>Une fois cette première analyse effectuée, n'hésitez pas à vous faire accompagner. Un expert saura confirmer votre intuition, attirer votre attention sur des points que vous n'aviez pas vus et s'occuper des démarches administratives pour que vous puissiez vous concentrer sur l'essentiel : le lancement de votre activité.</p>
+
+
+
+
+
+
+
+
+
+      <div class="author">
+        <div class="author-avatar">MD</div>
+        <div><h5>Marcel Delaregardière</h5><p>Expert-comptable chez Keobiz, Marcel accompagne chaque année plus de 200 dirigeants dans la structuration juridique et fiscale de leur projet.</p></div>
+      </div>
+      <div class="step-nav"><div class="step prev">← Étape précédente<small>Modèle de statuts simplifié - SASU SAS SARL 2026</small></div><div class="step next">Étape suivante →<small>Guide complet création d&#x27;entreprise 2026 - Anticipe</small></div></div>
+      <div class="bottom-cta"><h3>La création d'une entreprise ça ne s'improvise pas, on s'en parle ?</h3><a class="btn btn-white" href="#">Besoin d'aide pour vous lancer ?</a></div>
+    </div>
+  </main>
+</div>
+<footer class="site-footer"><div class="foot-inner">
+  <div class="foot-brand">
+    <a class="logo" href="#"><div class="logo-mark">k</div><div class="logo-text"><b>keobiz</b><small>BY KEROGO FINANCE</small></div></a>
+    <div class="foot-social"><a href="#">f</a><a href="#">▶</a><a href="#">◉</a><a href="#">in</a></div>
+    <div class="foot-cert">ENTREPRISE LABEL · QUALIANOR</div>
+  </div>
+  <div class="foot-col"><h6>Nos services</h6><a href="#">Expert comptable en ligne</a><a href="#">Création d'entreprise</a><a href="#">Bilan & liasse fiscale</a><a href="#">Conseil juridique</a></div>
+  <div class="foot-col"><h6>Nos ressources</h6><a href="#">Le mag</a><a href="#">Nos outils</a><a href="#">Guides</a><a href="#">Modèles</a></div>
+  <div class="foot-col"><h6>À propos de Keobiz</h6><a href="#">Notre cabinet à Paris</a><a href="#">Notre cabinet à Rouen</a><a href="#">Témoignages</a><a href="#">Qui sommes-nous</a><a href="#">Nous contacter</a></div>
+</div><div class="foot-legal"><span>© 2026 Keobiz, tous droits réservés.</span><span><a href="#">CGU</a> · <a href="#">Mentions légales</a> · <a href="#">Cookies</a></span></div></footer>
+</body></html>

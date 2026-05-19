@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modèle de pacte d'associés 2026 - Guide pratique | Keobiz</title>
+<meta name="description" content="Modèle de pacte d'associés 2026: téléchargez un modèle, découvrez les clauses clés, enjeux juridiques et comment l'adapter à votre société.">
+<style>
+  :root{
+    /* === Keobiz palette (extraite du template) === */
+    --indigo:#4848E8;
+    --indigo-600:#3840C8;
+    --indigo-700:#3040A0;
+    --indigo-50:#ECF2FA;
+    --green:#08A06F;
+    --green-600:#089068;
+    --mint-bg:#D6F0E5;
+    --mint-text:#08805A;
+    --peach:#FCEEDC;
+    --peach-deep:#F7DDB8;
+    --navy:#1B2D5E;
+    --ink:#1F2A44;
+    --muted:#5B6B82;
+    --line:#E5EAF0;
+    --soft:#F6F8FB;
+    --white:#FFFFFF;
+    --radius:24px;
+    --radius-sm:14px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--indigo);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+  a:hover{text-decoration-thickness:2px}
+  img{max-width:100%}
+
+  /* ============ TOP NAV ============ */
+  .nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+  .nav-inner{max-width:1320px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:36px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .logo-mark{width:38px;height:38px;background:var(--green);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;font-family:Georgia,serif;font-style:italic}
+  .logo-text{display:flex;flex-direction:column;line-height:1}
+  .logo-text b{color:var(--navy);font-weight:800;font-size:22px;letter-spacing:-0.3px}
+  .logo-text small{color:#9AA8BB;font-size:9.5px;letter-spacing:0.18em;margin-top:3px}
+  .nav-menu{display:flex;gap:30px;font-size:14.5px;color:var(--navy);font-weight:600}
+  .nav-menu a{color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:6px}
+  .nav-menu a::after{content:"⌄";font-size:12px;color:#9AA8BB;margin-top:-4px}
+  .nav-menu a.no-arrow::after{content:""}
+  .nav-right{margin-left:auto;display:flex;align-items:center;gap:14px}
+  .nav-phone{font-size:14.5px;color:var(--navy);font-weight:600;display:inline-flex;align-items:center;gap:6px;text-decoration:none}
+  .btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:13px 22px;font-weight:600;font-size:14.5px;cursor:pointer;border:0;transition:.2s;text-decoration:none}
+  .btn:hover{text-decoration:none;transform:translateY(-1px)}
+  .btn-indigo{background:var(--indigo);color:#fff}
+  .btn-indigo:hover{background:var(--indigo-600)}
+  .btn-green{background:var(--green);color:#fff}
+  .btn-green:hover{background:var(--green-600)}
+  .btn-white{background:#fff;color:var(--navy)}
+  .btn-outline-white{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6)}
+
+  /* ============ BREADCRUMB ============ */
+  .crumb{max-width:1320px;margin:0 auto;padding:22px 32px 4px;font-size:13.5px;color:var(--muted)}
+  .crumb a{color:var(--muted);text-decoration:none}
+  .crumb a:hover{color:var(--indigo)}
+  .crumb .sep{margin:0 10px;color:#B5C0D0}
+
+  /* ============ LAYOUT ============ */
+  .wrap{max-width:1320px;margin:0 auto;padding:20px 32px 60px;display:grid;grid-template-columns:280px 1fr;gap:48px}
+
+  /* ============ SOMMAIRE ============ */
+  .toc{position:sticky;top:100px;align-self:start}
+  .toc h4{margin:0 0 16px;font-size:18px;color:var(--navy);font-weight:800}
+  .toc ul{list-style:none;padding:0;margin:0}
+  .toc li{font-size:14px;margin:0}
+  .toc li a{display:block;padding:12px 14px;border-radius:10px;color:var(--ink);text-decoration:none;line-height:1.4}
+  .toc li a:hover{background:var(--soft);color:var(--indigo)}
+  .toc li.active a{background:var(--soft);color:var(--navy);font-weight:600}
+
+  /* ============ HERO ============ */
+  .hero{background:var(--indigo-50);border-radius:var(--radius);padding:46px 60px 50px;margin-bottom:36px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;border-radius:50%;border:1px solid #D7DFEC;opacity:.6}
+  .hero::after{content:"";position:absolute;right:120px;bottom:-30px;width:80px;height:80px;background:radial-gradient(circle,#D7DFEC 1px,transparent 1.5px);background-size:14px 14px;opacity:.5}
+  .hero .meta-row{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+  .hero .pill{background:var(--mint-bg);color:var(--mint-text);padding:6px 14px;border-radius:8px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+  .hero .time{color:var(--muted);font-size:13px}
+  .hero h1{margin:0 0 28px;font-size:44px;line-height:1.15;font-weight:800;color:var(--navy);letter-spacing:-0.8px;max-width:780px;position:relative}
+  .hero h1 .accent{color:var(--indigo)}
+  .hero .cta-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .hero-arrow{position:absolute;right:60px;top:36px;color:var(--green);font-size:30px;line-height:1;transform:rotate(35deg)}
+
+  /* ============ INTRO ============ */
+  .intro p{font-size:16.5px;color:var(--ink);margin:0 0 14px}
+
+  /* ============ RETAIN BLOCK (indigo gradient) ============ */
+  .retain{background:linear-gradient(135deg,#4A48E8 0%,#3850D0 60%,#3858C8 100%);color:#fff;border-radius:var(--radius);padding:42px 50px 44px;margin:36px 0;position:relative}
+  .retain-icon{position:absolute;left:36px;top:-26px;width:54px;height:54px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(72,72,232,.25)}
+  .retain-icon svg{width:26px;height:26px}
+  .retain h3{margin:14px 0 22px;font-size:18px;color:#A7D8E8;font-weight:700}
+  .retain ul{list-style:none;padding:0;margin:0}
+  .retain li{padding:14px 0 14px 36px;position:relative;border-top:1px solid rgba(255,255,255,.18)}
+  .retain li:first-child{border-top:0}
+  .retain li::before{content:"";position:absolute;left:0;top:18px;width:20px;height:20px;border-radius:50%;border:2px solid rgba(255,255,255,.5);background:transparent}
+  .retain li::after{content:"";position:absolute;left:7px;top:25px;width:6px;height:6px;border-radius:50%;background:#fff}
+  .retain li strong{display:block;color:#fff;font-weight:700;margin-bottom:4px;font-size:15.5px}
+  .retain li span{display:block;color:rgba(255,255,255,.78);font-size:14px;line-height:1.55}
+  .retain-arrow{position:absolute;right:30px;top:30px;color:var(--green);font-size:38px;line-height:1;transform:rotate(-25deg);opacity:.9}
+
+  /* ============ CONTENT ============ */
+  .content h2{font-size:28px;margin:48px 0 14px;color:var(--navy);font-weight:800;letter-spacing:-0.4px;scroll-margin-top:100px}
+  .content h3{font-size:18.5px;margin:28px 0 10px;color:var(--navy);font-weight:700}
+  .content p{margin:0 0 14px;color:var(--ink);font-size:15.5px}
+  .content > ul,.content > ol{padding-left:0;margin:14px 0 18px;list-style:none}
+  .content > ul > li{position:relative;padding:6px 0 6px 22px;margin-bottom:4px;font-size:15.5px}
+  .content > ul > li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:8px;border-radius:50%;background:var(--green)}
+  .content > ol{counter-reset:olist}
+  .content > ol > li{counter-increment:olist;position:relative;padding:6px 0 6px 36px;margin-bottom:8px;font-size:15.5px}
+  .content > ol > li::before{content:counter(olist,decimal-leading-zero);position:absolute;left:0;top:8px;color:var(--indigo);font-weight:800;font-size:13px}
+  .content li strong{color:var(--navy)}
+  .content ul ul{padding-left:0;margin:6px 0 0;list-style:none}
+  .content ul ul li{position:relative;padding:3px 0 3px 18px;font-size:14.5px;color:var(--muted)}
+  .content ul ul li::before{content:"";position:absolute;left:0;top:13px;width:6px;height:1.5px;background:var(--muted)}
+
+  /* ============ TOOLBOX CARD ============ */
+  .toolbox{background:var(--indigo-50);border-radius:var(--radius);padding:46px 40px 36px;margin:36px 0;position:relative}
+  .toolbox-icon{position:absolute;left:30px;top:-24px;width:50px;height:50px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(72,72,232,.12)}
+  .toolbox h4{margin:0 0 22px;color:var(--navy);font-size:18px;font-weight:800}
+  .toolbox-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .toolbox-cell{background:#fff;border-radius:14px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px;font-size:14.5px;color:var(--ink)}
+  .toolbox-cell a{color:var(--indigo);text-decoration:underline}
+  .toolbox-cell .arrow{color:var(--indigo);font-size:18px;font-weight:700;flex-shrink:0}
+
+  /* ============ RESOURCES MINI-BLOCK ============ */
+  .resources{background:var(--indigo-50);border-radius:var(--radius-sm);padding:18px 22px;margin:24px 0}
+  .resources-label{font-size:13px;color:var(--navy);font-weight:600;margin-bottom:10px}
+  .resources-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .resources-row a{background:#fff;border-radius:10px;padding:12px 14px;font-size:13.5px;color:var(--indigo);text-decoration:underline;display:flex;align-items:flex-start;gap:8px}
+  .resources-row a::before{content:"→";color:var(--indigo);font-weight:700;flex-shrink:0}
+
+  /* ============ INLINE GRADIENT CTA BAND ============ */
+  .band{background:linear-gradient(95deg,#4A48E8 0%,#08A06F 130%);color:#fff;border-radius:18px;padding:24px 30px;display:flex;align-items:center;justify-content:space-between;gap:24px;margin:30px 0}
+  .band h4{margin:0;font-size:17px;font-weight:700;max-width:520px;line-height:1.35}
+  .band .btn-white{padding:14px 24px}
+
+  /* ============ PEACH BLOCK ============ */
+  .peach-block{background:var(--peach);border-radius:var(--radius);padding:34px 38px;margin:30px 0;display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:center;position:relative;overflow:hidden}
+  .peach-block h3{margin:0 0 12px;color:var(--navy);font-size:22px;font-weight:800;line-height:1.25}
+  .peach-block p{margin:0 0 22px;color:var(--muted);font-size:14.5px}
+  .peach-illu{display:flex;justify-content:center;align-items:center}
+  .peach-illu svg{width:180px;height:auto}
+
+  /* ============ AUTHOR ============ */
+  .author{background:var(--indigo-50);border-radius:var(--radius);padding:26px 30px;margin:40px 0 30px;display:grid;grid-template-columns:80px 1fr;gap:22px;align-items:center}
+  .author-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--indigo),var(--indigo-600));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:26px;font-family:Georgia,serif}
+  .author h5{margin:0 0 6px;font-size:16px;color:var(--navy);font-weight:700}
+  .author p{margin:0;font-size:14px;color:var(--muted);line-height:1.6}
+
+  /* ============ STEP NAV ============ */
+  .step-nav{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:24px 0;margin:30px 0}
+  .step-nav .step{font-size:13.5px;color:var(--indigo);font-weight:600}
+  .step-nav .step small{display:block;color:var(--muted);font-weight:400;font-size:13px;margin-top:4px}
+  .step-nav .step.next{text-align:right}
+
+  /* ============ BOTTOM CTA ============ */
+  .bottom-cta{background:var(--indigo-700);color:#fff;border-radius:18px;padding:26px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;margin:30px 0 0}
+  .bottom-cta h3{margin:0;font-size:18px;font-weight:700;max-width:430px;line-height:1.35}
+  .bottom-cta .btn-white{padding:14px 26px}
+
+  /* ============ FOOTER ============ */
+  .site-footer{background:linear-gradient(180deg,var(--indigo-700) 0%,#283890 100%);color:rgba(255,255,255,.78);padding:60px 32px 30px;margin-top:60px;border-radius:32px 32px 0 0}
+  .foot-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+  .foot-brand .logo-mark{background:#fff;color:var(--green)}
+  .foot-brand .logo-text b{color:#fff}
+  .foot-brand .logo-text small{color:rgba(255,255,255,.6)}
+  .foot-social{display:flex;gap:10px;margin-top:18px}
+  .foot-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:13px}
+  .foot-cert{margin-top:22px;display:inline-flex;align-items:center;gap:8px;background:#F23358;color:#fff;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+  .foot-col h6{color:#fff;margin:0 0 14px;font-size:14.5px;font-weight:700}
+  .foot-col a{display:block;color:rgba(255,255,255,.78);font-size:14px;padding:5px 0;text-decoration:none}
+  .foot-col a:hover{color:#fff}
+  .foot-legal{max-width:1320px;margin:34px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);display:flex;justify-content:space-between;font-size:12.5px;color:rgba(255,255,255,.55);gap:20px;flex-wrap:wrap}
+  .foot-legal a{color:rgba(255,255,255,.7);text-decoration:none}
+
+  /* preview marker */
+  .preview-badge{position:fixed;right:14px;bottom:14px;background:var(--navy);color:#fff;padding:8px 14px;border-radius:999px;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;z-index:99;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+
+  @media(max-width:980px){
+    .wrap{grid-template-columns:1fr;padding:18px}
+    .toc{position:static}
+    .nav-menu{display:none}
+    .hero{padding:32px 28px}
+    .hero h1{font-size:30px}
+    .toolbox-grid,.resources-row,.peach-block,.step-nav,.band,.bottom-cta,.foot-inner{grid-template-columns:1fr;flex-direction:column;align-items:flex-start}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== TOP NAV ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#">
+      <div class="logo-mark">k</div>
+      <div class="logo-text">
+        <b>keobiz</b>
+        <small>BY KEROGO FINANCE</small>
+      </div>
+    </a>
+    <div class="nav-menu">
+      <a href="#">Expert comptable</a>
+      <a href="#">Création d'entreprise</a>
+      <a href="#" class="no-arrow">Tarifs</a>
+      <a href="#">Ressources</a>
+    </div>
+    <div class="nav-right">
+      <a class="nav-phone" href="tel:0176410560">📞 01 76 41 05 60</a>
+      <a class="btn btn-indigo" href="#">Obtenir un devis</a>
+      <a class="btn btn-green" href="#">Se connecter</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== BREADCRUMB ===== -->
+<div class="crumb">
+  <a href="#">Accueil</a><span class="sep">/</span>
+  <a href="#">Fiches pratiques</a><span class="sep">/</span>
+  <a href="#">Création d'entreprise</a><span class="sep">/</span>
+  <span style="color:var(--navy);font-weight:500">Modèle de pacte d'associés</span>
+</div>
+
+<!-- ===== LAYOUT ===== -->
+<div class="wrap">
+
+  <!-- SOMMAIRE -->
+  <aside class="toc">
+    <h4>Sommaire</h4>
+    <ul>
+      <li class="active"><a href="#s1">Qu'est-ce qu'un pacte d'associés ?</a></li>
+      <li><a href="#s2">Les clauses essentielles</a></li>
+      <li><a href="#s3">Comment utiliser un modèle</a></li>
+      <li><a href="#s4">La validation juridique</a></li>
+      <li><a href="#s5">Questions fréquentes</a></li>
+    </ul>
+  </aside>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <span class="hero-arrow">↘</span>
+      <div class="meta-row">
+        <span class="pill">Guide complet</span>
+        <span class="time">9 min</span>
+      </div>
+      <h1>Modèle de pacte d'associés 2026 : guide pratique et <span class="accent">clauses clés</span></h1>
+      <div class="cta-row">
+        <a class="btn btn-indigo" href="#">Être accompagné par un expert →</a>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro">
+      <p>Prêt à vous lancer avec des associés ? L'enthousiasme est à son comble, les idées fusent, et la vision commune est limpide. Mais avez-vous pensé à ce qui se passera dans 2, 5 ou 10 ans ? Comment vous assurer que les règles du jeu restent claires et que votre projet ne déraille pas au premier désaccord majeur ?</p>
+      <p>La réponse tient en un document stratégique, souvent sous-estimé par les entrepreneurs qui démarrent : <a href="#">le pacte d'associés</a>. Loin d'être une simple formalité, c'est la véritable colonne vertébrale de votre aventure entrepreneuriale à plusieurs.</p>
+    </section>
+
+    <!-- RETAIN BLOCK -->
+    <section class="retain">
+      <div class="retain-icon">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke="#08A06F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <span class="retain-arrow">↙</span>
+      <h3>Ce que vous devez retenir :</h3>
+      <ul>
+        <li><strong>Pacte vs statuts :</strong><span>Le pacte est un contrat confidentiel entre associés, plus souple et flexible que les statuts publics.</span></li>
+        <li><strong>Les clauses incontournables :</strong><span>Gouvernance (véto, information), capital (agrément, préemption) et sortie (Good/Bad Leaver, Buy or Sell).</span></li>
+        <li><strong>Adapter, jamais copier-coller :</strong><span>Chaque clause doit refléter votre projet, vos associés et vos enjeux spécifiques.</span></li>
+        <li><strong>Validation par un expert :</strong><span>Un avocat ou expert-comptable garantit la validité juridique et la cohérence avec les statuts.</span></li>
+      </ul>
+    </section>
+
+    <div class="content">
+
+      <!-- SECTION 1 -->
+      <h2 id="s1">Qu'est-ce qu'un pacte d'associés et pourquoi est-il indispensable ?</h2>
+      <p>Un pacte d'associés (ou pacte d'actionnaires en SAS) est un contrat confidentiel signé par tout ou partie des associés d'une société. Son objectif est d'organiser leurs relations, de définir les règles de gestion du capital et d'anticiper les potentiels conflits. C'est un document sur-mesure qui vient compléter les statuts de l'entreprise.</p>
+      <p>Pensez aux statuts comme au code de la route de votre société : ils sont publics, obligatoires et définissent les grandes règles de fonctionnement (objet social, siège, <a href="#">capital social</a>). Le pacte, lui, est la conversation privée entre signataires : il définit qui conduit, qui choisit la musique et ce qu'on fait si un passager veut descendre en cours de route.</p>
+
+      <ul>
+        <li><strong>Sécuriser les relations :</strong> clarifier les attentes et engagements de chacun.</li>
+        <li><strong>Anticiper les conflits :</strong> prévoir les scénarios de sortie ou désaccord pour éviter les blocages.</li>
+        <li><strong>Protéger le capital :</strong> contrôler l'entrée de nouveaux investisseurs et la sortie des associés actuels.</li>
+        <li><strong>Stabiliser la gouvernance :</strong> accorder des droits spécifiques (véto…) pour préserver l'équilibre.</li>
+      </ul>
+
+      <!-- TOOLBOX -->
+      <section class="toolbox">
+        <div class="toolbox-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" stroke="#4848E8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>La boîte à outils du créateur d'entreprise</h4>
+        <div class="toolbox-grid">
+          <div class="toolbox-cell"><span>Modèle de <a href="#">pacte d'associés</a> (Word)</span><span class="arrow">→</span></div>
+          <div class="toolbox-cell"><span>Checklist clauses essentielles <a href="#">étape par étape</a> (PDF)</span><span class="arrow">→</span></div>
+          <div class="toolbox-cell"><span>Simulateur <a href="#">valorisation société</a></span><span class="arrow">→</span></div>
+          <div class="toolbox-cell"><span>Guide complet sur la <a href="#">SAS vs SARL</a> (E-book)</span><span class="arrow">→</span></div>
+        </div>
+      </section>
+
+      <!-- SECTION 2 -->
+      <h2 id="s2">Les clauses essentielles pour un pacte d'associés solide</h2>
+      <p>Un modèle est un excellent point de départ, mais son efficacité dépend de sa personnalisation. Voici les clauses incontournables à examiner et à adapter.</p>
+
+      <h3>Clauses relatives à la gouvernance</h3>
+      <ul>
+        <li><strong>La clause d'information renforcée :</strong> oblige les dirigeants à transmettre des informations stratégiques aux associés à une fréquence définie.</li>
+        <li><strong>Le droit de véto :</strong> permet à un ou plusieurs associés de bloquer des décisions majeures, même minoritaires.</li>
+        <li><strong>Le droit de consultation :</strong> impose de consulter certains associés avant une décision importante.</li>
+      </ul>
+
+      <!-- RESOURCES MINI -->
+      <div class="resources">
+        <div class="resources-label">Vos ressources complémentaires sur ce sujet :</div>
+        <div class="resources-row">
+          <a href="#">Comment fonctionne le droit de véto ?</a>
+          <a href="#">Comprendre la gouvernance en SAS</a>
+          <a href="#">Rédiger une clause d'information</a>
+        </div>
+      </div>
+
+      <h3>Clauses encadrant les mouvements de capital</h3>
+      <ul>
+        <li><strong>La clause d'agrément :</strong> soumet toute cession de parts à l'approbation des autres associés.</li>
+        <li><strong>Le droit de préemption :</strong> oblige à proposer les parts en priorité aux autres signataires.</li>
+        <li><strong>La clause d'inaliénabilité :</strong> interdit la vente des actions pendant une période déterminée (10 ans max).</li>
+      </ul>
+
+      <!-- INLINE BAND CTA -->
+      <div class="band">
+        <h4>Le pacte d'associés, ça ne s'improvise pas, on s'en parle ?</h4>
+        <a class="btn btn-white" href="#">Besoin d'aide pour vous lancer ?</a>
+      </div>
+
+      <h3>Clauses pour anticiper les départs et les conflits</h3>
+      <ul>
+        <li><strong>Les clauses « Leaver » (Good / Bad Leaver) :</strong> organisent les conditions de sortie d'un associé selon que son départ est « acceptable » ou préjudiciable.</li>
+        <li><strong>La clause « Buy or Sell » (clause texane) :</strong> en cas de blocage, force un associé à racheter ou vendre ses parts.</li>
+        <li><strong>La clause de non-concurrence :</strong> interdit à l'associé sortant de rejoindre une activité concurrente.</li>
+      </ul>
+
+      <h3>Clauses de protection des minoritaires et des fondateurs</h3>
+      <ul>
+        <li><strong>Le droit de sortie conjointe (Tag-along) :</strong> protège les minoritaires en cas de cession majoritaire.</li>
+        <li><strong>L'obligation de sortie conjointe (Drag-along) :</strong> permet de garantir une sortie totale en cas d'offre sur 100% de la société.</li>
+      </ul>
+
+      <!-- SECTION 3 -->
+      <h2 id="s3">Comment utiliser un modèle de pacte d'associés ?</h2>
+      <p>Un document cadre est un formidable outil pour structurer votre réflexion. Pour l'adapter, organisez une réunion avec tous les futurs signataires et posez-vous les bonnes questions, en toute transparence.</p>
+      <ol>
+        <li><strong>Vision et rôles :</strong> quelle vision commune à 5 ans ? Qui apporte quoi (compétences, réseau, financement) ?</li>
+        <li><strong>Gouvernance :</strong> quelles décisions à l'unanimité ? Qui doit être informé et à quelle fréquence ?</li>
+        <li><strong>Capital et valorisation :</strong> ouverture à de nouveaux investisseurs ? Méthode de valorisation ?</li>
+        <li><strong>Scénarios de sortie :</strong> que se passe-t-il en cas de départ, désaccord, décès ou incapacité d'un associé ?</li>
+      </ol>
+
+      <!-- PEACH BLOCK -->
+      <div class="peach-block">
+        <div>
+          <h3>Marre de l'administratif avant même d'avoir commencé ?</h3>
+          <p>Laissez nos experts Keobiz structurer votre pacte d'associés pendant que vous peaufinez votre produit. Nous gérons la complexité juridique pour vous.</p>
+          <a class="btn btn-green" href="#">Créer mon entreprise gratuitement →</a>
+        </div>
+        <div class="peach-illu">
+          <svg viewBox="0 0 200 220" fill="none">
+            <rect x="40" y="20" width="90" height="170" rx="14" fill="#fff" stroke="#1B2D5E" stroke-width="2"/>
+            <rect x="50" y="40" width="70" height="8" rx="3" fill="#4848E8"/>
+            <rect x="50" y="56" width="50" height="6" rx="3" fill="#E5EAF0"/>
+            <rect x="50" y="70" width="70" height="40" rx="6" fill="#ECF2FA"/>
+            <rect x="50" y="120" width="70" height="6" rx="3" fill="#E5EAF0"/>
+            <rect x="50" y="132" width="55" height="6" rx="3" fill="#E5EAF0"/>
+            <rect x="50" y="150" width="70" height="22" rx="6" fill="#08A06F"/>
+            <rect x="100" y="60" width="80" height="140" rx="12" fill="#fff" stroke="#1B2D5E" stroke-width="2"/>
+            <rect x="110" y="78" width="60" height="6" rx="3" fill="#4848E8"/>
+            <rect x="110" y="92" width="40" height="5" rx="2" fill="#E5EAF0"/>
+            <rect x="110" y="106" width="60" height="30" rx="5" fill="#ECF2FA"/>
+            <rect x="110" y="144" width="60" height="18" rx="5" fill="#4848E8"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- SECTION 4 -->
+      <h2 id="s4">L'étape cruciale : la validation juridique</h2>
+      <p>Une fois vos idées au clair, l'intervention d'un professionnel du droit ou de l'expertise-comptable est non négociable. Chez Keobiz, nous accompagnons les entrepreneurs bien au-delà de la simple comptabilité, en assurant la cohérence de leur montage juridique.</p>
+      <ul>
+        <li><strong>Validité juridique :</strong> conformité des clauses avec la loi.</li>
+        <li><strong>Cohérence globale :</strong> vérification que le pacte ne contredit pas les statuts.</li>
+        <li><strong>Équilibre :</strong> aucun signataire n'est lésé, prévenant les contentieux.</li>
+      </ul>
+      <p>Le coût de la relecture peut varier de quelques centaines à plusieurs milliers d'euros selon la complexité. C'est une assurance contre des litiges qui pourraient vous coûter des dizaines de milliers d'euros et, pire, la survie de votre entreprise.</p>
+
+      <!-- SECTION 5 -->
+      <h2 id="s5">Questions fréquentes sur le pacte d'associés</h2>
+      <h3>Peut-on modifier un pacte d'associés ?</h3>
+      <p>Oui, à tout moment. La modification requiert toutefois l'accord unanime de tous ses signataires, généralement via un avenant.</p>
+      <h3>Que se passe-t-il si un associé ne respecte pas le pacte ?</h3>
+      <p>Les autres signataires peuvent agir en justice : exécution forcée, dommages et intérêts, voire exclusion de l'associé fautif si le pacte le prévoit.</p>
+      <h3>Le pacte d'associés est-il obligatoire ?</h3>
+      <p>Non, il est purement contractuel et facultatif. Il est néanmoins fortement recommandé dès que l'on s'associe à plusieurs.</p>
+      <h3>Faut-il enregistrer le pacte d'associés ?</h3>
+      <p>Non, contrairement aux statuts, le pacte est un acte « sous seing privé ». Sa confidentialité est l'un de ses principaux atouts.</p>
+
+      <!-- AUTHOR -->
+      <div class="author">
+        <div class="author-avatar">MD</div>
+        <div>
+          <h5>Marcel Delaregardière</h5>
+          <p>Expert-comptable chez Keobiz, Marcel accompagne chaque année plus de 200 dirigeants dans la structuration juridique et fiscale de leur projet. Spécialisé en création d'entreprise et fiscalité des dirigeants.</p>
+        </div>
+      </div>
+
+      <!-- STEP NAV -->
+      <div class="step-nav">
+        <div class="step prev">← Étape précédente<small>Choisir sa forme juridique</small></div>
+        <div class="step next">Étape suivante →<small>S'associer en SAS ou SARL ?</small></div>
+      </div>
+
+      <!-- BOTTOM CTA -->
+      <div class="bottom-cta">
+        <h3>La création d'une entreprise ça ne s'improvise pas, on s'en parle ?</h3>
+        <a class="btn btn-white" href="#">Besoin d'aide pour vous lancer ?</a>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <a class="logo" href="#">
+        <div class="logo-mark">k</div>
+        <div class="logo-text">
+          <b>keobiz</b>
+          <small>BY KEROGO FINANCE</small>
+        </div>
+      </a>
+      <div class="foot-social">
+        <a href="#">f</a><a href="#">▶</a><a href="#">◉</a><a href="#">in</a>
+      </div>
+      <div class="foot-cert">ENTREPRISE LABEL · QUALIANOR</div>
+    </div>
+    <div class="foot-col">
+      <h6>Nos services</h6>
+      <a href="#">Expert comptable en ligne</a>
+      <a href="#">Création d'entreprise</a>
+      <a href="#">Bilan & liasse fiscale</a>
+      <a href="#">Conseil juridique</a>
+    </div>
+    <div class="foot-col">
+      <h6>Nos ressources</h6>
+      <a href="#">Le mag</a>
+      <a href="#">Nos outils</a>
+      <a href="#">Guides</a>
+      <a href="#">Modèles</a>
+      <a href="#">FAQ</a>
+    </div>
+    <div class="foot-col">
+      <h6>À propos de Keobiz</h6>
+      <a href="#">Notre cabinet à Paris</a>
+      <a href="#">Notre cabinet à Rouen</a>
+      <a href="#">Témoignages</a>
+      <a href="#">Qui sommes-nous</a>
+      <a href="#">Nous contacter</a>
+      <a href="#">Ils parlent de nous</a>
+      <a href="#">Parrainage</a>
+      <a href="#">Partenaires</a>
+      <a href="#">Recrutement</a>
+    </div>
+  </div>
+  <div class="foot-legal">
+    <span>© 2026 Keobiz, tous droits réservés.</span>
+    <span><a href="#">Conditions générales</a> · <a href="#">Mentions légales</a> · <a href="#">Protection des données</a> · <a href="#">Gestion des cookies</a></span>
+  </div>
+</footer>
+
+<div class="preview-badge">Preview · Template Fiche pratique N2</div>
+
+</body>
+</html>

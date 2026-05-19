@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modèle de CGV 2026 - prêt, clair et conforme</title>
+<meta name="description" content="Découvrez un modèle de CGV clair et conforme 2026 et apprenez comment rédiger vos Conditions Générales de Vente étape par étape pour sécuriser vos ventes.">
+<style>
+:root{
+  --indigo:#4848E8; --indigo-600:#3840C8; --indigo-700:#3040A0; --indigo-50:#ECF2FA;
+  --green:#08A06F; --green-600:#089068;
+  --mint-bg:#D6F0E5; --mint-text:#08805A;
+  --peach:#FCEEDC;
+  --navy:#1B2D5E; --ink:#1F2A44; --muted:#5B6B82;
+  --line:#E5EAF0; --soft:#F6F8FB; --white:#FFFFFF;
+  --radius:24px; --radius-sm:14px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#fff;color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--indigo);text-decoration:underline;text-underline-offset:2px}
+a:hover{text-decoration-thickness:2px}
+img{max-width:100%}
+.nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.nav-inner{max-width:1320px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:36px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:38px;height:38px;background:var(--green);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;font-family:Georgia,serif;font-style:italic}
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-text b{color:var(--navy);font-weight:800;font-size:22px;letter-spacing:-0.3px}
+.logo-text small{color:#9AA8BB;font-size:9.5px;letter-spacing:0.18em;margin-top:3px}
+.nav-menu{display:flex;gap:30px;font-size:14.5px;color:var(--navy);font-weight:600}
+.nav-menu a{color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:6px}
+.nav-menu a::after{content:"⌄";font-size:12px;color:#9AA8BB;margin-top:-4px}
+.nav-menu a.no-arrow::after{content:""}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:14px}
+.nav-phone{font-size:14.5px;color:var(--navy);font-weight:600;text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:13px 22px;font-weight:600;font-size:14.5px;cursor:pointer;border:0;transition:.2s;text-decoration:none}
+.btn-indigo{background:var(--indigo);color:#fff}
+.btn-green{background:var(--green);color:#fff}
+.btn-white{background:#fff;color:var(--navy)}
+.crumb{max-width:1320px;margin:0 auto;padding:22px 32px 4px;font-size:13.5px;color:var(--muted)}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb .sep{margin:0 10px;color:#B5C0D0}
+.wrap{max-width:1320px;margin:0 auto;padding:20px 32px 60px;display:grid;grid-template-columns:280px 1fr;gap:48px}
+.toc{position:sticky;top:100px;align-self:start}
+.toc h4{margin:0 0 16px;font-size:18px;color:var(--navy);font-weight:800}
+.toc ul{list-style:none;padding:0;margin:0}
+.toc li a{display:block;padding:12px 14px;border-radius:10px;color:var(--ink);text-decoration:none;line-height:1.4;font-size:14px}
+.toc li a:hover{background:var(--soft);color:var(--indigo)}
+.toc li.active a{background:var(--soft);color:var(--navy);font-weight:600}
+.hero{background:var(--indigo-50);border-radius:var(--radius);padding:46px 60px 50px;margin-bottom:36px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;border-radius:50%;border:1px solid #D7DFEC;opacity:.6}
+.hero .meta-row{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.hero .pill{background:var(--mint-bg);color:var(--mint-text);padding:6px 14px;border-radius:8px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.hero .time{color:var(--muted);font-size:13px}
+.hero h1{margin:0 0 28px;font-size:42px;line-height:1.15;font-weight:800;color:var(--navy);letter-spacing:-0.8px;max-width:780px}
+.hero h1 .accent{color:var(--indigo)}
+.hero .cta-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.hero-arrow{position:absolute;right:60px;top:36px;color:var(--green);font-size:30px;line-height:1;transform:rotate(35deg)}
+.intro p{font-size:16.5px;color:var(--ink);margin:0 0 14px}
+.retain{background:linear-gradient(135deg,#4A48E8 0%,#3850D0 60%,#3858C8 100%);color:#fff;border-radius:var(--radius);padding:42px 50px 44px;margin:36px 0;position:relative}
+.retain-icon{position:absolute;left:36px;top:-26px;width:54px;height:54px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(72,72,232,.25)}
+.retain h3{margin:14px 0 22px;font-size:18px;color:#A7D8E8;font-weight:700}
+.retain ul{list-style:none;padding:0;margin:0}
+.retain li{padding:14px 0 14px 36px;position:relative;border-top:1px solid rgba(255,255,255,.18)}
+.retain li:first-child{border-top:0}
+.retain li::before{content:"";position:absolute;left:0;top:18px;width:20px;height:20px;border-radius:50%;border:2px solid rgba(255,255,255,.5);background:transparent}
+.retain li::after{content:"";position:absolute;left:7px;top:25px;width:6px;height:6px;border-radius:50%;background:#fff}
+.retain li strong{display:block;color:#fff;font-weight:700;margin-bottom:4px;font-size:15.5px}
+.retain li span{display:block;color:rgba(255,255,255,.78);font-size:14px;line-height:1.55}
+.content h2{font-size:28px;margin:48px 0 14px;color:var(--navy);font-weight:800;letter-spacing:-0.4px;scroll-margin-top:100px}
+.content h3{font-size:18.5px;margin:28px 0 10px;color:var(--navy);font-weight:700}
+.content p{margin:0 0 14px;color:var(--ink);font-size:15.5px}
+.content ul,.content ol{padding-left:0;margin:14px 0 18px;list-style:none}
+.content > ul > li, .content section > ul > li{position:relative;padding:6px 0 6px 22px;margin-bottom:4px;font-size:15.5px}
+.content > ul > li::before, .content section > ul > li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:8px;border-radius:50%;background:var(--green)}
+.content > ol{counter-reset:olist}
+.content > ol > li{counter-increment:olist;position:relative;padding:6px 0 6px 36px;margin-bottom:8px;font-size:15.5px}
+.content > ol > li::before{content:counter(olist,decimal-leading-zero);position:absolute;left:0;top:8px;color:var(--indigo);font-weight:800;font-size:13px}
+.content li strong{color:var(--navy)}
+.content ul ul li{position:relative;padding:3px 0 3px 18px;font-size:14.5px;color:var(--muted);list-style:none}
+.content ul ul li::before{content:"";position:absolute;left:0;top:13px;width:6px;height:1.5px;background:var(--muted)}
+.attention,.advice{border-radius:14px;padding:20px 24px;margin:24px 0}
+.attention{background:#FFF6E5;border:1px solid #F5D89B}
+.attention h4{margin:0 0 6px;color:#7A4E00;font-size:15.5px}
+.attention p{margin:0;font-size:14.5px;color:#5C3A00}
+.advice{background:var(--indigo-50);border:1px solid #C7D6F0}
+.advice h4{margin:0 0 6px;color:var(--navy);font-size:15.5px}
+.advice p{margin:0;font-size:14.5px;color:var(--ink)}
+.band{background:linear-gradient(95deg,#4A48E8 0%,#08A06F 130%);color:#fff;border-radius:18px;padding:24px 30px;display:flex;align-items:center;justify-content:space-between;gap:24px;margin:30px 0}
+.band h4{margin:0;font-size:17px;font-weight:700;max-width:520px;line-height:1.35}
+.band .btn-white{padding:14px 24px}
+.peach-block{background:var(--peach);border-radius:var(--radius);padding:34px 38px;margin:30px 0;display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:center}
+.peach-block h3{margin:0 0 12px;color:var(--navy);font-size:22px;font-weight:800;line-height:1.25}
+.peach-block p{margin:0 0 22px;color:var(--muted);font-size:14.5px}
+.peach-illu{display:flex;justify-content:center;align-items:center}
+.author{background:var(--indigo-50);border-radius:var(--radius);padding:26px 30px;margin:40px 0 30px;display:grid;grid-template-columns:80px 1fr;gap:22px;align-items:center}
+.author-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--indigo),var(--indigo-600));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:26px;font-family:Georgia,serif}
+.author h5{margin:0 0 6px;font-size:16px;color:var(--navy);font-weight:700}
+.author p{margin:0;font-size:14px;color:var(--muted);line-height:1.6}
+.step-nav{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:24px 0;margin:30px 0}
+.step-nav .step{font-size:13.5px;color:var(--indigo);font-weight:600}
+.step-nav .step small{display:block;color:var(--muted);font-weight:400;font-size:13px;margin-top:4px}
+.step-nav .step.next{text-align:right}
+.bottom-cta{background:var(--indigo-700);color:#fff;border-radius:18px;padding:26px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;margin:30px 0 0}
+.bottom-cta h3{margin:0;font-size:18px;font-weight:700;max-width:430px;line-height:1.35}
+.bottom-cta .btn-white{padding:14px 26px}
+.site-footer{background:linear-gradient(180deg,var(--indigo-700) 0%,#283890 100%);color:rgba(255,255,255,.78);padding:60px 32px 30px;margin-top:60px;border-radius:32px 32px 0 0}
+.foot-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.foot-brand .logo-mark{background:#fff;color:var(--green)}
+.foot-brand .logo-text b{color:#fff}
+.foot-brand .logo-text small{color:rgba(255,255,255,.6)}
+.foot-social{display:flex;gap:10px;margin-top:18px}
+.foot-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:13px}
+.foot-cert{margin-top:22px;display:inline-flex;align-items:center;gap:8px;background:#F23358;color:#fff;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.foot-col h6{color:#fff;margin:0 0 14px;font-size:14.5px;font-weight:700}
+.foot-col a{display:block;color:rgba(255,255,255,.78);font-size:14px;padding:5px 0;text-decoration:none}
+.foot-legal{max-width:1320px;margin:34px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);display:flex;justify-content:space-between;font-size:12.5px;color:rgba(255,255,255,.55);gap:20px;flex-wrap:wrap}
+.foot-legal a{color:rgba(255,255,255,.7);text-decoration:none}
+</style></head><body>
+<nav class="nav"><div class="nav-inner">
+  <a class="logo" href="#"><div class="logo-mark">k</div><div class="logo-text"><b>keobiz</b><small>BY KEROGO FINANCE</small></div></a>
+  <div class="nav-menu"><a href="#">Expert comptable</a><a href="#">Création d'entreprise</a><a href="#" class="no-arrow">Tarifs</a><a href="#">Ressources</a></div>
+  <div class="nav-right"><a class="nav-phone" href="tel:0176410560">📞 01 76 41 05 60</a><a class="btn btn-indigo" href="#">Obtenir un devis</a><a class="btn btn-green" href="#">Se connecter</a></div>
+</div></nav>
+<div class="crumb"><a href="#">Accueil</a><span class="sep">/</span><a href="#">Fiches pratiques</a><span class="sep">/</span><span style="color:var(--navy);font-weight:500">Modèle de CGV 2026</span></div>
+<div class="wrap">
+  <aside class="toc"><h4>Sommaire</h4><ul><li class="active"><a href="#s1">Les CGV, bien plus qu&#x27;une simple formalité</a></li>
+<li><a href="#s2">Vos cgv sont-elles obligatoires ? la distinction B2B / B2C</a></li>
+<li><a href="#s3">La structure de vos CGV : les clauses indispensables à ne jamais oubli</a></li>
+<li><a href="#s4">Comment rédiger et mettre en place vos conditions générales de vente ?</a></li>
+<li><a href="#s5">Les erreurs fréquentes à éviter pour des CGV conformes</a></li></ul></aside>
+  <main>
+    <section class="hero">
+      <span class="hero-arrow">↘</span>
+      <div class="meta-row"><span class="pill">Guide complet</span><span class="time">8 min</span></div>
+      <h1>Modèle de CGV 2026 <span class="accent">prêt, clair et conforme</span></h1>
+      <div class="cta-row"><a class="btn btn-indigo" href="#">Être accompagné par un expert →</a></div>
+    </section>
+    <section class="intro"></section>
+    <section class="retain">
+      <div class="retain-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke="#08A06F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>Ce que vous devez retenir :</h3>
+      <ul><li><strong>Les CGV, bien plus qu&#x27;une simple formalité</strong><span>Les Conditions Générales de Vente (CGV) constituent le contrat qui encadre chaque transaction entre votre entreprise et vos clients.</span></li>
+<li><strong>Vos cgv sont-elles obligatoires</strong><span>L&#x27;obligation de communiquer vos CGV dépend directement de la nature de votre client.</span></li>
+<li><strong>La structure de vos CGV</strong><span>Un modèle de CGV sert de base, mais il doit impérativement être adapté à votre activité.</span></li>
+<li><strong>Comment rédiger et mettre en place vos conditions général...</strong><span>Structurer ses CGV est une chose, les rendre opposables à vos clients en est une autre.</span></li></ul>
+    </section>
+    <div class="content">
+      
+<div class="video-placeholder-wrapper">
+<div class="video-placeholder-content video-placeholder-empty">
+<div class="video-placeholder-play">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<div class="video-placeholder-text">Vidéo à intégrer depuis YouTube</div>
+<button class="video-placeholder-button" onclick="window.searchVideo &amp;&amp; window.searchVideo()">
+<svg fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+                Rechercher une vidéo
+              </button>
+</div>
+</div>
+<h2 id="s1">Les CGV, bien plus qu'une simple formalité</h2>
+<p>Les Conditions Générales de Vente (CGV) constituent le contrat qui encadre chaque transaction entre votre entreprise et vos clients. Elles définissent les droits et obligations de chacun, de la commande au paiement, en passant par la livraison et les éventuels litiges. On peut les voir comme le mode d'emploi de votre relation commerciale. Leur objectif est double : informer le client en toute transparence et sécuriser juridiquement votre activité.</p>
+<p>En cas de désaccord ou de litige, ce sont elles qui serviront de référence. Des CGV claires et complètes permettent de réduire considérablement les risques d'impayés, de contestations sur la livraison ou de malentendus sur les garanties. Elles sont aussi un gage de crédibilité et de professionnalisme aux yeux de vos clients, qui savent précisément à quoi s'attendre en achetant vos produits ou services.</p>
+<p>Il est courant de les confondre avec les Conditions Générales d'Utilisation (CGU). La distinction est simple :</p>
+<ul>
+<li><strong>Les CGV</strong> encadrent une relation <strong>commerciale</strong> (la vente d'un bien ou d'une prestation).</li>
+<li><strong>Les CGU</strong> régissent <strong>l'utilisation</strong> d'un service, comme la simple navigation sur votre site internet, sans qu'il y ait forcément une transaction.</li>
+</ul>
+<h2 id="s2">Vos cgv sont-elles obligatoires ? la distinction B2B / B2C</h2>
+<p>L'obligation de communiquer vos CGV dépend directement de la nature de votre client. C'est un point de vigilance essentiel, car les règles diffèrent radicalement.</p>
+<h3>Si votre client est un particulier (B2C)</h3>
+<p>La communication des CGV est une <strong>obligation légale absolue</strong>. En tant que professionnel, vous devez fournir ces informations à votre client consommateur avant la conclusion du contrat. C'est ce qu'on appelle l'obligation précontractuelle d'information. Le droit considère le consommateur comme la partie la plus vulnérable, qu'il faut protéger en lui donnant tous les éléments pour qu'il s'engage en connaissance de cause. La preuve que cette communication a bien eu lieu vous incombe. En cas de manquement, vous risquez une amende administrative pouvant aller jusqu'à 15 000 €.</p>
+<h3>Si votre client est un professionnel (B2B)</h3>
+<p>Entre professionnels, la situation est plus souple. Il n'est pas obligatoire de présenter spontanément vos CGV. Cependant, vous devez <strong>obligatoirement les communiquer si un client professionnel en fait la demande</strong>. Le refus est sanctionné par une amende pouvant atteindre 75 000 € pour une personne morale. On connaît la tentation de ne pas les fournir à un concurrent curieux, mais la loi est claire : s'il peut prouver une intention de commande, vous êtes tenu de les transmettre.</p>
+<blockquote>
+<p><strong>Le cas du professionnel "assimilé consommateur"</strong><br/>Attention, un client professionnel peut parfois bénéficier de la protection du droit de la consommation. C'est le cas s'il remplit trois conditions cumulatives : il emploie 5 salariés au maximum, le contrat est conclu hors de son champ d'activité principal, et la vente se fait à distance ou hors établissement (sur un salon, par exemple). Dans cette situation, ce sont les règles protectrices du B2C qui s'appliquent.</p>
+</blockquote>
+<div class="band"><h4>Sécurisez votre projet avec un expert-comptable Keobiz</h4><a class="btn btn-white" href="#">Besoin d'aide pour vous lancer ?</a></div><h2 id="s3">La structure de vos CGV : les clauses indispensables à ne jamais oublier</h2>
+<p>Un modèle de CGV sert de base, mais il doit impérativement être adapté à votre activité. Voici les clauses incontournables qui doivent y figurer pour garantir leur validité et leur efficacité.</p>
+<h3>Objet et champ d'application</h3>
+<p>Cette première clause sert à définir clairement ce que les CGV encadrent : la vente de quels produits ? La réalisation de quelles prestations de services ? S'appliquent-elles aux ventes en ligne, en magasin, ou les deux ? C'est le préambule qui pose le cadre général.</p>
+<h3>Prix et conditions de paiement</h3>
+<p>La clarté sur le prix est non-négociable.</p>
+<ul>
+<li><strong>Prix :</strong> Pour une clientèle de particuliers (B2C), les prix doivent toujours être indiqués Toutes Taxes Comprises (TTC). Pour les professionnels (B2B), il est d'usage d'afficher les prix Hors Taxes (HT), car la <a href="https://keobiz.fr/le-mag/tva">gestion de la TVA</a> est un élément central de leur comptabilité. Précisez la devise et la durée de validité de vos offres.</li>
+<li><strong>Modalités de paiement :</strong> Listez les moyens de paiement acceptés (carte bancaire, virement, etc.).</li>
+<li><strong>Délais de paiement :</strong> Indiquez quand le paiement est exigible (à la commande, à la livraison, à 30 jours...).</li>
+<li><strong>Pénalités de retard :</strong> En B2B, il est obligatoire de mentionner le taux des pénalités de retard et le montant de l'indemnité forfaitaire pour frais de recouvrement (40 € minimum). En B2C, cette mention est possible mais moins systématique.</li>
+</ul>
+<h3>Livraison ou exécution de la prestation</h3>
+<p>Cette section détaille tout le processus logistique.</p>
+<ul>
+<li><strong>Délais :</strong> Fournissez une estimation du délai de livraison ou de la date d'exécution de la prestation.</li>
+<li><strong>Coûts et zones :</strong> Précisez les frais de livraison et les zones géographiques desservies.</li>
+<li><strong>Transfert de propriété et des risques :</strong> Indiquez à quel moment le bien devient la propriété du client et qui est responsable en cas de perte ou de dommage durant le transport.</li>
+<li><strong>Procédure de réception :</strong> Expliquez ce que le client doit faire s'il reçoit un produit endommagé.</li>
+</ul>
+<h3>Droit de rétractation : la protection clé du consommateur</h3>
+<p>Cette clause est <strong>cruciale et obligatoire en B2C</strong> pour les contrats conclus à distance ou hors établissement.</p>
+<ul>
+<li><strong>Délai :</strong> Le consommateur dispose d'un délai légal de 14 jours pour changer d'avis, sans avoir à se justifier.</li>
+<li><strong>Modalités :</strong> Expliquez clairement comment exercer ce droit (formulaire à renvoyer, contact du service client...).</li>
+<li><strong>Remboursement :</strong> Précisez les conditions de retour du produit et le délai de remboursement.</li>
+<li><strong>Exclusions :</strong> Listez les cas où le droit de rétractation ne s'applique pas (biens personnalisés, produits périssables, etc.).</li>
+</ul>
+
+<h3>Garanties légales</h3>
+<p>Vous devez informer vos clients de l'existence des garanties légales qui s'imposent à tout vendeur professionnel.</p>
+<ul>
+<li><strong>Garantie légale de conformité :</strong> Elle protège le consommateur contre les défauts de conformité du produit (bien qui ne correspond pas à la description, impropre à l'usage attendu...).</li>
+<li><strong>Garantie contre les vices cachés :</strong> Elle couvre les défauts non apparents au moment de l'achat qui rendent le produit inutilisable ou diminuent fortement son usage.</li>
+</ul>
+<p>Si vous proposez une garantie commerciale supplémentaire, ses conditions (durée, étendue, exclusions) doivent être détaillées ici.</p>
+<h3>Responsabilité et cas de force majeure</h3>
+<p>Cette clause vise à délimiter votre responsabilité. Vous pouvez prévoir des cas où votre responsabilité ne pourra être engagée, comme une mauvaise utilisation du produit par le client. Mentionnez également les cas de force majeure (événements imprévisibles, irrésistibles et extérieurs) qui suspendent vos obligations contractuelles.</p>
+<div class="note">
+<h4>Clause de réserve de propriété</h4>
+<p>Particulièrement utile en B2B, cette clause stipule que vous restez propriétaire des biens vendus jusqu'au paiement intégral du prix par le client. En cas de non-paiement, elle vous permet de revendiquer et récupérer votre marchandise plus facilement.</p>
+</div>
+<h3>Protection des données personnelles (RGPD)</h3>
+<p>Depuis l'entrée en vigueur du RGPD, cette mention est indispensable. Vous devez informer vos clients sur :</p>
+<ul>
+<li>Les données personnelles que vous collectez (nom, adresse, email...).</li>
+<li>La finalité de cette collecte (gestion de la commande, livraison, marketing...).</li>
+<li>La durée de conservation des données.</li>
+<li>Les droits des personnes concernées (accès, rectification, suppression...).</li>
+</ul>
+<h3>Règlement des litiges et droit applicable</h3>
+<p>Précisez le droit applicable au contrat (généralement le droit français) et la juridiction compétente en cas de litige. Pour les clients consommateurs, vous devez également mentionner la possibilité de recourir à un médiateur de la consommation, en indiquant ses coordonnées.</p>
+<div class="peach-block"><div><h3>Marre de l'administratif avant même d'avoir commencé ?</h3><p>Laissez nos experts Keobiz structurer votre projet pendant que vous peaufinez votre activité. Nous gérons la complexité pour vous.</p><a class="btn btn-green" href="#">Créer mon entreprise gratuitement →</a></div><div class="peach-illu"><svg fill="none" viewbox="0 0 200 220">
+<rect fill="#fff" height="170" rx="14" stroke="#1B2D5E" stroke-width="2" width="90" x="40" y="20"></rect>
+<rect fill="#4848E8" height="8" rx="3" width="70" x="50" y="40"></rect>
+<rect fill="#E5EAF0" height="6" rx="3" width="50" x="50" y="56"></rect>
+<rect fill="#ECF2FA" height="40" rx="6" width="70" x="50" y="70"></rect>
+<rect fill="#08A06F" height="22" rx="6" width="70" x="50" y="150"></rect>
+<rect fill="#fff" height="140" rx="12" stroke="#1B2D5E" stroke-width="2" width="80" x="100" y="60"></rect>
+<rect fill="#4848E8" height="6" rx="3" width="60" x="110" y="78"></rect>
+<rect fill="#ECF2FA" height="30" rx="5" width="60" x="110" y="106"></rect>
+<rect fill="#4848E8" height="18" rx="5" width="60" x="110" y="144"></rect>
+</svg></div></div><h2 id="s4">Comment rédiger et mettre en place vos conditions générales de vente ?</h2>
+<p>Structurer ses CGV est une chose, les rendre opposables à vos clients en est une autre. La méthode est cruciale pour que le document ait une réelle valeur juridique.</p>
+<p>D'abord, partez d'un modèle fiable mais personnalisez-le scrupuleusement. Chaque activité a ses spécificités (type de produits, logistique, clientèle...). Un simple copier-coller des CGV d'un concurrent est une erreur dangereuse qui peut vous exposer à des sanctions et laisser votre entreprise sans protection adéquate.</p>
+<p>Ensuite, assurez-vous de leur accessibilité et de leur acceptation. Pour un site e-commerce, elles doivent être facilement accessibles (un lien dans le pied de page, par exemple). Surtout, le client doit activement les accepter avant de valider sa commande, généralement via une case à cocher avec une phrase du type "Je reconnais avoir lu et accepté les Conditions Générales de Vente". Cette action formalise son consentement et rend le contrat applicable. Pour une prestation de service, faites-les figurer au dos de vos devis et factures et mentionnez sur le recto que la signature du devis vaut acceptation des CGV.</p>
+<div class="advice">
+<h4>Faites valider vos CGV par un professionnel</h4>
+<p>La rédaction de clauses juridiques engage votre responsabilité. Pour dormir sur vos deux oreilles, il est fortement recommandé de faire relire et valider vos CGV par un professionnel (avocat ou juriste). Un <a href="https://keobiz.fr/le-mag/expert-comptable-en-ligne-ce-quil-faut-savoir-sur-le-metier">expert-comptable en ligne</a> peut également vous orienter sur les aspects financiers et fiscaux à intégrer, assurant une cohérence parfaite avec votre gestion.</p>
+</div>
+<h2 id="s5">Les erreurs fréquentes à éviter pour des CGV conformes</h2>
+<p>Certains pièges sont courants et peuvent invalider vos CGV ou affaiblir votre protection. On les a tous vus, et il est simple de les éviter.</p>
+<ol>
+<li><p><strong>Copier-coller sans adapter :</strong> C'est l'erreur la plus fréquente. Les CGV d'un autre site ne correspondront jamais parfaitement à votre activité, à vos processus de livraison ou à votre politique de retour.</p></li>
+<li><p><strong>Utiliser un langage trop complexe :</strong> Vos CGV doivent être lisibles et compréhensibles, surtout en B2C. Le jargon juridique excessif peut être considéré comme une clause abusive.</p></li>
+<li><p><strong>Oublier des mentions obligatoires :</strong> L'absence d'une information clé, comme les modalités du droit de rétractation, peut entraîner des sanctions et l'annulation de certaines clauses.</p></li>
+<li><p><strong>Ne pas les mettre à jour :</strong> La législation évolue. Des CGV rédigées il y a cinq ans ne sont probablement plus conformes. Pensez à les réviser régulièrement.</p></li>
+<li><p><strong>Mélanger les règles B2B et B2C :</strong> Appliquer des conditions B2B (comme l'absence de droit de rétractation) à un client particulier est illégal. Il est souvent plus simple de prévoir deux documents distincts.</p></li>
+</ol>
+<p>Les Conditions Générales de Vente ne sont pas qu'un document légal à produire pour être en règle. Elles sont le reflet de votre professionnalisme et la pierre angulaire d'une relation commerciale transparente et saine. En y consacrant le temps nécessaire, vous ne faites pas que vous conformer à la loi : vous investissez dans la confiance de vos clients et dans la pérennité de votre entreprise. C'est un effort initial qui sécurise d'innombrables transactions futures.</p>
+
+
+
+      <div class="author">
+        <div class="author-avatar">MD</div>
+        <div><h5>Marcel Delaregardière</h5><p>Expert-comptable chez Keobiz, Marcel accompagne chaque année plus de 200 dirigeants dans la structuration juridique et fiscale de leur projet.</p></div>
+      </div>
+      <div class="step-nav"><div class="step prev">← Étape précédente<small>Calendrier pratique 2026 obligations fiscales et sociales</small></div><div class="step next">Étape suivante →<small>Modèle de prévisionnel financier sur tableur Excel : guide p</small></div></div>
+      <div class="bottom-cta"><h3>La création d'une entreprise ça ne s'improvise pas, on s'en parle ?</h3><a class="btn btn-white" href="#">Besoin d'aide pour vous lancer ?</a></div>
+    </div>
+  </main>
+</div>
+<footer class="site-footer"><div class="foot-inner">
+  <div class="foot-brand">
+    <a class="logo" href="#"><div class="logo-mark">k</div><div class="logo-text"><b>keobiz</b><small>BY KEROGO FINANCE</small></div></a>
+    <div class="foot-social"><a href="#">f</a><a href="#">▶</a><a href="#">◉</a><a href="#">in</a></div>
+    <div class="foot-cert">ENTREPRISE LABEL · QUALIANOR</div>
+  </div>
+  <div class="foot-col"><h6>Nos services</h6><a href="#">Expert comptable en ligne</a><a href="#">Création d'entreprise</a><a href="#">Bilan & liasse fiscale</a><a href="#">Conseil juridique</a></div>
+  <div class="foot-col"><h6>Nos ressources</h6><a href="#">Le mag</a><a href="#">Nos outils</a><a href="#">Guides</a><a href="#">Modèles</a></div>
+  <div class="foot-col"><h6>À propos de Keobiz</h6><a href="#">Notre cabinet à Paris</a><a href="#">Notre cabinet à Rouen</a><a href="#">Témoignages</a><a href="#">Qui sommes-nous</a><a href="#">Nous contacter</a></div>
+</div><div class="foot-legal"><span>© 2026 Keobiz, tous droits réservés.</span><span><a href="#">CGU</a> · <a href="#">Mentions légales</a> · <a href="#">Cookies</a></span></div></footer>
+</body></html>
