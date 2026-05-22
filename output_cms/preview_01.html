@@ -1,0 +1,327 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8">
+<title>Modèle de pacte d&#x27;associés 2026 - Guide pratique | Keobiz</title>
+<style>
+:root{
+  --indigo:#4848E8; --indigo-600:#3840C8; --indigo-700:#3040A0; --indigo-50:#ECF2FA;
+  --green:#08A06F; --green-600:#089068;
+  --mint-bg:#D6F0E5; --mint-text:#08805A;
+  --peach:#FCEEDC; --navy:#1B2D5E; --ink:#1F2A44; --muted:#5B6B82;
+  --line:#E5EAF0; --soft:#F6F8FB;
+  --radius:24px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#fff;color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--indigo);text-decoration:underline;text-underline-offset:2px}
+img{max-width:100%}
+.nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.nav-inner{max-width:1320px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:36px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:38px;height:38px;background:var(--green);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;font-family:Georgia,serif;font-style:italic}
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-text b{color:var(--navy);font-weight:800;font-size:22px}
+.logo-text small{color:#9AA8BB;font-size:9.5px;letter-spacing:0.18em;margin-top:3px}
+.nav-menu{display:flex;gap:30px;font-size:14.5px;color:var(--navy);font-weight:600}
+.nav-menu a{color:var(--navy);text-decoration:none}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:13px 22px;font-weight:600;font-size:14.5px;border:0;text-decoration:none}
+.btn-indigo{background:var(--indigo);color:#fff}
+.btn-green{background:var(--green);color:#fff}
+.btn-white{background:#fff;color:var(--navy)}
+.crumb{max-width:1320px;margin:0 auto;padding:22px 32px 4px;font-size:13.5px;color:var(--muted)}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb .sep{margin:0 10px;color:#B5C0D0}
+.wrap{max-width:1180px;margin:0 auto;padding:20px 32px 60px}
+.hero{background:var(--indigo-50);border-radius:var(--radius);padding:46px 60px 50px;margin-bottom:30px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;border-radius:50%;border:1px solid #D7DFEC;opacity:.6}
+.hero .pill{display:inline-block;background:var(--mint-bg);color:var(--mint-text);padding:6px 14px;border-radius:8px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.hero h1{margin:0 0 28px;font-size:44px;line-height:1.15;font-weight:800;color:var(--navy);letter-spacing:-0.8px;max-width:820px}
+.hero h1 span{color:var(--indigo)}
+.intro p{font-size:16.5px;color:var(--ink);margin:0 0 14px}
+.retain{background:linear-gradient(135deg,#4A48E8 0%,#3850D0 60%,#3858C8 100%);color:#fff;border-radius:var(--radius);padding:42px 50px 44px;margin:30px 0;position:relative}
+.retain-icon{position:absolute;left:36px;top:-26px;width:54px;height:54px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(72,72,232,.25)}
+.retain h3{margin:14px 0 22px;font-size:18px;color:#A7D8E8;font-weight:700}
+.retain ul{list-style:none;padding:0;margin:0}
+.retain li{padding:14px 0 14px 36px;position:relative;border-top:1px solid rgba(255,255,255,.18);font-size:14.5px;color:rgba(255,255,255,.85);line-height:1.55}
+.retain li:first-child{border-top:0}
+.retain li::before{content:"";position:absolute;left:0;top:18px;width:20px;height:20px;border-radius:50%;border:2px solid rgba(255,255,255,.5)}
+.retain li::after{content:"";position:absolute;left:7px;top:25px;width:6px;height:6px;border-radius:50%;background:#fff}
+.retain li strong{color:#fff;font-weight:700;margin-right:4px}
+.parcours-title{font-size:32px;color:var(--navy);font-weight:800;letter-spacing:-0.5px;margin:50px 0 24px;text-align:center}
+.parcours-title span{color:var(--indigo)}
+.etape{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:38px 42px;margin:24px 0;position:relative}
+.etape-badge{display:inline-block;background:var(--indigo);color:#fff;padding:6px 16px;border-radius:8px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+.etape h2{font-size:26px;color:var(--navy);font-weight:800;letter-spacing:-0.3px;margin:0 0 6px;line-height:1.2}
+.etape h2 span{color:var(--indigo)}
+.etape .subtitle{color:var(--muted);font-size:15px;margin:0 0 22px}
+.etape .body{font-size:15.5px;color:var(--ink)}
+.etape .body p{margin:0 0 14px}
+.etape .body h3{font-size:18px;color:var(--navy);margin:22px 0 10px;font-weight:700}
+.etape .body ul,.etape .body ol{padding-left:0;margin:14px 0 18px;list-style:none}
+.etape .body ul > li{position:relative;padding:6px 0 6px 22px}
+.etape .body ul > li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:8px;border-radius:50%;background:var(--green)}
+.etape .body ol{counter-reset:n}
+.etape .body ol > li{counter-increment:n;position:relative;padding:6px 0 6px 36px;margin-bottom:8px}
+.etape .body ol > li::before{content:counter(n,decimal-leading-zero);position:absolute;left:0;top:8px;color:var(--indigo);font-weight:800;font-size:13px}
+.etape .body li strong{color:var(--navy)}
+.etape .body ul ul li{position:relative;padding:3px 0 3px 18px;font-size:14.5px;color:var(--muted)}
+.etape .body ul ul li::before{content:"";position:absolute;left:0;top:13px;width:6px;height:1.5px;background:var(--muted);border-radius:0}
+.etape .body .attention,.etape .body .advice{border-radius:14px;padding:18px 22px;margin:18px 0}
+.etape .body .attention{background:#FFF6E5;border:1px solid #F5D89B}
+.etape .body .attention h4{margin:0 0 6px;color:#7A4E00;font-size:15px}
+.etape .body .attention p{margin:0;font-size:14px;color:#5C3A00}
+.etape .body .advice{background:var(--indigo-50);border:1px solid #C7D6F0}
+.etape .body .advice h4{margin:0 0 6px;color:var(--navy);font-size:15px}
+.etape .body .advice p{margin:0;font-size:14px;color:var(--ink)}
+.resources{background:var(--indigo-50);border-radius:14px;padding:18px 22px;margin:24px 0}
+.resources-label{font-size:13px;color:var(--navy);font-weight:600;margin-bottom:10px}
+.resources-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.resources-row a{background:#fff;border-radius:10px;padding:12px 14px;font-size:13.5px;color:var(--indigo);display:flex;align-items:flex-start;gap:8px}
+.resources-row a::before{content:"→";color:var(--indigo);font-weight:700;flex-shrink:0}
+.promo{background:var(--peach);border-radius:18px;padding:28px 32px;margin:30px -8px -8px;display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:center}
+.promo h3{margin:0 0 10px;color:var(--navy);font-size:20px;font-weight:800;line-height:1.25}
+.promo p{margin:0 0 18px;color:var(--muted);font-size:14.5px}
+.promo-illu{display:flex;justify-content:center;align-items:center}
+.demarches{background:var(--indigo-50);border-radius:var(--radius);padding:38px 42px;margin:40px 0}
+.demarches h2{margin:0 0 10px;color:var(--navy);font-size:24px;font-weight:800}
+.demarches .intro{color:var(--muted);font-size:15px;margin-bottom:22px}
+.demarches ul{list-style:none;padding:0;margin:0}
+.demarches li{padding:12px 0 12px 32px;position:relative;border-top:1px solid #D7DFEC;font-size:14.5px;color:var(--ink)}
+.demarches li:first-child{border-top:0}
+.demarches li::before{content:"";position:absolute;left:0;top:16px;width:18px;height:18px;border-radius:4px;border:2px solid var(--green)}
+.demarches li::after{content:"✓";position:absolute;left:3px;top:11px;color:var(--green);font-weight:800;font-size:14px}
+.demarches li strong{color:var(--navy)}
+.author{background:var(--indigo-50);border-radius:var(--radius);padding:26px 30px;margin:40px 0 30px;display:grid;grid-template-columns:80px 1fr;gap:22px;align-items:center}
+.author-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--indigo),var(--indigo-600));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:26px;font-family:Georgia,serif}
+.author h5{margin:0 0 6px;font-size:16px;color:var(--navy);font-weight:700}
+.author p{margin:0;font-size:14px;color:var(--muted);line-height:1.6}
+.cta-rdv{background:var(--indigo-700);color:#fff;border-radius:18px;padding:26px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;margin:30px 0}
+.cta-rdv h3{margin:0;font-size:18px;font-weight:700;max-width:520px;line-height:1.4}
+.rubnav{margin:40px 0 0}
+.rubnav h3{font-size:22px;color:var(--navy);font-weight:800;margin:0 0 20px;line-height:1.3}
+.rubnav h3 span{color:var(--indigo)}
+.rubnav-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.rubnav-item{background:var(--indigo-50);border-radius:14px;padding:18px 20px;display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--navy);font-weight:600;font-size:14.5px}
+.rubnav-icon{width:42px;height:42px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--indigo);font-weight:800;font-size:18px;flex-shrink:0}
+</style></head><body>
+<nav class="nav"><div class="nav-inner">
+  <a class="logo" href="#"><div class="logo-mark">k</div><div class="logo-text"><b>keobiz</b><small>BY KEROGO FINANCE</small></div></a>
+  <div class="nav-menu"><a href="#">Expert comptable</a><a href="#">Création d'entreprise</a><a href="#">Tarifs</a><a href="#">Ressources</a></div>
+  <div class="nav-right"><a class="btn btn-indigo" href="#">Obtenir un devis</a><a class="btn btn-green" href="#">Se connecter</a></div>
+</div></nav>
+<div class="crumb"><a href="#">Accueil</a><span class="sep">/</span><a href="#">Fiches pratiques</a><span class="sep">/</span><span style="color:var(--navy)">Modèle de pacte d&#x27;associés 2026 - Guide pratique</span></div>
+<main class="wrap">
+<section class="hero">
+  <span class="pill">GUIDE COMPLET</span>
+  <h1>Modèle de pacte d'associés 2026 - <span>Guide pratique</span></h1>
+  <a class="btn btn-indigo" href="https://www.keobiz.fr/">Être accompagné dans la création →</a>
+</section>
+<section class="intro"><p>Prêt à vous lancer avec des associés ? L'enthousiasme est à son comble, les idées fusent, et la vision commune est limpide. Mais avez-vous pensé à ce qui se passera dans 2, 5 ou 10 ans ? Comment vous assurer que les règles du jeu restent claires, que votre collaboration est protégée et que votre projet ne déraille pas au premier désaccord majeur ?</p></section>
+<section class="intro"><p>La réponse tient en un document stratégique, souvent sous-estimé par les entrepreneurs qui démarrent : le pacte d'associés. Loin d'être une simple formalité administrative, c'est la véritable colonne vertébrale de votre aventure entrepreneuriale à plusieurs.</p></section>
+<section class="retain">
+  <div class="retain-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke="#08A06F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <h3>Ce que vous devez retenir : Modèle de pacte d&#x27;associés 2026</h3>
+  <ul><li><strong>Qu'est-ce qu'un pacte d'associés et pourquoi est-il indispensable : </strong>Un pacte d'associés (ou pacte d'actionnaires en SAS) est un contrat confidentiel signé par tout ou partie des associés d'une société.</li><li><strong>Les clauses essentielles pour un pacte d'associés solide : </strong>Un modèle de pacte d'associés est un excellent point de départ, mais son efficacité dépendra de sa personnalisation.</li><li><strong>Comment utiliser un modèle de pacte d'associés : </strong>Un document cadre est un formidable outil pour structurer votre réflexion.</li><li><strong>L'étape cruciale : la validation juridique : </strong>Une fois que vous avez mis vos idées au clair, l'intervention d'un professionnel du droit ou de l'expertise-comptable est une étape non négociable.</li></ul>
+</section>
+<h2 class="parcours-title">Votre parcours en <span>4 étapes</span></h2><section class="etape">
+          <span class="etape-badge">Etape 1</span>
+          <h2>Qu'est-ce qu'un pacte d'associés et pourquoi est-il <span>indispensable ?</span></h2>
+          <p class="subtitle">Un pacte d&#x27;associés (ou pacte d&#x27;actionnaires en SAS) est un contrat confidentiel signé par tout o...</p>
+          <div class="body"><p>Un pacte d'associés (ou pacte d'actionnaires en SAS) est un contrat confidentiel signé par tout ou partie des associés d'une société. Son objectif est d'organiser leurs relations, de définir les règles de gestion du capital et d'anticiper les potentiels conflits. C'est un document sur-mesure qui vient compléter les statuts de l'entreprise.</p>
+<p>Pensez aux statuts comme au code de la route de votre société : ils sont publics, obligatoires et définissent les grandes règles de fonctionnement (objet social, siège, <a href="https://keobiz.fr/le-mag/capital-social" title="Définition et rôle du capital social">capital social</a>, etc.). Le pacte d'associés, lui, est la conversation privée que vous avez dans la voiture avant de démarrer : il définit qui conduit, qui choisit la musique et ce qu'on fait si l'un des passagers veut descendre en cours de route. Il reste secret entre les signataires et offre une flexibilité que les statuts ne permettent pas.</p>
+<ul>
+<li><p><strong>Sécuriser les relations :</strong> Il clarifie les attentes et les engagements de chacun.</p></li>
+<li><p><strong>Anticiper les conflits :</strong> En prévoyant les scénarios de sortie ou de désaccord, il offre des solutions clés en main et évite les blocages.</p></li>
+<li><p><strong>Protéger le capital :</strong> Il contrôle l'entrée de nouveaux investisseurs et la sortie des associés actuels.</p></li>
+<li><p><strong>Stabiliser la gouvernance :</strong> Il peut accorder des droits spécifiques (comme un droit de véto) à certains associés pour préserver l'équilibre du pouvoir.</p></li>
+</ul>
+<p>Que vous soyez deux cofondateurs ou dix investisseurs, structurer votre collaboration avec un tel accord est un investissement inestimable pour la pérennité de votre entreprise.</p></div>
+          
+          <div class="promo">
+              <div>
+                <h3>La création d’une entreprise ça ne s’improvise pas, on s’en parle ?</h3>
+                <p>Statut juridique, immatriculation, obligations fiscales... Nous prenons en charge toutes vos démarches de A à Z.</p>
+                <a class="btn btn-green" href="#">Créer mon entreprise gratuitement →</a>
+              </div>
+              <div class="promo-illu"><svg viewBox="0 0 200 220" fill="none">
+<rect x="40" y="20" width="90" height="170" rx="14" fill="#fff" stroke="#1B2D5E" stroke-width="2"/>
+<rect x="50" y="40" width="70" height="8" rx="3" fill="#4848E8"/>
+<rect x="50" y="70" width="70" height="40" rx="6" fill="#ECF2FA"/>
+<rect x="50" y="150" width="70" height="22" rx="6" fill="#08A06F"/>
+<rect x="100" y="60" width="80" height="140" rx="12" fill="#fff" stroke="#1B2D5E" stroke-width="2"/>
+<rect x="110" y="78" width="60" height="6" rx="3" fill="#4848E8"/>
+<rect x="110" y="106" width="60" height="30" rx="5" fill="#ECF2FA"/>
+<rect x="110" y="144" width="60" height="18" rx="5" fill="#4848E8"/>
+</svg></div>
+            </div>
+        </section><section class="etape">
+          <span class="etape-badge">Etape 2</span>
+          <h2>Les clauses essentielles pour un pacte <span>d'associés solide</span></h2>
+          <p class="subtitle">Clauses relatives à la gouvernance et aux droits des associés</p>
+          <div class="body"><p>Un modèle de pacte d'associés est un excellent point de départ, mais son efficacité dépendra de sa personnalisation. Chaque clause doit être pensée pour répondre aux enjeux spécifiques de votre projet. Voici les clauses incontournables à examiner et à adapter.</p>
+<h3>Clauses relatives à la gouvernance et aux droits des associés</h3>
+<p>Ces clauses visent à organiser le pouvoir et la circulation de l'information au sein de la société. Elles sont le cœur de la gouvernance quotidienne.</p>
+<ul>
+<li><p><strong>La clause d'information renforcée :</strong> Elle oblige les dirigeants à transmettre des informations stratégiques (comptes prévisionnels, projets de développement, état de la trésorerie) aux associés signataires à une fréquence définie. C'est un gage de transparence qui renforce la confiance.</p></li>
+<li><p><strong>Le droit de véto :</strong> Cette clause donne à un ou plusieurs associés le pouvoir de bloquer des décisions majeures, même s'ils sont minoritaires. On peut l'activer pour des sujets sensibles comme une <a href="https://keobiz.fr/le-mag/modification-objet-social" title="Guide pour la modification de l'objet social">modification de l'objet social</a>, une augmentation de capital significative ou le recrutement d'un dirigeant. C'est un levier de protection puissant pour les fondateurs ou les premiers investisseurs.</p></li>
+<li><p><strong>Le droit de consultation :</strong> Plus souple que le droit de véto, cette clause impose de consulter certains associés avant de prendre une décision importante. Ils donnent leur avis, mais la décision finale reste à la majorité. Cela garantit que toutes les voix sont entendues.</p></li>
+</ul>
+<h3>Clauses encadrant les mouvements de capital</h3>
+<p>Le capital de votre entreprise est vivant : il évolue, des parts changent de main. Ces clauses permettent de maîtriser ces mouvements pour ne pas perdre le contrôle.</p>
+<ul>
+<li><p><strong>La clause d'agrément :</strong> Elle soumet toute cession de <a href="https://keobiz.fr/le-mag/parts-de-societe" title="Comprendre la nature des parts de société">parts ou d'actions</a> à l'approbation des autres associés. L'objectif est simple : vous choisissez avec qui vous vous associez. Cela empêche l'entrée d'un concurrent ou d'une personne non alignée avec la vision de l'entreprise.</p></li>
+<li><p><strong>Le droit de préemption :</strong> Si un associé souhaite vendre ses parts, cette clause oblige à les proposer en priorité aux autres associés signataires du pacte, aux mêmes conditions de prix. C'est le meilleur moyen de garder le capital "en famille" et de ne pas voir sa participation diluée.</p></li>
+<li><p><strong>La clause d'inaliénabilité :</strong> Elle interdit aux associés de vendre leurs actions pendant une période déterminée (10 ans maximum en général). Très utilisée au démarrage d'une startup, elle assure la stabilité de l'actionnariat et l'engagement des fondateurs sur le long terme.</p></li>
+</ul>
+<p></p>
+<h3>Clauses pour anticiper les départs et les conflits</h3>
+<p>C'est souvent la partie la plus délicate à aborder, mais aussi la plus salvatrice. On connaît tous des histoires de sociétés paralysées par un conflit entre fondateurs.</p>
+<ul>
+<li>
+<p><strong>Les clauses de "Leaver" (Good / Bad Leaver) :</strong> Elles organisent les conditions de sortie d'un associé, notamment d'un fondateur ou d'un manager clé.</p>
+<ul>
+<li><p><em>Un Good Leaver</em> est un associé qui part pour des raisons "acceptables" (retraite, maladie, licenciement non fautif). Il pourra vendre ses parts à un prix juste (la valeur de marché).</p></li>
+<li><p><em>Un Bad Leaver</em> est celui qui part en créant un préjudice (démission pour rejoindre un concurrent, faute lourde). Il sera sanctionné et devra céder ses parts à un prix décoté (par exemple, leur valeur nominale).</p></li>
+</ul>
+</li>
+<li><p><strong>La clause "Buy or Sell" (ou clause texane) :</strong> En cas de blocage majeur, un associé (A) peut proposer à un autre (B) de lui racheter ses parts à un prix défini. L'associé B a alors deux options : soit il accepte de vendre, soit il est obligé de racheter les parts de A au même prix. Cette clause radicale force à trouver une solution et évite la paralysie de l'entreprise.</p></li>
+<li><p><strong>La clause de non-concurrence :</strong> Elle interdit à un associé qui quitte l'entreprise de créer ou de rejoindre une activité concurrente pendant une certaine durée et dans une zone géographique définie. Elle protège le savoir-faire et la clientèle de la société.</p></li>
+</ul>
+<h3>Clauses de protection des minoritaires et des fondateurs</h3>
+<p>Ces dernières clauses permettent de maintenir un équilibre, surtout lors de l'arrivée d'investisseurs qui pourraient prendre une participation majoritaire.</p>
+<ul>
+<li><p><strong>Le droit de sortie conjointe (Tag-along / Droit de suite) :</strong> Si un associé majoritaire reçoit une offre de rachat pour ses parts, cette clause permet aux associés minoritaires de vendre leurs propres parts au même acquéreur et aux mêmes conditions. C'est une protection pour ne pas se retrouver "coincé" dans la société avec un nouvel actionnaire majoritaire inconnu.</p></li>
+<li><p><strong>L'obligation de sortie conjointe (Drag-along / Obligation de suite) :</strong> C'est le miroir de la clause précédente. Si un acquéreur souhaite racheter 100% de la société, les associés majoritaires peuvent forcer les minoritaires à vendre leurs parts aux mêmes conditions. Cette clause est souvent exigée par les fonds d'investissement pour garantir une sortie totale et simplifiée.</p></li>
+</ul>
+<div class="attention">
+<h4>Attention au copier-coller</h4>
+<p>Un modèle de pacte d'associés est une base de travail, pas une solution universelle. Une clause mal rédigée ou inadaptée à votre situation peut avoir des conséquences désastreuses, allant de la nullité de la clause à un blocage juridique complet de votre société. Chaque mot compte.</p>
+</div></div>
+          
+          <div class="promo">
+              <div>
+                <h3>La création d’une entreprise ça ne s’improvise pas, on s’en parle ?</h3>
+                <p>Statut juridique, immatriculation, obligations fiscales... Nous prenons en charge toutes vos démarches de A à Z.</p>
+                <a class="btn btn-green" href="#">Créer mon entreprise gratuitement →</a>
+              </div>
+              <div class="promo-illu"><svg viewBox="0 0 200 220" fill="none">
+<rect x="40" y="20" width="90" height="170" rx="14" fill="#fff" stroke="#1B2D5E" stroke-width="2"/>
+<rect x="50" y="40" width="70" height="8" rx="3" fill="#4848E8"/>
+<rect x="50" y="70" width="70" height="40" rx="6" fill="#ECF2FA"/>
+<rect x="50" y="150" width="70" height="22" rx="6" fill="#08A06F"/>
+<rect x="100" y="60" width="80" height="140" rx="12" fill="#fff" stroke="#1B2D5E" stroke-width="2"/>
+<rect x="110" y="78" width="60" height="6" rx="3" fill="#4848E8"/>
+<rect x="110" y="106" width="60" height="30" rx="5" fill="#ECF2FA"/>
+<rect x="110" y="144" width="60" height="18" rx="5" fill="#4848E8"/>
+</svg></div>
+            </div>
+        </section><section class="etape">
+          <span class="etape-badge">Etape 3</span>
+          <h2>Comment utiliser un modèle de pacte <span>d'associés ?</span></h2>
+          <p class="subtitle">Un document cadre est un formidable outil pour structurer votre réflexion.</p>
+          <div class="body"><p>Un document cadre est un formidable outil pour structurer votre réflexion. Il vous permet de balayer tous les sujets importants et de ne rien oublier. Pour l'adapter, organisez une réunion avec tous les futurs signataires et posez-vous les bonnes questions, en toute transparence.</p>
+<p>Voici une checklist pour guider votre discussion :</p>
+<ol>
+<li>
+<p><strong>Vision et rôles :</strong></p>
+<ul>
+<li><p>Quelle est notre vision commune à 5 ans ?</p></li>
+<li><p>Qui apporte quoi (compétences, réseau, financement) ?</p></li>
+<li><p>Quels sont les rôles opérationnels de chacun et comment sont-ils valorisés (salaire, parts sociales...) ? La <a href="https://keobiz.fr/le-mag/nomination-et-remuneration-gerant-sarl" title="Règles pour la nomination et la rémunération du gérant">nomination et la rémunération des gérants</a> doit être claire.</p></li>
+</ul>
+</li>
+<li>
+<p><strong>Gouvernance :</strong></p>
+<ul>
+<li><p>Quelles sont les décisions qui nécessitent l'unanimité ? (Droit de véto)</p></li>
+<li><p>Qui doit être informé de quoi et à quelle fréquence ? (Information renforcée)</p></li>
+<li><p>Comment gère-t-on les décisions du quotidien ?</p></li>
+</ul>
+</li>
+<li>
+<p><strong>Capital et valorisation :</strong></p>
+<ul>
+<li><p>Sommes-nous prêts à accueillir de nouveaux investisseurs ? Si oui, sous quelles conditions ? (Clause d'agrément)</p></li>
+<li><p>Comment valoriser l'entreprise aujourd'hui et demain en cas de départ ou d'entrée ?</p></li>
+<li><p>Pendant combien de temps les fondateurs s'engagent-ils à rester ? (Clause d'inaliénabilité)</p></li>
+</ul>
+</li>
+<li>
+<p><strong>Scénarios de sortie :</strong></p>
+<ul>
+<li><p>Que se passe-t-il si l'un de nous veut partir ? (Good/Bad Leaver)</p></li>
+<li><p>Que se passe-t-il en cas de désaccord profond et insoluble ? (Clause "Buy or Sell")</p></li>
+<li><p>Que se passe-t-il en cas de décès ou d'incapacité d'un associé ?</p></li>
+</ul>
+</li>
+</ol>
+<p>Ce travail préparatoire est essentiel. Il vous forcera à avoir les conversations difficiles maintenant, quand tout va bien, plutôt que plus tard, en pleine crise.</p></div>
+          
+          <div class="promo">
+              <div>
+                <h3>La création d’une entreprise ça ne s’improvise pas, on s’en parle ?</h3>
+                <p>Statut juridique, immatriculation, obligations fiscales... Nous prenons en charge toutes vos démarches de A à Z.</p>
+                <a class="btn btn-green" href="#">Créer mon entreprise gratuitement →</a>
+              </div>
+              <div class="promo-illu"><svg viewBox="0 0 200 220" fill="none">
+<rect x="40" y="20" width="90" height="170" rx="14" fill="#fff" stroke="#1B2D5E" stroke-width="2"/>
+<rect x="50" y="40" width="70" height="8" rx="3" fill="#4848E8"/>
+<rect x="50" y="70" width="70" height="40" rx="6" fill="#ECF2FA"/>
+<rect x="50" y="150" width="70" height="22" rx="6" fill="#08A06F"/>
+<rect x="100" y="60" width="80" height="140" rx="12" fill="#fff" stroke="#1B2D5E" stroke-width="2"/>
+<rect x="110" y="78" width="60" height="6" rx="3" fill="#4848E8"/>
+<rect x="110" y="106" width="60" height="30" rx="5" fill="#ECF2FA"/>
+<rect x="110" y="144" width="60" height="18" rx="5" fill="#4848E8"/>
+</svg></div>
+            </div>
+        </section><section class="etape">
+          <span class="etape-badge">Etape 4</span>
+          <h2>L'étape cruciale : <span>la validation juridique</span></h2>
+          <p class="subtitle">Une fois que vous avez mis vos idées au clair, l&#x27;intervention d&#x27;un professionnel du droit ou de l...</p>
+          <div class="body"><p>Une fois que vous avez mis vos idées au clair, l'intervention d'un professionnel du droit ou de l'expertise-comptable est une étape non négociable. On pense souvent à l'avocat, mais votre expert-comptable, en tant que partenaire de la vie de votre entreprise, peut également vous orienter et coordonner cette démarche. Chez Keobiz, nous accompagnons les entrepreneurs bien au-delà de la simple comptabilité, en assurant la cohérence de leur montage juridique.</p>
+<p>Pourquoi cette validation est-elle si importante ?</p>
+<ul>
+<li><p><strong>Pour la validité juridique :</strong> Un expert s'assurera que vos clauses sont conformes à la loi et ne risquent pas d'être annulées par un juge.</p></li>
+<li><p><strong>Pour la cohérence globale :</strong> Il vérifiera que le pacte ne contredit pas les statuts de la société.</p></li>
+<li><p><strong>Pour l'équilibre :</strong> Il veillera à ce que le pacte soit équilibré et ne lèse aucun des signataires, prévenant ainsi de futurs contentieux.</p></li>
+</ul>
+<p>Le coût de la rédaction ou de la relecture d'un pacte par un professionnel peut varier de quelques centaines à plusieurs milliers d'euros selon la complexité. C'est un coût, certes, mais il doit être vu comme une assurance. Une assurance contre des litiges qui, eux, pourraient vous coûter des dizaines de milliers d'euros et, pire encore, la survie de votre entreprise. Pensez-y comme la fondation de votre maison : vous ne la construiriez pas sans l'avis d'un architecte.</p>
+<div class="advice">
+<h4>Adaptez le pacte à votre type de société</h4>
+<p>Le pacte n'aura pas la même forme pour une startup en hyper-croissance cherchant à lever des fonds, une entreprise familiale visant la transmission, ou une SARL de services entre deux associés. Dans le premier cas, les clauses de drag-along et de leaver seront centrales. Dans le second, l'agrément et la préemption seront renforcés pour garder le contrôle au sein de la famille.</p>
+</div>
+<p>Le pacte d'associés est bien plus qu'un simple contrat. C'est un acte de confiance et de prévoyance. En définissant clairement les règles du jeu, il libère les énergies pour ce qui compte vraiment : développer votre projet et le mener au succès. C'est l'outil qui vous permet de vous concentrer sur votre business, en sachant que votre collaboration est solidement encadrée.</p></div>
+          
+          <div class="promo">
+              <div>
+                <h3>La création d’une entreprise ça ne s’improvise pas, on s’en parle ?</h3>
+                <p>Statut juridique, immatriculation, obligations fiscales... Nous prenons en charge toutes vos démarches de A à Z.</p>
+                <a class="btn btn-green" href="#">Créer mon entreprise gratuitement →</a>
+              </div>
+              <div class="promo-illu"><svg viewBox="0 0 200 220" fill="none">
+<rect x="40" y="20" width="90" height="170" rx="14" fill="#fff" stroke="#1B2D5E" stroke-width="2"/>
+<rect x="50" y="40" width="70" height="8" rx="3" fill="#4848E8"/>
+<rect x="50" y="70" width="70" height="40" rx="6" fill="#ECF2FA"/>
+<rect x="50" y="150" width="70" height="22" rx="6" fill="#08A06F"/>
+<rect x="100" y="60" width="80" height="140" rx="12" fill="#fff" stroke="#1B2D5E" stroke-width="2"/>
+<rect x="110" y="78" width="60" height="6" rx="3" fill="#4848E8"/>
+<rect x="110" y="106" width="60" height="30" rx="5" fill="#ECF2FA"/>
+<rect x="110" y="144" width="60" height="18" rx="5" fill="#4848E8"/>
+</svg></div>
+            </div>
+        </section>
+<section class="author">
+  <div class="author-avatar">MD</div>
+  <div><h5>Marcel Delaregardière</h5><p>Expert-comptable chez Keobiz, Marcel accompagne chaque année plus de 200 dirigeants dans la structuration juridique et fiscale de leur projet.</p></div>
+</section>
+<section class="cta-rdv">
+  <h3>La création d’une entreprise ça ne s’improvise <br>pas, on s’en parle ?</h3>
+  <a class="btn btn-white" href="#">Prendre un rendez-vous</a>
+</section>
+<section class="rubnav">
+  <h3>Un projet d’entreprise en particulier ? <br>Retrouvez toutes nos autres <span>fiches pratiques :</span></h3>
+  <div class="rubnav-grid"><a class="rubnav-item" href="#"><span class="rubnav-icon">A</span>Fiches Artisan du BTP</a><a class="rubnav-item" href="#"><span class="rubnav-icon">C</span>Fiches Consultant indépendant</a><a class="rubnav-item" href="#"><span class="rubnav-icon">C</span>Fiches Commerce de proximité</a><a class="rubnav-item" href="#"><span class="rubnav-icon">V</span>Fiches VTC et transport de personnes</a><a class="rubnav-item" href="#"><span class="rubnav-icon">H</span>Fiches Hôtellerie et Restauration</a></div>
+</section>
+</main>
+</body></html>
