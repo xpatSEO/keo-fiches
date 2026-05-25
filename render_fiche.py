@@ -269,6 +269,8 @@ RENDERERS = {
 def render(json_path: Path, out_path: Path):
     with open(json_path) as f:
         payload = json.load(f)
+    if isinstance(payload, list):   # accept [ {...} ] array-wrapped files
+        payload = payload[0]
     pd = payload["post_data"]
     body_parts = []
     for kind, name, data in parse_blocks(pd["post_content"]):

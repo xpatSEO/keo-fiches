@@ -483,18 +483,28 @@ def main(limit=10):
         articles = json.load(f)
     selection = articles[:limit]
     items_xml = []
+    all_payloads = []
     for i, art in enumerate(selection):
         post_id = 33000 + i  # synthetic IDs starting after demo (32098)
         payload = build_fiche(art, post_id)
+        all_payloads.append(payload)
+        # Each per-fiche file is wrapped in a JSON array ([ {...} ]) so the
+        # importer can always iterate a list (dev request: "ajouter [ ]
+        # avant et après tout le contenu").
         json_path = OUT_JSON / f"{i+1:02d}-{art['slug']}.json"
-        json_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+        json_path.write_text(json.dumps([payload], ensure_ascii=False, indent=2), encoding="utf-8")
         items_xml.append(wxr_item(payload))
         print(f"  ✓ {json_path.name}")
+
+    # Combined array of every fiche, for a single bulk import file.
+    combined_path = OUT / "all-fiches.json"
+    combined_path.write_text(json.dumps(all_payloads, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"\n  ✓ {combined_path.relative_to(ROOT)}  ({len(selection)} fiches en un tableau)")
 
     wxr = build_wxr(items_xml)
     wxr_path = OUT / "keobiz-fiches-import.xml"
     wxr_path.write_text(wxr, encoding="utf-8")
-    print(f"\n  ✓ {wxr_path.relative_to(ROOT)}  ({len(selection)} fiches)")
+    print(f"  ✓ {wxr_path.relative_to(ROOT)}  ({len(selection)} fiches)")
 
 if __name__ == "__main__":
     import sys
