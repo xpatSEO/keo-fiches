@@ -47,6 +47,38 @@ RUBNAV_TITLE = "Un projet d’entreprise en particulier ? <br>Retrouvez toutes n
 FAQ_RE = re.compile(r"(questions?\s+fr[ée]quent|FAQ|foire\s+aux\s+questions)", re.I)
 DEMARCHES_RE = re.compile(r"(d[ée]marches?|checklist)", re.I)
 
+# A fiche is "sequential" (a real step-by-step journey) when its H2s are
+# explicit steps ("Étape N…") or its slug marks a guide/checklist. Otherwise
+# it is "thematic" (H2s are questions/topics) and the "Etape N" badge would be
+# semantically wrong.
+ETAPE_H2_RE  = re.compile(r"^\s*[ée]tape\s*\d", re.I)
+SEQ_SLUG_RE  = re.compile(r"(checklist|guide-complet|etape-par-etape|pas-a-pas)", re.I)
+
+def is_sequential(article, h2_texts):
+    if any(ETAPE_H2_RE.search(h) for h in h2_texts):
+        return True
+    return bool(SEQ_SLUG_RE.search(article.get("slug", "")))
+
+# Short, non-ordinal badge derived from a thematic H2. Order = most specific
+# first; falls back to a neutral label.
+_BADGE_RULES = [
+    (re.compile(r"qu['’]est-ce|pourquoi|c['’]est quoi|à quoi sert|comprendre", re.I), "Comprendre"),
+    (re.compile(r"clause", re.I),                                                      "Les clauses"),
+    (re.compile(r"erreur|vigilance|éviter|piège|limite", re.I),                        "Vigilance"),
+    (re.compile(r"modèle|prêt à l['’]emploi|prêt, clair|template", re.I),              "Le modèle"),
+    (re.compile(r"tableau|comparatif|comparer|critère|au crible|quel statut", re.I),   "Comparer"),
+    (re.compile(r"checklist|réflexe|avant de signer|à ne pas oublier", re.I),          "Checklist"),
+    (re.compile(r"accompagn|expert|relais|validation juridique", re.I),                "Accompagnement"),
+    (re.compile(r"obligatoire|conforme|obligation|échéance|sanction|majoration|calendrier", re.I), "Obligations"),
+    (re.compile(r"comment|utiliser|rédiger|mettre en place|faire|piloter|remplir|choisir", re.I),  "Méthode"),
+]
+
+def thematic_badge(h2_text):
+    for rx, lbl in _BADGE_RULES:
+        if rx.search(h2_text):
+            return lbl
+    return "À savoir"
+
 # ACF field key constants (mirror the demo file)
 FIELD_KEYS = {
     "hero_badge":      "field_fp_hero_badge",
@@ -291,6 +323,7 @@ def build_fiche(article, post_id):
 
     # Remaining H2 sections -> parcours steps
     h2_list = soup.find_all("h2")
+    sequential = is_sequential(article, [h.get_text(" ", strip=True) for h in h2_list])
     steps = []
     for i, h2 in enumerate(h2_list[:8]):
         h2_text = h2.get_text(" ", strip=True)
@@ -305,8 +338,9 @@ def build_fiche(article, post_id):
             first_p = sec_soup.find("p")
             if first_p:
                 subt = first_sentence(first_p.get_text(" ", strip=True), 100)
+        badge = f"Etape {i+1}" if sequential else thematic_badge(h2_text)
         steps.append({
-            "badge": f"Etape {i+1}",
+            "badge": badge,
             "title": split_title_span(h2_text),
             "subtitle": subt,
             "title_url": "",
@@ -343,8 +377,10 @@ def build_fiche(article, post_id):
         retenir_items,
     )))
     parts.append("")
+    parcours_title = (f"Votre parcours en <span>{len(steps)} étapes</span>"
+                      if sequential else "L’essentiel <span>à connaître</span>")
     parts.append(block("fiche-pratique-parcours-etapes", parcours_data(
-        f"Votre parcours en <span>{len(steps)} étapes</span>",
+        parcours_title,
         steps,
     )))
     parts.append("")
